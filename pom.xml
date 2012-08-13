@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.histone</groupId>
     <artifactId>histone-acceptance-test-cases</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <comments>Copyright 2012 MegaFon</comments>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Ruslan Matveev</name>
+            <email>matveev.ruslan@gmail.com</email>
+            <organization>Megafon</organization>
+            <organizationUrl>http://www.megafon.ru</organizationUrl>
+        </developer>
+        <developer>
+            <name>Peter Salnikov</name>
+            <email>peter@salnikov.cc</email>
+            <organization>Megafon</organization>
+            <organizationUrl>http://www.megafon.ru</organizationUrl>
+        </developer>
+        <developer>
+            <name>Sergey Nazaryev</name>
+            <email>sergey.nazaryev@gmail.com</email>
+            <organization>Megafon</organization>
+            <organizationUrl>http://www.megafon.ru</organizationUrl>
+        </developer>
+        <developer>
+            <name>Georgiy Batanov</name>
+            <email>gbatanov@megafon-retail.ru</email>
+            <organization>Megafon</organization>
+            <organizationUrl>http://www.megafon.ru</organizationUrl>
+        </developer>
+    </developers>
     <build>
         <resources>
             <resource>
@@ -12,6 +47,32 @@
             </resource>
         </resources>
         <plugins>
+            <plugin>
+                <groupId>com.google.code.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+                <version>1.4.0</version>
+                <configuration>
+                    <basedir>${basedir}</basedir>
+                    <header>src/etc/HEADER.txt</header>
+                    <quiet>false</quiet>
+                    <failIfMissing>true</failIfMissing>
+                    <encoding>UTF-8</encoding>
+                    <includes>
+                        <include>src/main/acceptance/**</include>
+                    </includes>
+                    <excludes>
+                        <exclude>src/main/acceptance/evaluator/testresources/**</exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>eu.numberfour.maven.plugins</groupId>
                 <artifactId>file-list-maven-plugin</artifactId>
@@ -50,6 +111,7 @@
         </plugins>
     </build>
     <scm>
+        <url>https://github.com/MegafonWebLab/histone-acceptance-tests</url>
         <connection>scm:git:git://github.com/MegafonWebLab/histone-acceptance-tests.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:MegafonWebLab/histone-acceptance-tests.git</developerConnection>
     </scm>
