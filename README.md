@@ -5,7 +5,7 @@ Histone Acceptance Test Cases
 
 [Сайт проекта](http://weblab.megafon.ru/histone/)  
 [Документация](http://weblab.megafon.ru/histone/documentation/)  
-[Для разработчиков](http://weblab.megafon.ru/histone/contributors#Tests)  
+[Для разработчиков](http://weblab.megafon.ru/histone/contributors/#Tests)  
 
 Структура папок
 ---------------
