@@ -121,7 +121,7 @@
     <scm>
         <url>https://github.com/MegafonWebLab/histone-acceptance-tests</url>
         <connection>scm:git:git://github.com/MegafonWebLab/histone-acceptance-tests.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:MegafonWebLab/histone-acceptance-tests.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com/MegafonWebLab/histone-acceptance-tests.git</developerConnection>
     </scm>
     <distributionManagement>
         <repository>
