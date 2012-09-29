@@ -419,22 +419,22 @@
 		}
 	}, {
 		"input": "{{this}}",
-		"expected": "[[105,[\"this\"]]]"
+		"expected": [[105,["this"]]]
 	}, {
 		"input": "{{test}}",
-		"expected": "[[105, [\"test\"]]]"
+		"expected": [[105, ["test"]]]
 	}, {
 		"input": "{{test.foo}}",
-		"expected": "[[105, [\"test\", \"foo\"]]]"
+		"expected": [[105, ["test", "foo"]]]
 	}, {
 		"input": "{{this.foo}}",
-		"expected": "[[105, [\"this\", \"foo\"]]]"
+		"expected": [[105, ["this", "foo"]]]
 	}, {
 		"input": "{{self}}",
-		"expected": "[[105,[\"self\"]]]"
+		"expected": [[105,["self"]]]
 	}, {
 		"input": "{{self.foo}}",
-		"expected": "[[105, [\"self\", \"foo\"]]]"
+		"expected": [[105, ["self", "foo"]]]
 	}, {
 		"input": "{{test.}}",
 		"exception": {
