@@ -1,42 +1,44 @@
 [{
-        "name": "func import",
-            "cases": [{
-                "input": "{{import",
-                "exception": {
-                    "line": "1",
-                    "expected": "string",
-                    "found": "EOF"
-                }
-            }, {
-                "input": "{{import}}",
-                "exception": {
-                    "line": "1",
-                    "expected": "string",
-                    "found": "}}"
-                }
-            }, {
-                "input": "{{import bla}}",
-                "exception": {
-                    "line": "1",
-                    "expected": "string",
-                    "found": "bla"
-                }
-            }, {
-                "input": "{{import 'template.tpl'}}",
-                "expected": "[[110, \"template.tpl\"]]"
-            }, {
-                "input": "{{import 'template.tpl',}}",
-                "exception": {
-                    "line": "1",
-                    "expected": "}}",
-                    "found": ","
-                }
-            }, {
-                "input": "{{import 't1.tpl', 't2.tpl'}}",
-                "exception": {
-                    "line": "1",
-                    "expected": "}}",
-                    "found": ","
-                }
-            }]
+	"name": "func import",
+	"cases": [{
+		"input": "{{import",
+		"exception": {
+			"line": "1",
+			"expected": "string",
+			"found": "EOF"
+		}
+	}, {
+		"input": "{{import}}",
+		"exception": {
+			"line": "1",
+			"expected": "string",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{import bla}}",
+		"exception": {
+			"line": "1",
+			"expected": "string",
+			"found": "bla"
+		}
+	}, {
+		"input": "{{import 'template.tpl'}}",
+		"expected": [
+			[110, "template.tpl"]
+		]
+	}, {
+		"input": "{{import 'template.tpl',}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": ","
+		}
+	}, {
+		"input": "{{import 't1.tpl', 't2.tpl'}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": ","
+		}
+	}]
 }]
