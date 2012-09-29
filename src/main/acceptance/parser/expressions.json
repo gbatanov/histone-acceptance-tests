@@ -322,7 +322,7 @@
 		"expected": [[103,"str\\ting"]]
 	}, {
 		"input": "{{'str\\ning'}}",
-		"expected": [[103,"str\\ning"]]
+		"expected": [[103,"str\ning"]]
 	}, {
 		"input": "{{'str\\\\ning'}}",
 		"expected": [[103,"str\\ning"]]
