@@ -334,7 +334,7 @@
 		"expected": [[103,"str\\fing"]]
 	}, {
 		"input": "{{'str\\ring'}}",
-		"expected": [[103,"str\\\\ring"]]
+		"expected": [[103,"str\ring"]]
 	}, {
 		"input": "{{'str\\\\ring'}}",
 		"expected": [[103, "str\\\\ring"]]
