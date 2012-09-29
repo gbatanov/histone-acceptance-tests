@@ -301,25 +301,25 @@
 		"expected": [[103, "strXing"]]
 	}, {
 		"input": "{{'str\\x5ing'}}",
-		"expected": [[103, "str\\\\x5ing"]]
+		"expected": [[103,"str\\x5ing"]]
 	}, {
 		"input": "{{'str\\121ing'}}",
-		"expected": [[103, "str\\\\121ing"]]
+		"expected": [[103,"str\\121ing"]]
 	}, {
 		"input": "{{'str\\11ing'}}",
-		"expected": "[[103, \"str\\\\11ing\"]]"
+		"expected": [[103,"str\\11ing"]]
 	}, {
 		"input": "{{'str\\bing'}}",
-		"expected": "[[103, \"str\\bing\"]]"
+		"expected": [[103,"str\bing"]]
 	}, {
 		"input": "{{'str\\\\bing'}}",
-		"expected": "[[103, \"str\\\\bing\"]]"
+		"expected": [[103,"str\\bing"]]
 	}, {
 		"input": "{{'str\\ting'}}",
-		"expected": "[[103, \"str\\ting\"]]"
+		"expected": [[103,"str\ting"]]
 	}, {
 		"input": "{{'str\\\\ting'}}",
-		"expected": "[[103, \"str\\\\ting\"]]"
+		"expected": [[103,"str\\ting"]]
 	}, {
 		"input": "{{'str\\ning'}}",
 		"expected": [[103,"str\\ning"]]
