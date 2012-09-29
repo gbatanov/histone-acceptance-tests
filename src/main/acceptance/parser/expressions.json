@@ -337,7 +337,7 @@
 		"expected": [[103,"str\ring"]]
 	}, {
 		"input": "{{'str\\\\ring'}}",
-		"expected": [[103, "str\\\\ring"]]
+		"expected": [[103, "str\\ring"]]
 	}, {
 		"input": "a {{title[1].hey}} b {{foo.bar(1, 2, 3)}} c",
 		"expected": ["a ",[105,["title",[101,1],"hey"]]," b ",[106,[105,["foo"]],"bar",[[101,1],[101,2],[101,3]]]," c"]
