@@ -1,0 +1,648 @@
+[{
+	"name": "expressions",
+	"cases": [{
+		"input": "{{null or 1 or .14 or 'string'}}",
+		"expected": [[1,[1,[1, [100], [101,1]],[102,0.14]],[103,"string"]]]
+	}, {
+		"input": "{{null or 1 or .14 or string'}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'"
+		}
+	}, {
+		"input": "{{-10.foo}}",
+		"expected": [[105,[[14,[101,10]],"foo"]]]
+	}, {
+		"input": "{{0 and 1 and 3}}",
+		"expected": [[2,[2,[101,0],[101,1]],[101,3]]]
+	}, {
+		"input": "{{0 and 1 and}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{true is false}}",
+		"expected": [[3, [16], [17]]]
+	}, {
+		"input": "{{true is}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{true isNot false}}",
+		"expected": [[4, [16], [17]]]
+	}, {
+		"input": "{{true isNot}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 <= 20}}",
+		"expected": [[5, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 <=}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 < 20}}",
+		"expected": [[6, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 <}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 >= 20}}",
+		"expected": [[7, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 >=}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 > 20}}",
+		"expected": [[8, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 >}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 + 20}}",
+		"expected": [[9, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 +}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 - 20}}",
+		"expected": [[10, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 -}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 * 20}}",
+		"expected": [[11, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 *}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 \/ 20}}",
+		"expected": [[12, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 \/}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 mod 20}}",
+		"expected": [[13, [101, 10], [101, 20]]]
+	}, {
+		"input": "{{10 mod}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{+10}}",
+		"expected": [[101, 10]]
+	}, {
+		"input": "{{++10}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "+"
+		}
+	}, {
+		"input": "{{-10}}",
+		"expected": [[14, [101, 10]]]
+	}, {
+		"input": "{{--10}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "-"
+		}
+	}, {
+		"input": "{{not true}}",
+		"expected": [[15, [16]]]
+	}, {
+		"input": "{{not}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{not false}}",
+		"expected": [[15, [17]]]
+	}, {
+		"input": "a {{-false}} b",
+		"expected": ["a ",[14,[17]]," b"]
+	}, {
+		"input": "a {{-true}} b",
+		"expected": ["a ",[14,[16]], " b"]
+	}, {
+		"input": "{{not true not}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "not"
+		}
+	}, {
+		"input": "{{true}}",
+		"expected": [[16]]
+	}, {
+		"input": "{{false}}",
+		"expected": [[17]]
+	}, {
+		"input": "{{null}}",
+		"expected": [[100]]
+	}, {
+		"input": "{{null.11}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": ".11"
+		}
+	}, {
+		"input": "{{10}}",
+		"expected": [[101, 10]]
+	}, {
+		"input": "{{0.14}}",
+		"expected": [[102, 0.14]]
+	}, {
+		"input": "{{0..14}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": ".14"
+		}
+	}, {
+		"input": "{{.234}}",
+		"expected": [[102, 0.234]]
+	}, {
+		"input": "{{..245}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "."
+		}
+	}, {
+		"input": "{{10E3}}",
+		"expected": [[102, 10000]]
+	}, {
+		"input": "{{10B2}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "B2"
+		}
+	}, {
+		"input": "{{10E+2}}",
+		"expected": [[102, 1000]]
+	}, {
+		"input": "{{4E-2}}",
+		"expected": [[102, 0.04]]
+	}, {
+		"input": "{{10E*2}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "E"
+		}
+	}, {
+		"input": "{{.27E3}}",
+		"expected": [[102, 270]]
+	}, {
+		"input": "{{.12E+2}}",
+		"expected": [[102, 12]]
+	}, {
+		"input": "{{.14E-2}}",
+		"expected": [[102, 0.0014]]
+	}, {
+		"input": "{{'string'}}",
+		"expected": [[103, "string"]]
+	}, {
+		"input": "{{'my str'ing'}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "ing"
+		}
+	}, {
+		"input": "{{\"string\"}}",
+		"expected": [[103, "string"]]
+	}, {
+		"input": "{{\"my str\"ing\"}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "ing"
+		}
+	}, {
+		"input": "{{'str\\'ing'}}",
+		"expected": [[103, "str'ing"]]
+	}, {
+		"input": "{{'my str\\\\'ing'}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "ing"
+		}
+	}, {
+		"input": "{{\"str\\\"ing\"}}",
+		"expected": [[103, "str\"ing"]]
+	}, {
+		"input": "{{\"my str\\\\\"ing\"}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "ing"
+		}
+	}, {
+		"input": "{{'str\\u0040ing'}}",
+		"expected": [[103, "str@ing"]]
+	}, {
+		"input": "{{'str\\u004ing'}}",
+		"expected": "[[103, \"str\\\\u004ing\"]]"
+	}, {
+		"input": "{{'str\\x58ing'}}",
+		"expected": "[[103, \"strXing\"]]"
+	}, {
+		"input": "{{'str\\x5ing'}}",
+		"expected": "[[103, \"str\\\\x5ing\"]]"
+	}, {
+		"input": "{{'str\\121ing'}}",
+		"expected": "[[103, \"str\\\\121ing\"]]"
+	}, {
+		"input": "{{'str\\11ing'}}",
+		"expected": "[[103, \"str\\\\11ing\"]]"
+	}, {
+		"input": "{{'str\\bing'}}",
+		"expected": "[[103, \"str\\bing\"]]"
+	}, {
+		"input": "{{'str\\\\bing'}}",
+		"expected": "[[103, \"str\\\\bing\"]]"
+	}, {
+		"input": "{{'str\\ting'}}",
+		"expected": "[[103, \"str\\ting\"]]"
+	}, {
+		"input": "{{'str\\\\ting'}}",
+		"expected": "[[103, \"str\\\\ting\"]]"
+	}, {
+		"input": "{{'str\\ning'}}",
+		"expected": "[[103, \"str\\ning\"]]"
+	}, {
+		"input": "{{'str\\\\ning'}}",
+		"expected": "[[103, \"str\\\\ning\"]]"
+	}, {
+		"input": "{{'str\\fing'}}",
+		"expected": "[[103, \"str\\fing\"]]"
+	}, {
+		"input": "{{'str\\\\fing'}}",
+		"expected": "[[103, \"str\\\\fing\"]]"
+	}, {
+		"input": "{{'str\\ring'}}",
+		"expected": "[[103, \"str\\ring\"]]"
+	}, {
+		"input": "{{'str\\\\ring'}}",
+		"expected": "[[103, \"str\\\\ring\"]]"
+	}, {
+		"input": "a {{title[1].hey}} b {{foo.bar(1, 2, 3)}} c",
+		"expected": "[\"a \",[105,[\"title\",[101,1],\"hey\"]],\" b \",[106,[105,[\"foo\"]],\"bar\",[[101,1],[101,2],[101,3]]],\" c\"]"
+	}, {
+		"input": "a {{title[1].hey}} b",
+		"expected": "[\"a \",[105,[\"title\",[101,1],\"hey\"]],\" b\"]"
+	}, {
+		"input": "a {{foo[title[1].hey].bingo[1].bongo}} b",
+		"expected": "[\"a \",[105,[\"foo\",[105,[\"title\",[101,1],\"hey\"]],\"bingo\",[101,1],\"bongo\"]],\" b\"]"
+	}, {
+		"input": "{{10 * () + 2}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "()"
+		}
+	}, {
+		"input": "{{10 * (.14 \/ 2}}",
+		"exception": {
+			"line": "1",
+			"expected": ")",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{foo.true}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "true"
+		}
+	}, {
+		"input": "{{foo[]}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "[]"
+		}
+	}, {
+		"input": "{{foo['sss'}}",
+		"exception": {
+			"line": "1",
+			"expected": "]",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 * 2 + 'xxxxx'",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{this.this}} b",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "this"
+		}
+	}, {
+		"input": "a {{self.self}} b",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "self"
+		}
+	}, {
+		"input": "a {{this.self}} b",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "self"
+		}
+	}, {
+		"input": "a {{self.this}} b",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "this"
+		}
+	}, {
+		"input": "{{this}}",
+		"expected": "[[105,[\"this\"]]]"
+	}, {
+		"input": "{{test}}",
+		"expected": "[[105, [\"test\"]]]"
+	}, {
+		"input": "{{test.foo}}",
+		"expected": "[[105, [\"test\", \"foo\"]]]"
+	}, {
+		"input": "{{this.foo}}",
+		"expected": "[[105, [\"this\", \"foo\"]]]"
+	}, {
+		"input": "{{self}}",
+		"expected": "[[105,[\"self\"]]]"
+	}, {
+		"input": "{{self.foo}}",
+		"expected": "[[105, [\"self\", \"foo\"]]]"
+	}, {
+		"input": "{{test.}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{this.}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{self.}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{test['foo']}}",
+		"expected": "[[105, [\"test\", [103, \"foo\"]]]]"
+	}, {
+		"input": "{{this['foo']}}",
+		"expected": "[[105, [\"this\", [103, \"foo\"]]]]"
+	}, {
+		"input": "{{self['foo']}}",
+		"expected": "[[105, [\"self\", [103, \"foo\"]]]]"
+	}, {
+		"input": "{{test[}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{this[}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{self[}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{test[1}}",
+		"exception": {
+			"line": "1",
+			"expected": "]",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{this[1}}",
+		"exception": {
+			"line": "1",
+			"expected": "]",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{self[1}}",
+		"exception": {
+			"line": "1",
+			"expected": "]",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{test[1,}}",
+		"exception": {
+			"line": "1",
+			"expected": "]",
+			"found": ","
+		}
+	}, {
+		"input": "{{this[1,}}",
+		"exception": {
+			"line": "1",
+			"expected": "]",
+			"found": ","
+		}
+	}, {
+		"input": "{{self[1,}}",
+		"exception": {
+			"line": "1",
+			"expected": "]",
+			"found": ","
+		}
+	}, {
+		"input": "{{test['foo'].bar}}",
+		"expected": "[[105, [\"test\", [103, \"foo\"], \"bar\"]]]"
+	}, {
+		"input": "{{this['foo'].bar}}",
+		"expected": "[[105, [\"this\", [103, \"foo\"], \"bar\"]]]"
+	}, {
+		"input": "{{self['foo'].bar}}",
+		"expected": "[[105, [\"self\", [103, \"foo\"], \"bar\"]]]"
+	}, {
+		"input": "{{test['foo'].}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{this['foo'].}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{self['foo'].}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{test['foo']['bar']}}",
+		"expected": "[[105, [\"test\", [103, \"foo\"], [103, \"bar\"]]]]"
+	}, {
+		"input": "{{this['foo']['bar']}}",
+		"expected": "[[105, [\"this\", [103, \"foo\"], [103, \"bar\"]]]]"
+	}, {
+		"input": "{{self['foo']['bar']}}",
+		"expected": "[[105, [\"self\", [103, \"foo\"], [103, \"bar\"]]]]"
+	}, {
+		"input": "{{test['foo'].['bar']}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "["
+		}
+	}, {
+		"input": "{{this['foo'].['bar']}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "["
+		}
+	}, {
+		"input": "{{self['foo'].['bar']}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "["
+		}
+	}, {
+		"input": "{{test['foo'].hey['bar']}}",
+		"expected": "[[105, [\"test\", [103, \"foo\"], \"hey\", [103, \"bar\"]]]]"
+	}, {
+		"input": "{{this['foo'].hey['bar']}}",
+		"expected": "[[105, [\"this\", [103, \"foo\"], \"hey\", [103, \"bar\"]]]]"
+	}, {
+		"input": "{{self['foo'].hey['bar']}}",
+		"expected": "[[105, [\"self\", [103, \"foo\"], \"hey\", [103, \"bar\"]]]]"
+	}, {
+		"input": "{{this['foo'].this['bar']}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "this"
+		}
+	}, {
+		"input": "{{self['foo'].self['bar']}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "self"
+		}
+	}, {
+		"input": "{{10 ? \"20\" : .30}}",
+		"expected": "[[104,\n                [101, 10],\n                [103, \"20\"],\n                [102, 0.3]\n                ]]"
+	}, {
+		"input": "{{null ? 10 ? 3.14 : \"string\" : 1E5 ? '' : .1E-2}}",
+		"expected": "[[104, [100],\n                [104, [101,10], [102,3.14], [103,\"string\"]],\n                [104,[102,100000],[103,\"\"],[102,0.001]]\n                ]]"
+	}, {
+		"input": "{{10 ? \"20\"}}",
+		"expected": "[[104,\n                [101, 10],\n                [103, \"20\"]\n                ]]"
+	}, {
+		"input": "{{10 ? # : .30}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "#"
+		}
+	}, {
+		"input": "{{10 ? 10 :}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{10 ? 10 : #}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "#"
+		}
+	}, {
+		"input": "{{10*(13+2)}}",
+		"expected": [[11,[101,10],[9,[101,13],[101,2]]]]
+	}]
+}]
