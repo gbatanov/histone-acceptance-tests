@@ -1,0 +1,231 @@
+[{
+	"name": "functions",
+	"cases": [{
+		"input": "{{foo()[1]}}",
+		"expected": "[[105,[[106,null,\"foo\",null],[101,1]]]]"
+	}, {
+		"input": "{{dayOfWeek(2012, 4, 2)}}",
+		"expected": "[[106, null, \"dayOfWeek\", [\n\t\t\t\t[101, 2012],\n\t\t\t\t[101, 4],\n\t\t\t\t[101, 2]\n\t\t\t\t]]]"
+	}, {
+		"input": "{{\"string\"()}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "("
+		}
+	}, {
+		"input": "a {{macro name}} b {{\/macro}} c",
+		"expected": "[\"a \",[1003,\"name\",[],[\" b \"]],\" c\"]"
+	}, {
+		"input": "a {{macro",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{macro name",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{macro name(",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{macro name(aa",
+		"exception": {
+			"line": "1",
+			"expected": ")",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{macro name(aa,",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{macro name(aa,)",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": ")"
+		}
+	}, {
+		"input": "a {{macro name()}} b {{\/macro}} c",
+		"expected": "[\"a \",[1003,\"name\",[],[\" b \"]],\" c\"]"
+	}, {
+		"input": "a {{macro name(arg1, arg2, arg3)}} b {{\/macro}} c",
+		"expected": "[\"a \",[1003,\"name\",[\"arg1\",\"arg2\",\"arg3\"],[\" b \"]],\" c\"]"
+	}, {
+		"input": "a {{macro name(a,b,c)",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{macro name(a,b,c)}} bbb",
+		"exception": {
+			"line": "1",
+			"expected": "{{\/macro}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{call name}} b {{\/call}} c",
+		"expected": "[\"a \",[106,null,\"name\",[[109,[\" b \"]]]],\" c\"]"
+	}, {
+		"input": "a {{call",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{call name",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{call name(",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{call name(10*2",
+		"exception": {
+			"line": "1",
+			"expected": ")",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{call name('string',",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{call name('string', bar)",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "a {{call name()}} b {{\/call}} c",
+		"expected": "[\"a \",[106,null,\"name\",[[109,[\" b \"]]]],\" c\"]"
+	}, {
+		"input": "a {{call name(argA, argB, argC)}} b {{\/call}} c",
+		"expected": "[\"a \",[106,null,\"name\",[[105,[\"argA\"]],[105,[\"argB\"]],[105,[\"argC\"]],[109,[\" b \"]]]],\" c\"]"
+	}, {
+		"input": "a {{call name('string', bar)}}",
+		"exception": {
+			"line": "1",
+			"expected": "{{\/call}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "{{foo(3.14E+3}}",
+		"exception": {
+			"line": "1",
+			"expected": ")",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{true.foo(11)}}",
+		"expected": "[[106,[105,[[16]]],\"foo\",[[101,11]]]]"
+	}, {
+		"input": "{{false.foo(11)}}",
+		"expected": "[[106,[105,[[17]]],\"foo\",[[101,11]]]]"
+	}, {
+		"input": "{{null.foo()}}",
+		"expected": "[\n [106, [105, [[100]]], \"foo\", null]\n ]"
+	}, {
+		"input": "{{this.foo()}}",
+		"expected": "[[106,[105,[\"this\"]],\"foo\",null]]"
+	}, {
+		"input": "{{self.foo()}}",
+		"expected": "[[106,[105,[\"self\"]],\"foo\",null]]"
+	}, {
+		"input": "{{test.foo(}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{'string'.foo()}}",
+		"expected": "[\n [106, [105, [[103, \"string\"]]], \"foo\", null]\n ]"
+	}, {
+		"input": "{{111.foo(11}}",
+		"exception": {
+			"line": "1",
+			"expected": ")",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{12.foo()}}",
+		"expected": "[\n [106, [105, [[101, 12]]], \"foo\", null]\n ]"
+	}, {
+		"input": "{{17.62.foo()}}",
+		"expected": "[\n [106, [105, [[102, 17.62]]], \"foo\", null]\n ]"
+	}, {
+		"input": "{{17..62.foo()}}",
+		"exception": {
+			"line": "1",
+			"expected": "identifier",
+			"found": ".62"
+		}
+	}, {
+		"input": "{{test()}}",
+		"expected": "[[106,\n null,\n \"test\",\n null\n ]]"
+	}, {
+		"input": "{{17(#}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "("
+		}
+	}, {
+		"input": "{{test(1, 'string', 7.14)}}",
+		"expected": "[[106, null, \"test\", [\n\t\t\t\t[101, 1],\n\t\t\t\t[103, \"string\"],\n\t\t\t\t[102, 7.14]\n\t\t\t\t]]]"
+	}, {
+		"input": "{{foo.test()}}",
+		"expected": "[[106,\n\t\t\t\t[105, [\"foo\"]],\n\t\t\t\t\"test\",\n\t\t\t\tnull\n\t\t\t\t]]"
+	}, {
+		"input": "{{foo.test(\"hey\", \"ho\")}}",
+		"expected": "[[106,\n\t\t\t\t[105, [\"foo\"]],\n\t\t\t\t\"test\", [\n\t\t\t\t[103, \"hey\"],\n\t\t\t\t[103, \"ho\"]\n\t\t\t\t]\n\t\t\t\t]]"
+	}, {
+		"input": "{{foo['test'](\"hey\", \"ho\")}}",
+		"expected": "[[106,\n\t\t\t\t[105, [\"foo\"]],\n\t\t\t\t[103,\"test\"], [\n\t\t\t\t[103, \"hey\"],\n\t\t\t\t[103, \"ho\"]\n\t\t\t\t]\n\t\t\t\t]]"
+	}, {
+		"input": "{{foo(\"hey\", \"ho\").isNumber()}}",
+		"expected": "[[106,\n\t\t\t\t[105,\n\t\t\t\t[[106,null,\"foo\",[\n\t\t\t\t[103,\"hey\"],\n\t\t\t\t[103,\"ho\"]\n\t\t\t\t]\n\t\t\t\t]]],\n\t\t\t\t\"isNumber\",null\n\t\t\t\t]]"
+	}, {
+		"input": "{{foo(14)(1, 2, 3)}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "("
+		}
+	}, {
+		"input": "{{foo(14)(1, 2, 3).do}}",
+		"exception": {
+			"line": "1",
+			"expected": "}}",
+			"found": "("
+		}
+	}]
+}]
