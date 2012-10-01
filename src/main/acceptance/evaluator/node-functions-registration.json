@@ -1,0 +1,103 @@
+[{
+	  "name": "register new node functions",
+	  "cases": [
+		{
+		  "function": {
+			"name": "test_func",
+			"node": "string",
+			"return": "string",
+			"result": "test function"
+		  },
+		  "input": "a {{'string'.test_func()}} b",
+		  "expected": "a test function b"
+		},
+		{
+		  "function": {
+			"name": "test_func",
+			"node": "number",
+			"return": "string",
+			"result": "test function"
+		  },
+		  "input": "a {{123.test_func()}} b",
+		  "expected": "a test function b"
+		},
+		{
+		  "function": {
+			"name": "test_func",
+			"node": "string",
+			"return": "number",
+			"result": "123.45"
+		  },
+		  "input": "a {{'string'.test_func()}} b",
+		  "expected": "a 123.45 b"
+		},
+		{
+		  "function": {
+			"name": "test_func",
+			"node": "string",
+			"return": "string",
+			"result": "test function :target: eof"
+		  },
+		  "input": "a {{'test'.test_func()}} b",
+		  "expected": "a test function (string(test)) eof b"
+		},
+		{
+		  "function": {
+			"name": "test_func",
+			"node": "string",
+			"return": "string",
+			"result": "test function :args: eof"
+		  },
+		  "input": "a {{'test'.test_func()}} b",
+		  "expected": "a test function [] eof b"
+		},
+		{
+		  "function": {
+			"name": "test_func",
+			"node": "string",
+			"return": "string",
+			"result": "test function :args: eof"
+		  },
+		  "input": "a {{'test'.test_func('test')}} b",
+		  "expected": "a test function [string(test)] eof b"
+		},
+		{
+		  "function": {
+			"name": "test_func",
+			"node": "string",
+			"return": "string",
+			"result": "test function :args: eof"
+		  },
+		  "input": "a {{'test'.test_func('test','abcd',1234)}} b",
+		  "expected": "a test function [string(test)-string(abcd)-number(1234)] eof b"
+		},
+		{
+		  "function": [
+			{
+			  "name": "f1",
+			  "node": "string",
+			  "return": "number",
+			  "result": "123.45"
+			},
+			{
+			  "name": "f2",
+			  "node": "string",
+			  "return": "string",
+			  "result": "123.45"
+			}
+		  ],
+		  "input": "a {{'aaa'.f1().isNumber()}} b {{'aaa'.f2().isString()}} c",
+		  "expected": "a true b true c"
+		},
+		{
+		  "function": {
+			"name": "test_func",
+			"node": "string",
+			"return": "number",
+			"result": ":exception:"
+		  },
+		  "input": "a {{'aaa'.test_func().isUndefined()}} b",
+		  "expected": "a true b"
+		}
+	  ]
+}]
