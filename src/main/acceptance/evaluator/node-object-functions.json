@@ -1,0 +1,442 @@
+[{
+		"name": "map as array",
+		"cases": [{
+				"input": "a {{['s', 't', 'r', 'i', 'n', 'g'][-1]}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{['s', 't', 'r', 'i', 'n', 'g'][-5]}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{['s', 't', 'r', 'i', 'n', 'g'][0]}} b",
+				"expected": "a s b"
+		}, {
+				"input": "a {{['s', 't', 'r', 'i', 'n', 'g'][1]}} b",
+				"expected": "a t b"
+		}, {
+				"input": "a {{['s', 't', 'r', 'i', 'n', 'g'][10]}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{['s', 't', 'r', 'i', 'n', 'g'][-15]}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{['|', 123, 3.14, true, false, adsfasdfads, null, 1E3, ['.', '.'], '|']}} b",
+				"expected": "a | 123 3.14 true false null 1000 . . | b"
+		}, {
+				"input": "a {{['a', 'b', 2, 3].length}} b {{['a', 'b', 2, 3].length.isUndefined()}} c",
+				"expected": "a  b true c"
+		}, {
+				"input": "a {{['length':123].length}} b",
+				"expected": "a 123 b"
+		}, {
+				"input": "a {{[].length}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[2, 3, 4][1]}} b",
+				"expected": "a 3 b"
+		}]
+}, {
+		"name": "map as hash",
+		"cases": [{
+				"input": "a {{[1: 'v1', 2: 'v2', 3: 'v3', '4': 'v4']}} b",
+				"expected": "a v1 v2 v3 v4 b"
+		}, {
+				"input": "a {{[m: undefined]}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[m: undefined].toJSON()}} b",
+				"expected": "a {\"m\":{}} b"
+		}, {
+				"input": "a {{[m: undefined, n: undefined].toJSON()}} b",
+				"expected": "a {\"m\":{},\"n\":{}} b"
+		}, {
+				"input": "a {{[m: undefined, n: null].toJSON()}} b",
+				"expected": "a {\"m\":{},\"n\":null} b"
+		}, {
+				"input": "a {{[m: undefined, n: 'bar'].toJSON()}} b",
+				"expected": "a {\"m\":{},\"n\":\"bar\"} b"
+		}, {
+				"input": "a {{[m: undefined].hasKey('m')}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[a: undefined, a: undefined]}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[a: undefined, a: undefined].toJSON()}} b",
+				"expected": "a {\"a\":{}} b"
+		}, {
+				"input": "a {{[a: undefined, a: undefined].hasKey('a')}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[a: 111, a: undefined]}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[a: 111, a: undefined].toJSON()}} b",
+				"expected": "a {\"a\":{}} b"
+		}, {
+				"input": "a {{[a: 111, a: undefined].hasKey('a')}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[a: undefined, a: 111]}} b",
+				"expected": "a 111 b"
+		}, {
+				"input": "a {{[a: undefined, a: 111].toJSON()}} b",
+				"expected": "a {\"a\":111} b"
+		}, {
+				"input": "a {{[a: undefined, a: 111].hasKey('a')}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[a: 111, a: 111]}} b",
+				"expected": "a 111 b"
+		}, {
+				"input": "a {{[a: 111, a: 111].toJSON()}} b",
+				"expected": "a {\"a\":111} b"
+		}, {
+				"input": "a {{[a: 111, a: 111].hasKey('a')}} b",
+				"expected": "a true b"
+		}]
+}, {
+		"name": "map.values",
+		"cases": [{
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].values()}} b",
+				"expected": "a bar y b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].values().isMap()}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].values().size()}} b",
+				"expected": "a 2 b"
+		}]
+}, {
+		"name": "map.keys",
+		"cases": [{
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].keys()}} b",
+				"expected": "a foo x b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].keys().isMap()}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].keys().size()}} b",
+				"expected": "a 2 b"
+		}]
+}, {
+		"name": "map.hasKey",
+		"cases": [{
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].hasKey('foo')}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].hasKey('y')}} b",
+				"expected": "a false b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].hasKey('foo').isBoolean()}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[\"123\": \"bar\", \"x\": \"y\"].hasKey(123)}} b",
+				"expected": "a true b"
+		}]
+}, {
+		"name": "map.join",
+		"cases": [{
+				"input": "a {{[2, 3, 4].join()}} b",
+				"expected": "a 234 b"
+		}, {
+				"input": "a {{[2, 3, 4].join('|')}} b",
+				"expected": "a 2|3|4 b"
+		}, {
+				"input": "a {{[2, 3, 4].join('|').isString()}} b",
+				"expected": "a true b"
+		}]
+}, {
+		"name": "map.size",
+		"cases": [{
+				"input": "a {{[].size()}} b",
+				"expected": "a 0 b"
+		}, {
+				"input": "a {{[2, 3, 4].size()}} b",
+				"expected": "a 3 b"
+		}, {
+				"input": "a {{['a':1,'b':2].size()}} b",
+				"expected": "a 2 b"
+		}, {
+				"input": "a {{[2, 3, 4].size().isNumber()}} b",
+				"expected": "a true b"
+		}]
+}, {
+		"name": "map.hasIndex",
+		"cases": [{
+				"input": "a {{[1, 2, 3].hasIndex(0)}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[1, 2, 3].hasIndex(10)}} b",
+				"expected": "a false b"
+		}, {
+				"input": "a {{[1, 2, 3].hasIndex(2)}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[1, 2, 3].hasIndex(2).isBoolean()}} b",
+				"expected": "a true b"
+		}]
+}, {
+		"name": "map.slice",
+		"cases": [{
+				"input": "a {{[0,1,2,3,4,5,6].slice(0)}} b",
+				"expected": "a 0 1 2 3 4 5 6 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(2)}} b",
+				"expected": "a 2 3 4 5 6 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(100)}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(-2)}} b",
+				"expected": "a 5 6 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(-100)}} b",
+				"expected": "a 0 1 2 3 4 5 6 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(0,2)}} b",
+				"expected": "a 0 1 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(1,2)}} b",
+				"expected": "a 1 2 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(0,100)}} b",
+				"expected": "a 0 1 2 3 4 5 6 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(1,100)}} b",
+				"expected": "a 1 2 3 4 5 6 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(0,-2)}} b",
+				"expected": "a 0 1 2 3 4 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(1,-2)}} b",
+				"expected": "a 1 2 3 4 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(1,-100)}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(-4,3)}} b",
+				"expected": "a 3 4 5 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(-5,-2)}} b",
+				"expected": "a 2 3 4 b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(1220,0)}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(1220,0).isMap()}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(0,-10000)}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[0,1,2,3,4,5,6].slice(0,-10000).isMap()}} b",
+				"expected": "a true b"
+		}]
+}, {
+		"name": "+",
+		"cases": [{
+				"input": "a {{undefined + undefined}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{undefined + null}} b",
+				"expected": "a null b"
+		}, {
+				"input": "a {{undefined + 'string'}} b",
+				"expected": "a string b"
+		}, {
+				"input": "a {{undefined + true}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{undefined + false}} b",
+				"expected": "a false b"
+		}, {
+				"input": "a {{undefined + 10}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{undefined + [1, 2, 3]}} b",
+				"expected": "a 1 2 3 b"
+		}, {
+				"input": "a {{undefined + ['foo': 'bar']}} b",
+				"expected": "a bar b"
+		}, {
+				"input": "a {{null + undefined}} b",
+				"expected": "a null b"
+		}, {
+				"input": "a {{null + null}} b",
+				"expected": "a nullnull b"
+		}, {
+				"input": "a {{null + 'string'}} b",
+				"expected": "a nullstring b"
+		}, {
+				"input": "a {{null + true}} b",
+				"expected": "a nulltrue b"
+		}, {
+				"input": "a {{null + false}} b",
+				"expected": "a nullfalse b"
+		}, {
+				"input": "a {{null + 12}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{null + [1, 2, 3]}} b",
+				"expected": "a null1 2 3 b"
+		}, {
+				"input": "a {{null + ['foo': 'bar']}} b",
+				"expected": "a nullbar b"
+		}, {
+				"input": "a {{'string' + undefined}} b",
+				"expected": "a string b"
+		}, {
+				"input": "a {{'string' + null}} b",
+				"expected": "a stringnull b"
+		}, {
+				"input": "a {{'A ' + ' B'}} b",
+				"expected": "a A  B b"
+		}, {
+				"input": "a {{'string: ' + true}} b",
+				"expected": "a string: true b"
+		}, {
+				"input": "a {{'string: ' + false}} b",
+				"expected": "a string: false b"
+		}, {
+				"input": "a {{'10' + 30}} b",
+				"expected": "a 1030 b"
+		}, {
+				"input": "a {{'string: ' + [1, 2, 3]}} b",
+				"expected": "a string: 1 2 3 b"
+		}, {
+				"input": "a {{'foo - ' + ['foo': 'bar']}} b",
+				"expected": "a foo - bar b"
+		}, {
+				"input": "a {{true + undefined}} b",
+				"expected": "a true b"
+		}, {
+				"input": "a {{false + undefined}} b",
+				"expected": "a false b"
+		}, {
+				"input": "a {{true + null}} b",
+				"expected": "a truenull b"
+		}, {
+				"input": "a {{false + null}} b",
+				"expected": "a falsenull b"
+		}, {
+				"input": "a {{true + ' - string'}} b",
+				"expected": "a true - string b"
+		}, {
+				"input": "a {{false + ' - string'}} b",
+				"expected": "a false - string b"
+		}, {
+				"input": "a {{true + ' - string'}} b",
+				"expected": "a true - string b"
+		}, {
+				"input": "a {{false + ' - string'}} b",
+				"expected": "a false - string b"
+		}, {
+				"input": "a {{true + true}} b",
+				"expected": "a truetrue b"
+		}, {
+				"input": "a {{true + false}} b",
+				"expected": "a truefalse b"
+		}, {
+				"input": "a {{false + true}} b",
+				"expected": "a falsetrue b"
+		}, {
+				"input": "a {{false + false}} b",
+				"expected": "a falsefalse b"
+		}, {
+				"input": "a {{true + 10}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{false + 12}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{true + [1, 2, 3]}} b",
+				"expected": "a true1 2 3 b"
+		}, {
+				"input": "a {{false + [1, 2, 3]}} b",
+				"expected": "a false1 2 3 b"
+		}, {
+				"input": "a {{true + ['foo': '-bar']}} b",
+				"expected": "a true-bar b"
+		}, {
+				"input": "a {{false + ['foo': '-bar']}} b",
+				"expected": "a false-bar b"
+		}, {
+				"input": "a {{10 + undefined}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{10 + null}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{10 + ':string'}} b",
+				"expected": "a 10:string b"
+		}, {
+				"input": "a {{10 + true}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{20 + 22}} b",
+				"expected": "a 42 b"
+		}, {
+				"input": "a {{20 + [':item']}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{20 + ['key': ':value']}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[1, 2, 3] + undefined}} b",
+				"expected": "a 1 2 3 b"
+		}, {
+				"input": "a {{[1, 2, 3] + null}} b",
+				"expected": "a 1 2 3null b"
+		}, {
+				"input": "a {{[1, 2, 3] + ' are values'}} b",
+				"expected": "a 1 2 3 are values b"
+		}, {
+				"input": "a {{[1, 2, 3] + true}} b",
+				"expected": "a 1 2 3true b"
+		}, {
+				"input": "a {{[1, 2, 3] + false}} b",
+				"expected": "a 1 2 3false b"
+		}, {
+				"input": "a {{[1, 2, 3] + 10}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{[1, 2, 3] + [1, 2, 3]}} b",
+				"expected": "a 1 2 3 1 2 3 b"
+		}, {
+				"input": "a {{[1, 2] + [3, 4]}} b",
+				"expected": "a 1 2 3 4 b"
+		}, {
+				"input": "a {{[3, 4] + [1, 2]}} b",
+				"expected": "a 3 4 1 2 b"
+		}, {
+				"input": "a {{[3, 4] + ['foo': 'are values']}} b",
+				"expected": "a 3 4 are values b"
+		}, {
+				"input": "a {{['foo': 'bar'] + undefined}} b",
+				"expected": "a bar b"
+		}, {
+				"input": "a {{['foo': 'bar'] + null}} b",
+				"expected": "a barnull b"
+		}, {
+				"input": "a {{['foo': 'bar', 'x': 'y'] + ' are values'}} b",
+				"expected": "a bar y are values b"
+		}, {
+				"input": "a {{['foo': 'bar - '] + true}} b",
+				"expected": "a bar - true b"
+		}, {
+				"input": "a {{['foo': 'bar - '] + false}} b",
+				"expected": "a bar - false b"
+		}, {
+				"input": "a {{['foo': 'bar - '] + false}} b",
+				"expected": "a bar - false b"
+		}, {
+				"input": "a {{['foo': 'bar - '] + 42}} b",
+				"expected": "a  b"
+		}, {
+				"input": "a {{['foo': 'values:'] + [1, 2, 3]}} b",
+				"expected": "a values: 1 2 3 b"
+		}, {
+				"input": "a {{['foo': 'bar'] + ['x': 'y']}} b",
+				"expected": "a bar y b"
+		}]
+}]
