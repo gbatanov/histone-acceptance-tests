@@ -1,0 +1,60 @@
+[{
+	"name": "all other test cases",
+	"cases": [{
+		"input": "{{%for x in items}}{{else",
+		"exception": {
+			"line": "1",
+			"expected": "%}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "hello {{}} world",
+		"expected": ["hello ", " world"]
+	}, {
+		"input": "a {{% hello {{10 * 2}} world %}} b",
+		"expected": ["a ", " hello {{10 * 2}} world ", " b"]
+	}, {
+		"input": "{{+}}",
+		"exception": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{\r+}}",
+		"exception": {
+			"line": "2",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{\r\r+}}",
+		"exception": {
+			"line": "3",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "fragment",
+		"expected": ["fragment"]
+	}, {
+		"input": "fragment1 fragment2",
+		"expected": ["fragment1 fragment2"]
+	}, {
+		"input": "fragment1 {{* comment *}} fragment2",
+		"expected": ["fragment1 ", " fragment2"]
+	}, {
+		"input": "fragment1 {{* comment{{* *}} fragment2",
+		"expected": ["fragment1 ", " fragment2"]
+	}, {
+		"input": "fragment1 {{* comment*}} *}} fragment2",
+		"expected": ["fragment1 ", " *}} fragment2"]
+	}, {
+		"input": "{{* comment without closing block",
+		"exception": {
+			"line": "1",
+			"expected": "*}}",
+			"found": "EOF"
+		}
+	}]
+}]
