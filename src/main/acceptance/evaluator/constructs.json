@@ -1,329 +1,243 @@
 [{
-	"name": "if statement",
-	"cases": [{
-		"input": "a {{if dfds}} true {{/if}} b",
-		"expected": "a b"
-	}, {
-		"input": "a {{if null}} true {{/if}} b",
-		"expected": "a b"
-	}, {
-		"input": "a {{if true}} true {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if false}} true {{/if}} b",
-		"expected": "a b"
-	}, {
-		"input": "a {{if -10}} true {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if 0}} true {{/if}} b",
-		"expected": "a b"
-	}, {
-		"input": "a {{if 10}} true {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if ''}} true {{/if}} b",
-		"expected": "a b"
-	}, {
-		"input": "a {{if 'string'}} true {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if []}} true {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if [1, 2, 3]}} true {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if []}} true {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if [foo: 1]}} true {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if dfds}} true {{else}} false {{/if}} b",
-		"expected": "a false b"
-	}, {
-		"input": "a {{if null}} true {{else}} false {{/if}} b",
-		"expected": "a false b"
-	}, {
-		"input": "a {{if true}} true {{else}} false {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if false}} true {{else}} false {{/if}} b",
-		"expected": "a false b"
-	}, {
-		"input": "a {{if -10}} true {{else}} false {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if 0}} true {{else}} false {{/if}} b",
-		"expected": "a false b"
-	}, {
-		"input": "a {{if 10}} true {{else}} false {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if ''}} true {{else}} false {{/if}} b",
-		"expected": "a false b"
-	}, {
-		"input": "a {{if 'string'}} true {{else}} false {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if []}} true {{else}} false {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if [1, 2, 3]}} true {{else}} false {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if []}} true {{else}} false {{/if}} b",
-		"expected": "a true b"
-	}, {
-		"input": "a {{if [foo: 1]}} true {{else}} false {{/if}} b",
-		"expected": "a true b"
-	}]
+    "name": "if statement",
+    "cases": [{
+        "input": "a {{if dfds}} true {{/if}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{if null}} true {{/if}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{if true}} true {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if false}} true {{/if}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{if -10}} true {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if 0}} true {{/if}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{if 10}} true {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if ''}} true {{/if}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{if 'string'}} true {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if []}} true {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if [1, 2, 3]}} true {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if []}} true {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if [foo: 1]}} true {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if dfds}} true {{else}} false {{/if}} b",
+        "expected": "a  false  b"
+    }, {
+        "input": "a {{if null}} true {{else}} false {{/if}} b",
+        "expected": "a  false  b"
+    }, {
+        "input": "a {{if true}} true {{else}} false {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if false}} true {{else}} false {{/if}} b",
+        "expected": "a  false  b"
+    }, {
+        "input": "a {{if -10}} true {{else}} false {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if 0}} true {{else}} false {{/if}} b",
+        "expected": "a  false  b"
+    }, {
+        "input": "a {{if 10}} true {{else}} false {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if ''}} true {{else}} false {{/if}} b",
+        "expected": "a  false  b"
+    }, {
+        "input": "a {{if 'string'}} true {{else}} false {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if []}} true {{else}} false {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if [1, 2, 3]}} true {{else}} false {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if []}} true {{else}} false {{/if}} b",
+        "expected": "a  true  b"
+    }, {
+        "input": "a {{if [foo: 1]}} true {{else}} false {{/if}} b",
+        "expected": "a  true  b"
+    }]
+
+
 }, {
-	"name": "for statement",
-	"cases": [{
-		"input": "a {{for x in sfgsag}}{{x}}{{/for}} b",
-		"expected": "a b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": null
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": true
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": false
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": -10
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": 0
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": 10
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": "string"
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": [1, 2, 3]
-		},
-		"expected": "a 123 b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{/for}} b",
-		"context": {
-			"items": {
-				"foo": 1,
-				"bar": 2,
-				"x": 3
-			}
-		},
-		"expected": "a 123 b"
-	}, {
-		"input": "a {{for key:x in sfgsag}}{{key}}:{{x}}{{/for}} b",
-		"expected": "a b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": null
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": true
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": false
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": -10
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": 0
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": 10
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": "string"
-		},
-		"expected": "a b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": [1, 2, 3]
-		},
-		"expected": "a 0:11:22:3 b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
-		"context": {
-			"items": {
-				"foo": 1,
-				"bar": 2,
-				"x": 3
-			}
-		},
-		"expected": "a foo:1bar:2x:3 b"
-	}, {
-		"input": "a {{for x in sfgsag}}{{x}}{{else}}#{{/for}} b",
-		"expected": "a # b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": null
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": true
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": false
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": -10
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": 0
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": 10
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": "string"
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": [1, 2, 3]
-		},
-		"expected": "a 123 b"
-	}, {
-		"input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": {
-				"foo": 1,
-				"bar": 2,
-				"x": 3
-			}
-		},
-		"expected": "a 123 b"
-	}, {
-		"input": "a {{for key:x in sfgsag}}{{key}}:{{x}}{{else}}#{{/for}} b",
-		"expected": "a # b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": null
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": true
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": false
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": -10
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": 0
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": 10
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
-		"context": {
-			"items": "string"
-		},
-		"expected": "a # b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}} {{else}}#{{/for}} b",
-		"context": {
-			"items": [1, 2, 3]
-		},
-		"expected": "a 0:1 1:2 2:3 b"
-	}, {
-		"input": "a {{for key:x in items}}{{key}}:{{x}} {{else}}#{{/for}} b",
-		"context": {
-			"items": {
-				"foo": 1,
-				"bar": 2,
-				"x": 3
-			}
-		},
-		"expected": "a foo:1 bar:2 x:3 b"
-	}]
+    "name": "for statement",
+    "cases": [{
+        "input": "a {{for x in sfgsag}}{{x}}{{/for}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": null}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": true}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": false}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": -10}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": 0}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": 10}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": \"string\"}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": [1, 2, 3]}",
+        "expected": "a 123 b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{/for}} b",
+        "context": "{\"items\": {\"foo\": 1, \"bar\": 2, \"x\": 3}}",
+        "expected": "a 123 b"
+    }, {
+        "input": "a {{for key:x in sfgsag}}{{key}}:{{x}}{{/for}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": null}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": true}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": false}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": -10}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": 0}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": 10}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": \"string\"}",
+        "expected": "a  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": [1, 2, 3]}",
+        "expected": "a 0:11:22:3 b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{/for}} b",
+        "context": "{\"items\": {\"foo\": 1, \"bar\": 2, \"x\": 3}}",
+        "expected": "a foo:1bar:2x:3 b"
+    }, {
+        "input": "a {{for x in sfgsag}}{{x}}{{else}}#{{/for}} b",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": null}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": true}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": false}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": -10}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": 0}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": 10}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": \"string\"}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": [1, 2, 3]}",
+        "expected": "a 123 b"
+    }, {
+        "input": "a {{for x in items}}{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": {\"foo\": 1, \"bar\": 2, \"x\": 3}}",
+        "expected": "a 123 b"
+    }, {
+        "input": "a {{for key:x in sfgsag}}{{key}}:{{x}}{{else}}#{{/for}} b",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": null}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": true}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": false}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": -10}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": 0}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": 10}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}}{{else}}#{{/for}} b",
+        "context": "{\"items\": \"string\"}",
+        "expected": "a # b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}} {{else}}#{{/for}} b",
+        "context": "{\"items\": [1, 2, 3]}",
+        "expected": "a 0:1 1:2 2:3  b"
+    }, {
+        "input": "a {{for key:x in items}}{{key}}:{{x}} {{else}}#{{/for}} b",
+        "context": "{\"items\": {\"foo\": 1, \"bar\": 2, \"x\": 3}}",
+        "expected": "a foo:1 bar:2 x:3  b"
+    }]
 }]
