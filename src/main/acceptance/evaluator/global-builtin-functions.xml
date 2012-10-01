@@ -451,25 +451,9 @@
 			<input>a {{uniqueId().isString()}} b</input>
 			<expected>a true b</expected>
 		</case>
-
 		<case>
-			<input>a {{uniqueId().size()}} b</input>
-			<expected>a 36 b</expected>
-		</case>
-
-		<case>
-			<input>a {{uniqueId().split('-').size()}} b</input>
-			<expected>a 5 b</expected>
-		</case>
-
-		<case>
-			<input>a {{for item in uniqueId().split('-')}}{{item.size()}}-{{/for}} b</input>
-			<expected>a 8-4-4-4-12- b</expected>
-		</case>
-
-		<case>
-			<input>a {{uniqueId().strip('-0123456789abcdef')}} b</input>
-			<expected>a  b</expected>
+			<input>a {{uniqueId() isNot uniqueId()}} b</input>
+			<expected>a true b</expected>
 		</case>
 	</suite>
 

@@ -268,17 +268,8 @@
 				"input": "a {{uniqueId().isString()}} b",
 				"expected": "a true b"
 		}, {
-				"input": "a {{uniqueId().size()}} b",
-				"expected": "a 36 b"
-		}, {
-				"input": "a {{uniqueId().split('-').size()}} b",
-				"expected": "a 5 b"
-		}, {
-				"input": "a {{for item in uniqueId().split('-')}}{{item.size()}}-{{/for}} b",
-				"expected": "a 8-4-4-4-12- b"
-		}, {
-				"input": "a {{uniqueId().strip('-0123456789abcdef')}} b",
-				"expected": "a  b"
+				"input": "a {{uniqueId() isNot uniqueId()}} b",
+				"expected": "a true b"
 		}]
 }, {
 		"name": "range",
