@@ -75,7 +75,7 @@
         </case>
     </suite>
 	<suite name="map as hash">
-		
+
 		<case>
 			<input>a {{[1: 'v1', 2: 'v2', 3: 'v3', '4': 'v4']}} b</input>
 			<expected>a v1 v2 v3 v4 b</expected>
@@ -86,28 +86,28 @@
 			<input>a {{[m: undefined]}} b</input>
 			<expected>a  b</expected>
 		</case>
-	
-		
+
+
 		<case>
 			<input>a {{[m: undefined].toJSON()}} b</input>
 			<expected>a {"m":{}} b</expected>
 		</case>
-		
+
 		<case>
 			<input>a {{[m: undefined, n: undefined].toJSON()}} b</input>
 			<expected>a {"m":{},"n":{}} b</expected>
 		</case>
-		
+
 		<case>
 			<input>a {{[m: undefined, n: null].toJSON()}} b</input>
 			<expected>a {"m":{},"n":null} b</expected>
 		</case>
-		
+
 		<case>
 			<input>a {{[m: undefined, n: 'bar'].toJSON()}} b</input>
 			<expected>a {"m":{},"n":"bar"} b</expected>
 		</case>
-		
+
 		<case>
 			<input>a {{[m: undefined].hasKey('m')}} b</input>
 			<expected>a true b</expected>
@@ -164,7 +164,7 @@
 	</suite>
 
 	<suite name="map.values">
-		
+
 		<case>
 			<input>a {{["foo": "bar", "x": "y"].values()}} b</input>
 			<expected>a bar y b</expected>
@@ -302,22 +302,22 @@
     <suite name="map.hasIndex">
         <case>
             <input>a {{[1, 2, 3].hasIndex(0)}} b</input>
-            <expected>a true b</expected>
+            <expected>a  b</expected>
         </case>
 
         <case>
             <input>a {{[1, 2, 3].hasIndex(10)}} b</input>
-            <expected>a false b</expected>
+            <expected>a  b</expected>
         </case>
 
         <case>
             <input>a {{[1, 2, 3].hasIndex(2)}} b</input>
-            <expected>a true b</expected>
+            <expected>a  b</expected>
         </case>
 
         <case>
             <input>a {{[1, 2, 3].hasIndex(2).isBoolean()}} b</input>
-            <expected>a true b</expected>
+            <expected>a  b</expected>
         </case>
     </suite>
 
