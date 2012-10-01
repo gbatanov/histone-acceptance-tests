@@ -1,3950 +1,3950 @@
 [{
-  "name": "-, *, /, mod, unary",
-  "cases": [
-    {
-      "input": "a {{undefined - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{-undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined - 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined * 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined / 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined mod 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined - 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined * 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined / 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined mod 42}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined - [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined * [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined / [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined mod [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined - ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined * ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined / ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{undefined mod ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{-null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null - 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null * 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null / 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null mod 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null - 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null * 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null / 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null mod 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null - [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null * [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null / [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null mod [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null - ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null * ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null / ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{null mod ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{-'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' - 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' * 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' / 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' mod 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' - 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' * 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' / 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' mod 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' - [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' * [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' / [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' mod [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' - ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' * ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' / ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'string' mod ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{-'10'}} b",
-      "expected": "a -10 b"
-    },
-    {
-      "input": "a {{'10' - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' - '10'}} b",
-      "expected": "a 0 b"
-    },
-    {
-      "input": "a {{'10' * '10'}} b",
-      "expected": "a 100 b"
-    },
-    {
-      "input": "a {{'10' / '10'}} b",
-      "expected": "a 1 b"
-    },
-    {
-      "input": "a {{'11' mod '2'}} b",
-      "expected": "a 1 b"
-    },
-    {
-      "input": "a {{'10' - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' - 10}} b",
-      "expected": "a 0 b"
-    },
-    {
-      "input": "a {{'10' * 10}} b",
-      "expected": "a 100 b"
-    },
-    {
-      "input": "a {{'10' / 10}} b",
-      "expected": "a 1 b"
-    },
-    {
-      "input": "a {{'10' mod 10}} b",
-      "expected": "a 0 b"
-    },
-    {
-      "input": "a {{'10' - [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' * [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' / [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' mod [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' - ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' * ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' / ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{'10' mod ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true - '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true * '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true / '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true mod '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false - '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false * '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false / '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false mod '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true - 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true * 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true / 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true mod 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false - 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false * 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false / 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false mod 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true - [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true * [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true / [1,2,3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true mod [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false - [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false * [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false / [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false mod [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true - ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true * ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true / ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{true mod ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false - ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false * ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false / ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{false mod ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{-10}} b",
-      "expected": "a -10 b"
-    },
-    {
-      "input": "a {{10 - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 - 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 * 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 / 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 mod 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 - '3'}} b",
-      "expected": "a 7 b"
-    },
-    {
-      "input": "a {{10 * '3'}} b",
-      "expected": "a 30 b"
-    },
-    {
-      "input": "a {{10 / '2'}} b",
-      "expected": "a 5 b"
-    },
-    {
-      "input": "a {{10 mod '3'}} b",
-      "expected": "a 1 b"
-    },
-    {
-      "input": "a {{10 - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 - 3}} b",
-      "expected": "a 7 b"
-    },
-    {
-      "input": "a {{10 * 4}} b",
-      "expected": "a 40 b"
-    },
-    {
-      "input": "a {{10 / 5}} b",
-      "expected": "a 2 b"
-    },
-    {
-      "input": "a {{10 mod 6}} b",
-      "expected": "a 4 b"
-    },
-    {
-      "input": "a {{10 - [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 * [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 / [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 mod [1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 - ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 * ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 / ['foo':  'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{10 mod ['foo': 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{-[1, 2, 3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] - 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] * 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] / 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] mod 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] - '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] * '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] / '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] mod '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1, 2, 3] - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] - 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] * 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] / 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] mod 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] - ['foo', 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] * ['foo', 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] / ['foo', 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] mod ['foo', 'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] - ['foo':  'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] * ['foo':  'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] / ['foo':  'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{[1,2,3] mod ['foo':  'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod undefined}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{-['foo':  'bar']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod null}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod 'string'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod '10'}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod true}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod false}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod 10}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - [1,2,3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * [1,2,3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / [1,2,3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod [1,2,3]}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] - [1: '2']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] * [1: '2']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] / [1: '2']}} b",
-      "expected": "a  b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] mod [1: '2']}} b",
-      "expected": "a  b"
-    }
-  ]
+	"name": "-, *, /, mod, unary",
+	"cases": [
+		{
+			"input": "a {{undefined - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{-undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined - 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined * 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined / 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined mod 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined - 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined * 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined / 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined mod 42}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined - [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined * [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined / [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined mod [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined - ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined * ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined / ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{undefined mod ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{-null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null - 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null * 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null / 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null mod 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null - 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null * 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null / 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null mod 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null - [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null * [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null / [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null mod [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null - ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null * ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null / ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{null mod ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{-'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' - 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' * 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' / 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' mod 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' - 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' * 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' / 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' mod 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' - [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' * [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' / [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' mod [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' - ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' * ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' / ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'string' mod ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{-'10'}} b",
+			"expected": "a -10 b"
+		},
+		{
+			"input": "a {{'10' - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' - '10'}} b",
+			"expected": "a 0 b"
+		},
+		{
+			"input": "a {{'10' * '10'}} b",
+			"expected": "a 100 b"
+		},
+		{
+			"input": "a {{'10' / '10'}} b",
+			"expected": "a 1 b"
+		},
+		{
+			"input": "a {{'11' mod '2'}} b",
+			"expected": "a 1 b"
+		},
+		{
+			"input": "a {{'10' - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' - 10}} b",
+			"expected": "a 0 b"
+		},
+		{
+			"input": "a {{'10' * 10}} b",
+			"expected": "a 100 b"
+		},
+		{
+			"input": "a {{'10' / 10}} b",
+			"expected": "a 1 b"
+		},
+		{
+			"input": "a {{'10' mod 10}} b",
+			"expected": "a 0 b"
+		},
+		{
+			"input": "a {{'10' - [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' * [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' / [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' mod [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' - ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' * ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' / ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{'10' mod ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true - '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true * '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true / '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true mod '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false - '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false * '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false / '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false mod '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true - 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true * 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true / 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true mod 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false - 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false * 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false / 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false mod 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true - [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true * [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true / [1,2,3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true mod [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false - [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false * [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false / [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false mod [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true - ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true * ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true / ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{true mod ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false - ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false * ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false / ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{false mod ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{-10}} b",
+			"expected": "a -10 b"
+		},
+		{
+			"input": "a {{10 - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 - 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 * 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 / 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 mod 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 - '3'}} b",
+			"expected": "a 7 b"
+		},
+		{
+			"input": "a {{10 * '3'}} b",
+			"expected": "a 30 b"
+		},
+		{
+			"input": "a {{10 / '2'}} b",
+			"expected": "a 5 b"
+		},
+		{
+			"input": "a {{10 mod '3'}} b",
+			"expected": "a 1 b"
+		},
+		{
+			"input": "a {{10 - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 - 3}} b",
+			"expected": "a 7 b"
+		},
+		{
+			"input": "a {{10 * 4}} b",
+			"expected": "a 40 b"
+		},
+		{
+			"input": "a {{10 / 5}} b",
+			"expected": "a 2 b"
+		},
+		{
+			"input": "a {{10 mod 6}} b",
+			"expected": "a 4 b"
+		},
+		{
+			"input": "a {{10 - [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 * [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 / [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 mod [1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 - ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 * ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 / ['foo':  'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{10 mod ['foo': 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{-[1, 2, 3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] - 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] * 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] / 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] mod 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] - '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] * '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] / '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] mod '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1, 2, 3] - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] - 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] * 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] / 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] mod 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] - ['foo', 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] * ['foo', 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] / ['foo', 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] mod ['foo', 'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] - ['foo':  'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] * ['foo':  'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] / ['foo':  'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{[1,2,3] mod ['foo':  'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod undefined}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{-['foo':  'bar']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod null}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod 'string'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod '10'}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod true}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod false}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod 10}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - [1,2,3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * [1,2,3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / [1,2,3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod [1,2,3]}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] - [1: '2']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] * [1: '2']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] / [1: '2']}} b",
+			"expected": "a  b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] mod [1: '2']}} b",
+			"expected": "a  b"
+		}
+	]
 }, {
-  "name": "is, isNot",
-  "cases": [
-    {
-      "input": "a {{undefined is undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{undefined isNot undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{undefined is null}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{undefined isNot null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{undefined is 'string'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{undefined isNot 'string'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{undefined is true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{undefined is false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{undefined isNot true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{undefined isNot false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{undefined is 10}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{undefined isNot 10}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{undefined is [1,2,3]}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{undefined isNot [1,2,3]}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{undefined is ['foo':  'bar']}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{undefined isNot ['foo':  'bar']}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{null is undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{null isNot undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{null is null}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{null isNot null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{null is 'string'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{null isNot 'string'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{null is true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{null isNot true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{null is false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{null isNot false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{null is 10}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{null isNot 10}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{null is [1,2,3]}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{null isNot [1,2,3]}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{null is ['foo':  'bar']}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{null isNot ['foo':  'bar']}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'string' is undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' isNot undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'string' is null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' isNot null}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'string' is 'string'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'string' isNot 'string'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' is 'bla'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' isNot 'bla'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'string' is true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'string' isNot true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' is false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' isNot false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'' is true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'' isNot true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'' is false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'' isNot false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' is 10}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' isNot 10}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'10' is 10}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'10' isNot 10}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' is [1,2,3]}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'string' isNot [1,2,3]}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{'string' is ['foo':  'bar']}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{'string' isNot ['foo':  'bar']}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true is undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false is undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true isNot undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false isNot undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true is null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false is null}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true isNot null}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false isNot null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true is 'string'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false is 'string'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true is ''}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false is ''}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true isNot 'string'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false isNot 'string'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true isNot ''}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false isNot ''}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true is true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true is false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false is true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false is false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true isNot true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true isNot false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false isNot true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false isNot false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true is 1}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false is 1}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true is 0}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false is 0}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true is -1}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false is -1}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true isNot 1}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false isNot 1}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true isNot 0}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false isNot 0}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true isNot -1}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false isNot -1}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true is [1,2,3]}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false is [1,2,3]}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true isNot [1,2,3]}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false isNot [1,2,3]}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{true is ['foo':  'bar']}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{false is ['foo':  'bar']}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{true isNot ['foo':  'bar']}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{false isNot ['foo':  'bar']}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 is undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{10 isNot undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 is null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{10 isNot undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{0 is undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{0 isNot undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{0 is null}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{0 isNot undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{-1 is undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{-1 isNot undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{-1 is null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{-1 isNot undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 is 'string'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{10 isNot 'string'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 is '10'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 isNot '10'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{1 is true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{1 is false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{1 isNot true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{1 isNot false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{0 is true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{0 is false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{0 isNot true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{0 isNot false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{10 is 10}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 is 30}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{10 isNot 10}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{10 isNot 30}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 is [1,2,3]}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 isNot [1,2,3]}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{10 is ['foo':  'bar']}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{10 isNot ['foo':  'bar']}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{[1,2,3] is undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{[1,2,3] isNot undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{[1,2,3] is null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{[1,2,3] isNot null}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{[1,2,3] is 'string'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{[1,2,3] isNot 'string'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{[1,2,3] is true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{[1,2,3] isNot true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{[1,2,3] is false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{[1,2,3] isNot false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{[1,2,3] is 10}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{[1,2,3] isNot 10}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{[1,2,3] is [3, 4, 5]}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{[1,2,3] isNot [3, 4, 5]}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{[1,2,3] is ['foo':  'bar']}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{[1,2,3] isNot ['foo':  'bar']}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] is undefined}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] isNot undefined}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] is null}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] isNot null}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] is 'string'}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] isNot 'string'}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] is true}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] isNot true}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] is false}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] isNot false}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] is 10}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] isNot 10}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] is [1,2,3]}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] isNot [1,2,3]}} b",
-      "expected": "a false b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] is ['x': 'y']}} b",
-      "expected": "a true b"
-    },
-    {
-      "input": "a {{['foo':  'bar'] isNot ['x': 'y']}} b",
-      "expected": "a false b"
-    }
-  ]
+	"name": "is, isNot",
+	"cases": [
+		{
+			"input": "a {{undefined is undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{undefined isNot undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{undefined is null}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{undefined isNot null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{undefined is 'string'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{undefined isNot 'string'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{undefined is true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{undefined is false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{undefined isNot true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{undefined isNot false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{undefined is 10}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{undefined isNot 10}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{undefined is [1,2,3]}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{undefined isNot [1,2,3]}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{undefined is ['foo':  'bar']}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{undefined isNot ['foo':  'bar']}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{null is undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{null isNot undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{null is null}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{null isNot null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{null is 'string'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{null isNot 'string'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{null is true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{null isNot true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{null is false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{null isNot false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{null is 10}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{null isNot 10}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{null is [1,2,3]}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{null isNot [1,2,3]}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{null is ['foo':  'bar']}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{null isNot ['foo':  'bar']}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'string' is undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' isNot undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'string' is null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' isNot null}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'string' is 'string'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'string' isNot 'string'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' is 'bla'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' isNot 'bla'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'string' is true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'string' isNot true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' is false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' isNot false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'' is true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'' isNot true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'' is false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'' isNot false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' is 10}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' isNot 10}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'10' is 10}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'10' isNot 10}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' is [1,2,3]}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'string' isNot [1,2,3]}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{'string' is ['foo':  'bar']}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{'string' isNot ['foo':  'bar']}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true is undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false is undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true isNot undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false isNot undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true is null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false is null}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true isNot null}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false isNot null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true is 'string'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false is 'string'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true is ''}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false is ''}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true isNot 'string'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false isNot 'string'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true isNot ''}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false isNot ''}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true is true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true is false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false is true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false is false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true isNot true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true isNot false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false isNot true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false isNot false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true is 1}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false is 1}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true is 0}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false is 0}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true is -1}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false is -1}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true isNot 1}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false isNot 1}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true isNot 0}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false isNot 0}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true isNot -1}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false isNot -1}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true is [1,2,3]}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false is [1,2,3]}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true isNot [1,2,3]}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false isNot [1,2,3]}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{true is ['foo':  'bar']}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{false is ['foo':  'bar']}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{true isNot ['foo':  'bar']}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{false isNot ['foo':  'bar']}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 is undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{10 isNot undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 is null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{10 isNot undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{0 is undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{0 isNot undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{0 is null}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{0 isNot undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{-1 is undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{-1 isNot undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{-1 is null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{-1 isNot undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 is 'string'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{10 isNot 'string'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 is '10'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 isNot '10'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{1 is true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{1 is false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{1 isNot true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{1 isNot false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{0 is true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{0 is false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{0 isNot true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{0 isNot false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{10 is 10}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 is 30}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{10 isNot 10}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{10 isNot 30}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 is [1,2,3]}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 isNot [1,2,3]}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{10 is ['foo':  'bar']}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{10 isNot ['foo':  'bar']}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{[1,2,3] is undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{[1,2,3] isNot undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{[1,2,3] is null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{[1,2,3] isNot null}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{[1,2,3] is 'string'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{[1,2,3] isNot 'string'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{[1,2,3] is true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{[1,2,3] isNot true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{[1,2,3] is false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{[1,2,3] isNot false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{[1,2,3] is 10}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{[1,2,3] isNot 10}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{[1,2,3] is [3, 4, 5]}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{[1,2,3] isNot [3, 4, 5]}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{[1,2,3] is ['foo':  'bar']}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{[1,2,3] isNot ['foo':  'bar']}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] is undefined}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] isNot undefined}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] is null}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] isNot null}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] is 'string'}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] isNot 'string'}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] is true}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] isNot true}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] is false}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] isNot false}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] is 10}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] isNot 10}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] is [1,2,3]}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] isNot [1,2,3]}} b",
+			"expected": "a false b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] is ['x': 'y']}} b",
+			"expected": "a true b"
+		},
+		{
+			"input": "a {{['foo':  'bar'] isNot ['x': 'y']}} b",
+			"expected": "a false b"
+		}
+	]
 }, {
-  "name": "relational operators",
-  "cases": [
-          {
-            "input": "a {{'string' < 10}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined < undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined <= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined > undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined >= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined < null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined <= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined > null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined >= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined < 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined <= 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined > 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined >= 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined < true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined <= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined > true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined >= true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined < false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined <= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined > false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined >= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined < 10}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined <= 10}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined > 10}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined >= 10}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined < [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined <= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined > [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined >= [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined < ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined <= ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{undefined > ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{undefined >= ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null < undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null <= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null > undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null >= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null < null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null <= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null > null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null >= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null < 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null <= 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null > 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null >= 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null < true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null <= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null > true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null >= true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null < false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null <= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null > false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null >= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null < 10}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null <= 10}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null > 10}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null >= 10}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null < [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null <= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null > [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null >= [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null < ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null <= ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{null > ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{null >= ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' < undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' <= undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' > undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'string' >= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'string' < null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' <= null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' > null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'string' >= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'a' < 'bbbbb'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'aaaaa' < 'b'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'a' <= 'b'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'aaaaaa' <= 'b'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'aaaaaa' > 'a'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'aa' > 'bbbbbbb'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'aa' >= 'bb'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'aa' >= 'baaaab'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' < true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' <= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'string' > true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' >= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'string' < false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' <= false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'string' > false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'string' >= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'10' < 5}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'3' < 5}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'5' <= 5}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'12' <= 5}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'10' > 5}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'3' > 5}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'5' >= 5}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'3' >= 5}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'10' < [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'5' <= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'10' > [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'5' >= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'10' < ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'5' <= ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{'10' > ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{'5' >= ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true < undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true <= undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false <= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false > undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true < null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true <= null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false <= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false > null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true < 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true <= 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false <= 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false > 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true < true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true <= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false <= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false > true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true < false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true <= false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false <= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false > false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true < 0}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < 0}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true <= 0}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false <= 0}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > 0}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false > 0}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= 0}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= 0}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true < 1}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < 1}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true <= 1}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false <= 1}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > 1}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false > 1}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= 1}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= 1}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true < [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true <= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false <= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false > [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true < ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false < ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true <= ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false <= ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{true > ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{false > ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{true >= ['foo':  'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{false >= ['foo':  'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 < undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 <= undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 > undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 >= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 < null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 <= null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 > null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 >= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 < 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 <= 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 > 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 >= 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 < '10'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 < '40'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 <= '4'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 <= '10'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 > '10'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 > '3'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 >= '30'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 >= '3'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{0 < true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{0 < false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 <= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{1 <= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{1 > true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{1 > false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{0 >= true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{1 >= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 < 3}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 < 30}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 <= 3}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 <= 10}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 > 30}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 > 3}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 >= 30}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 >= 10}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 < [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 <= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 > [1,2,3]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 >= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 < [foo: 'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 <= [foo: 'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{10 > [foo: 'bar']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{10 >= [foo: 'bar']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= undefined}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] > undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] >= undefined}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= null}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] > null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] >= null}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] > 'string'}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] >= 'string'}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] > true}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] >= true}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= false}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] > false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] >= false}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < 10}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= 10}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] > 10}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] >= 10}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < [1]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] < [1, 2, 3, 4, 5]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= [1, 2]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] <= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] > [1, 2, 3, 4, 5]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] > [1]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] >= [1, 2, 3, 4]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] >= [1,2,3]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < [1: 2]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= [1: 2]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] > [1: 2]}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] >= [1: 2]}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] < [1: 'x']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] <= [1: 'x']}} b",
-            "expected": "a true b"
-          },
-          {
-            "input": "a {{[1,2,3] > [1: 'x']}} b",
-            "expected": "a false b"
-          },
-          {
-            "input": "a {{[1,2,3] >= [1: 'x']}} b",
-            "expected": "a true b"
-          }
-  ]
+	"name": "relational operators",
+	"cases": [
+					{
+						"input": "a {{'string' < 10}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined < undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined <= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined > undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined >= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined < null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined <= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined > null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined >= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined < 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined <= 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined > 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined >= 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined < true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined <= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined > true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined >= true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined < false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined <= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined > false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined >= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined < 10}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined <= 10}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined > 10}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined >= 10}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined < [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined <= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined > [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined >= [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined < ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined <= ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{undefined > ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{undefined >= ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null < undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null <= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null > undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null >= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null < null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null <= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null > null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null >= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null < 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null <= 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null > 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null >= 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null < true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null <= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null > true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null >= true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null < false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null <= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null > false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null >= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null < 10}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null <= 10}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null > 10}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null >= 10}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null < [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null <= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null > [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null >= [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null < ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null <= ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{null > ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{null >= ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' < undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' <= undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' > undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'string' >= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'string' < null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' <= null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' > null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'string' >= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'a' < 'bbbbb'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'aaaaa' < 'b'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'a' <= 'b'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'aaaaaa' <= 'b'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'aaaaaa' > 'a'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'aa' > 'bbbbbbb'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'aa' >= 'bb'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'aa' >= 'baaaab'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' < true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' <= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'string' > true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' >= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'string' < false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' <= false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'string' > false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'string' >= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'10' < 5}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'3' < 5}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'5' <= 5}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'12' <= 5}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'10' > 5}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'3' > 5}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'5' >= 5}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'3' >= 5}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'10' < [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'5' <= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'10' > [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'5' >= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'10' < ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'5' <= ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{'10' > ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{'5' >= ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true < undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true <= undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false <= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false > undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true < null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true <= null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false <= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false > null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true < 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true <= 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false <= 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false > 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true < true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true <= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false <= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false > true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true < false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true <= false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false <= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false > false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true < 0}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < 0}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true <= 0}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false <= 0}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > 0}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false > 0}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= 0}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= 0}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true < 1}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < 1}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true <= 1}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false <= 1}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > 1}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false > 1}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= 1}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= 1}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true < [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true <= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false <= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false > [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true < ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false < ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true <= ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false <= ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{true > ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{false > ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{true >= ['foo':  'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{false >= ['foo':  'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 < undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 <= undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 > undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 >= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 < null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 <= null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 > null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 >= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 < 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 <= 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 > 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 >= 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 < '10'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 < '40'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 <= '4'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 <= '10'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 > '10'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 > '3'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 >= '30'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 >= '3'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{0 < true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{0 < false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 <= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{1 <= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{1 > true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{1 > false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{0 >= true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{1 >= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 < 3}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 < 30}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 <= 3}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 <= 10}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 > 30}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 > 3}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 >= 30}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 >= 10}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 < [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 <= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 > [1,2,3]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 >= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 < [foo: 'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 <= [foo: 'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{10 > [foo: 'bar']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{10 >= [foo: 'bar']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= undefined}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] > undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] >= undefined}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= null}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] > null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] >= null}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] > 'string'}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] >= 'string'}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] > true}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] >= true}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= false}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] > false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] >= false}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < 10}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= 10}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] > 10}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] >= 10}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < [1]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] < [1, 2, 3, 4, 5]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= [1, 2]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] <= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] > [1, 2, 3, 4, 5]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] > [1]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] >= [1, 2, 3, 4]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] >= [1,2,3]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < [1: 2]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= [1: 2]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] > [1: 2]}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] >= [1: 2]}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] < [1: 'x']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] <= [1: 'x']}} b",
+						"expected": "a true b"
+					},
+					{
+						"input": "a {{[1,2,3] > [1: 'x']}} b",
+						"expected": "a false b"
+					},
+					{
+						"input": "a {{[1,2,3] >= [1: 'x']}} b",
+						"expected": "a true b"
+					}
+	]
 }, {
-  "name": "logical operators",
-    "cases": [
-      {
-        "input": "a {{undefined or undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined or null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{undefined or 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{undefined or ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined or true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{undefined or false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{undefined or 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{undefined or 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{undefined or [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{undefined or [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{null or undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{null or null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null or 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{null or ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{null or true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{null or false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{null or 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{null or 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{null or [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{null or [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{'string' or undefined}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or null}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or 'strdfdsfing'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or ''}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or true}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or false}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or 0}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or 10}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or [1,2,3]}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' or [key: 42]}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'' or undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' or null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{'' or 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'' or 'strdfdsfing'}} b",
-        "expected": "a strdfdsfing b"
-      },
-      {
-        "input": "a {{'' or ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' or true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{'' or false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{'' or 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{'' or 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{'' or [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{'' or [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{true or undefined}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or null}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or 'string'}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or ''}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or false}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or 0}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or 10}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or [1,2,3]}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true or [key: 42]}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{false or undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{false or null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{false or 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{false or ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{false or true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{false or false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false or 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{false or 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{false or [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{false or [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{10 or undefined}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or null}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or 'string'}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or ''}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or true}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or false}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or 0}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or 20}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or [1,2,3]}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 or [key: 42]}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{0 or undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{0 or null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{0 or 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{0 or ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{0 or true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{0 or false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{0 or 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 or 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{0 or [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{0 or [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{0 or undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{0 or 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{0 or ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{0 or true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{0 or false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{-10 or -10}} b",
-        "expected": "a -10 b"
-      },
-      {
-        "input": "a {{0 or [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{0 or [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{[1,2,3] or undefined}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or null}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or 'string'}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or ''}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or true}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or false}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or 0}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or 10}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] or [key: 42]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or undefined}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or null}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or 'string'}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or ''}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or true}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or false}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or 0}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or 10}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or [1,2,3]}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] or [key: 42]}} b",
-        "expected": "a my value b"
-      },
-      {
-        "input": "a {{undefined and undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and null}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and 'string'}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and true}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and false}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and 0}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and 10}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and [1,2,3]}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{undefined and [key: 42]}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{null and undefined}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and 'string'}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and ''}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and true}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and false}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and 0}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and 10}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and [1,2,3]}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{null and [key: 42]}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{'string' and undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'string' and null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{'string' and 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{'string' and 'strdfdsfing'}} b",
-        "expected": "a strdfdsfing b"
-      },
-      {
-        "input": "a {{'string' and ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'string' and true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{'string' and false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{'string' and 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{'string' and 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{'string' and [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{'string' and [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{'' and undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and null}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and 'string'}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and 'strdfdsfing'}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and true}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and false}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and 0}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and 10}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and [1,2,3]}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{'' and [key: 42]}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{true and undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{true and null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{true and 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{true and ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{true and true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{true and false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{true and 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{true and 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{true and [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{true and [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{false and undefined}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and null}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and 'string'}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and ''}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and true}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and 0}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and 10}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and [1,2,3]}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{false and [key: 42]}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{10 and undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{10 and null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{10 and 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{10 and ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{10 and true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{10 and false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{10 and 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{10 and 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{10 and 20}} b",
-        "expected": "a 20 b"
-      },
-      {
-        "input": "a {{10 and [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{10 and [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{0 and undefined}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and null}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and 'string'}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and ''}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and true}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and false}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and 10}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and [1,2,3]}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and [key: 42]}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and undefined}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and null}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and 'string'}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and ''}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and true}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and false}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{-10 and -10}} b",
-        "expected": "a -10 b"
-      },
-      {
-        "input": "a {{0 and [1,2,3]}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{0 and [key: 42]}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{[1,2,3] and undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{[1,2,3] and null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{[1,2,3] and 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{[1,2,3] and ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{[1,2,3] and true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{[1,2,3] and false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{[1,2,3] and 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{[1,2,3] and 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{[1,2,3] and [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{[1,2,3] and [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and undefined}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and null}} b",
-        "expected": "a null b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and 'string'}} b",
-        "expected": "a string b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and ''}} b",
-        "expected": "a  b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and true}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and false}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and 0}} b",
-        "expected": "a 0 b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and 10}} b",
-        "expected": "a 10 b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and [1,2,3]}} b",
-        "expected": "a 1 2 3 b"
-      },
-      {
-        "input": "a {{['my key': 'my value'] and [key: 42]}} b",
-        "expected": "a 42 b"
-      },
-      {
-        "input": "a {{not undefined}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{not null}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{not 'string'}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{not ''}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{not true}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{not false}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{not 0}} b",
-        "expected": "a true b"
-      },
-      {
-        "input": "a {{not 1}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{not 10}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{not [1,2,3]}} b",
-        "expected": "a false b"
-      },
-      {
-        "input": "a {{not [key: 42]}} b",
-        "expected": "a false b"
-      }
-    ]
-  }, {
-    "name": "ternary operator",
-    "cases": [
-          {
-            "input": "a {{undefined ? 'yes' : 'no'}} b",
-            "expected": "a no b"
-          },
-          {
-            "input": "a {{null ? 'yes' : 'no'}} b",
-            "expected": "a no b"
-          },
-          {
-            "input": "a {{'string' ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{'' ? 'yes' : 'no'}} b",
-            "expected": "a no b"
-          },
-          {
-            "input": "a {{true ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{false ? 'yes' : 'no'}} b",
-            "expected": "a no b"
-          },
-          {
-            "input": "a {{0 ? 'yes' : 'no'}} b",
-            "expected": "a no b"
-          },
-          {
-            "input": "a {{1 ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{10 ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{-10 ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{[1,2,3] ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{[] ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{[key: 42] ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{[] ? 'yes' : 'no'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{true ? 'yes'}} b",
-            "expected": "a yes b"
-          },
-          {
-            "input": "a {{false ? 'yes'}} b",
-            "expected": "a  b"
-          }
-    ]
-  }
+	"name": "logical operators",
+		"cases": [
+			{
+				"input": "a {{undefined or undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined or null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{undefined or 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{undefined or ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined or true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{undefined or false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{undefined or 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{undefined or 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{undefined or [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{undefined or [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{null or undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{null or null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null or 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{null or ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{null or true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{null or false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{null or 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{null or 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{null or [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{null or [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{'string' or undefined}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or null}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or 'strdfdsfing'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or ''}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or true}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or false}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or 0}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or 10}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or [1,2,3]}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' or [key: 42]}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'' or undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' or null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{'' or 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'' or 'strdfdsfing'}} b",
+				"expected": "a strdfdsfing b"
+			},
+			{
+				"input": "a {{'' or ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' or true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{'' or false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{'' or 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{'' or 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{'' or [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{'' or [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{true or undefined}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or null}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or 'string'}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or ''}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or false}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or 0}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or 10}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or [1,2,3]}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true or [key: 42]}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{false or undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{false or null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{false or 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{false or ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{false or true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{false or false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false or 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{false or 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{false or [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{false or [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{10 or undefined}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or null}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or 'string'}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or ''}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or true}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or false}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or 0}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or 20}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or [1,2,3]}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 or [key: 42]}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{0 or undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{0 or null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{0 or 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{0 or ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{0 or true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{0 or false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{0 or 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 or 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{0 or [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{0 or [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{0 or undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{0 or 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{0 or ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{0 or true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{0 or false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{-10 or -10}} b",
+				"expected": "a -10 b"
+			},
+			{
+				"input": "a {{0 or [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{0 or [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{[1,2,3] or undefined}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or null}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or 'string'}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or ''}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or true}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or false}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or 0}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or 10}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] or [key: 42]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or undefined}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or null}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or 'string'}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or ''}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or true}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or false}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or 0}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or 10}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or [1,2,3]}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] or [key: 42]}} b",
+				"expected": "a my value b"
+			},
+			{
+				"input": "a {{undefined and undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and null}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and 'string'}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and true}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and false}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and 0}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and 10}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and [1,2,3]}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{undefined and [key: 42]}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{null and undefined}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and 'string'}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and ''}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and true}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and false}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and 0}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and 10}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and [1,2,3]}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{null and [key: 42]}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{'string' and undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'string' and null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{'string' and 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{'string' and 'strdfdsfing'}} b",
+				"expected": "a strdfdsfing b"
+			},
+			{
+				"input": "a {{'string' and ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'string' and true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{'string' and false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{'string' and 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{'string' and 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{'string' and [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{'string' and [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{'' and undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and null}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and 'string'}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and 'strdfdsfing'}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and true}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and false}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and 0}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and 10}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and [1,2,3]}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{'' and [key: 42]}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{true and undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{true and null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{true and 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{true and ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{true and true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{true and false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{true and 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{true and 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{true and [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{true and [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{false and undefined}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and null}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and 'string'}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and ''}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and true}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and 0}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and 10}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and [1,2,3]}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{false and [key: 42]}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{10 and undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{10 and null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{10 and 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{10 and ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{10 and true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{10 and false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{10 and 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{10 and 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{10 and 20}} b",
+				"expected": "a 20 b"
+			},
+			{
+				"input": "a {{10 and [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{10 and [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{0 and undefined}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and null}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and 'string'}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and ''}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and true}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and false}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and 10}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and [1,2,3]}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and [key: 42]}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and undefined}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and null}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and 'string'}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and ''}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and true}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and false}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{-10 and -10}} b",
+				"expected": "a -10 b"
+			},
+			{
+				"input": "a {{0 and [1,2,3]}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{0 and [key: 42]}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{[1,2,3] and undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{[1,2,3] and null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{[1,2,3] and 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{[1,2,3] and ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{[1,2,3] and true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{[1,2,3] and false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{[1,2,3] and 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{[1,2,3] and 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{[1,2,3] and [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{[1,2,3] and [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and undefined}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and null}} b",
+				"expected": "a null b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and 'string'}} b",
+				"expected": "a string b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and ''}} b",
+				"expected": "a  b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and true}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and false}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and 0}} b",
+				"expected": "a 0 b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and 10}} b",
+				"expected": "a 10 b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and [1,2,3]}} b",
+				"expected": "a 1 2 3 b"
+			},
+			{
+				"input": "a {{['my key': 'my value'] and [key: 42]}} b",
+				"expected": "a 42 b"
+			},
+			{
+				"input": "a {{not undefined}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{not null}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{not 'string'}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{not ''}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{not true}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{not false}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{not 0}} b",
+				"expected": "a true b"
+			},
+			{
+				"input": "a {{not 1}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{not 10}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{not [1,2,3]}} b",
+				"expected": "a false b"
+			},
+			{
+				"input": "a {{not [key: 42]}} b",
+				"expected": "a false b"
+			}
+		]
+	}, {
+		"name": "ternary operator",
+		"cases": [
+					{
+						"input": "a {{undefined ? 'yes' : 'no'}} b",
+						"expected": "a no b"
+					},
+					{
+						"input": "a {{null ? 'yes' : 'no'}} b",
+						"expected": "a no b"
+					},
+					{
+						"input": "a {{'string' ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{'' ? 'yes' : 'no'}} b",
+						"expected": "a no b"
+					},
+					{
+						"input": "a {{true ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{false ? 'yes' : 'no'}} b",
+						"expected": "a no b"
+					},
+					{
+						"input": "a {{0 ? 'yes' : 'no'}} b",
+						"expected": "a no b"
+					},
+					{
+						"input": "a {{1 ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{10 ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{-10 ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{[1,2,3] ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{[] ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{[key: 42] ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{[] ? 'yes' : 'no'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{true ? 'yes'}} b",
+						"expected": "a yes b"
+					},
+					{
+						"input": "a {{false ? 'yes'}} b",
+						"expected": "a  b"
+					}
+		]
+	}
 ]
