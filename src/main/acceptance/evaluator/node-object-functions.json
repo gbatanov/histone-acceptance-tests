@@ -44,16 +44,16 @@
 				"expected": "a  b"
 		}, {
 				"input": "a {{[m: undefined].toJSON()}} b",
-				"expected": "a {\"m\":{}} b"
+				"expected": "a {} b"
 		}, {
 				"input": "a {{[m: undefined, n: undefined].toJSON()}} b",
-				"expected": "a {\"m\":{},\"n\":{}} b"
+				"expected": "a {} b"
 		}, {
 				"input": "a {{[m: undefined, n: null].toJSON()}} b",
-				"expected": "a {\"m\":{},\"n\":null} b"
+				"expected": "a {\"n\":null} b"
 		}, {
 				"input": "a {{[m: undefined, n: 'bar'].toJSON()}} b",
-				"expected": "a {\"m\":{},\"n\":\"bar\"} b"
+				"expected": "a {\"n\":\"bar\"} b"
 		}, {
 				"input": "a {{[m: undefined].hasKey('m')}} b",
 				"expected": "a true b"
@@ -62,7 +62,7 @@
 				"expected": "a  b"
 		}, {
 				"input": "a {{[a: undefined, a: undefined].toJSON()}} b",
-				"expected": "a {\"a\":{}} b"
+				"expected": "a {} b"
 		}, {
 				"input": "a {{[a: undefined, a: undefined].hasKey('a')}} b",
 				"expected": "a true b"
@@ -71,7 +71,7 @@
 				"expected": "a  b"
 		}, {
 				"input": "a {{[a: 111, a: undefined].toJSON()}} b",
-				"expected": "a {\"a\":{}} b"
+				"expected": "a {} b"
 		}, {
 				"input": "a {{[a: 111, a: undefined].hasKey('a')}} b",
 				"expected": "a true b"
