@@ -1,0 +1,67 @@
+[{
+	"name": "var statement",
+	"cases": [{
+		"input": "{{var x = 10}}"
+	}, {
+		"input": "{{var x = sadfdasf}}{{x}}"
+	}, {
+		"input": "{{var x = null}}{{x}}",
+		"expected": "null"
+	}, {
+		"input": "{{var x = true}}{{x}}",
+		"expected": "true"
+	}, {
+		"input": "{{var x = false}}{{x}}",
+		"expected": "false"
+	}, {
+		"input": "{{var x = 10}}{{x}}",
+		"expected": "10"
+	}, {
+		"input": "{{var x = \"string\"}}{{x}}",
+		"expected": "string"
+	}, {
+		"input": "{{var x = [1, 2, 3]}}{{x}}",
+		"expected": "1 2 3"
+	}, {
+		"input": "{{var x = [foo:\"bar\"]}}{{x}}",
+		"expected": "bar"
+	}, {
+		"input": "{{var x = [foo: undefined]}}{{x}}"
+	}, {
+		"input": "{{var x = [foo:\"bar\"]}}{{x}}",
+		"expected": "bar"
+	}, {
+		"input": "{{var x = [foo:\"bar\", other: undefined]}}{{x}}",
+		"expected": "bar"
+	}, {
+		"input": "{{var x}}{{/var}}"
+	}, {
+		"input": "{{var x}}{{/var}}{{x}}"
+	}, {
+		"input": "{{var x}}something{{/var}}{{x}}",
+		"expected": "something"
+	}, {
+		"input": "{{var x}}{{safsdaf}}{{/var}}{{x}}"
+	}, {
+		"input": "{{var x}}{{null}}{{/var}}{{x}}",
+		"expected": "null"
+	}, {
+		"input": "{{var x}}{{true}}{{/var}}{{x}}",
+		"expected": "true"
+	}, {
+		"input": "{{var x}}{{false}}{{/var}}{{x}}",
+		"expected": "false"
+	}, {
+		"input": "{{var x}}{{12}}{{/var}}{{x}}",
+		"expected": "12"
+	}, {
+		"input": "{{var x}}{{'string'}}{{/var}}{{x}}",
+		"expected": "string"
+	}, {
+		"input": "{{var x}}{{[1, 2, 3]}}{{/var}}{{x}}",
+		"expected": "1 2 3"
+	}, {
+		"input": "{{var x}}{{[foo:\"bar\"]}}{{/var}}{{x}}",
+		"expected": "bar"
+	}]
+}]
