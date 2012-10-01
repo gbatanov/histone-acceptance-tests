@@ -173,7 +173,7 @@
 				"expected": "a  b"
 		}, {
 				"input": "a {{[1, 2, 3].hasIndex(2).isBoolean()}} b",
-				"expected": "a  b"
+				"expected": "a false b"
 		}]
 }, {
 		"name": "map.slice",

@@ -317,7 +317,7 @@
 
         <case>
             <input>a {{[1, 2, 3].hasIndex(2).isBoolean()}} b</input>
-            <expected>a  b</expected>
+            <expected>a false b</expected>
         </case>
     </suite>
 
