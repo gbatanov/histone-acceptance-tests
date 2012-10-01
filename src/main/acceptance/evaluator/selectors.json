@@ -1,0 +1,89 @@
+[{
+    "name": "selectors",
+    "cases": [{
+        "input": "a{{asdfsadfasdfdsfdasf}}b",
+        "expected": "ab"
+    }, {
+        "input": "a {{testasdfdsbafb}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb.foo}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb[2333]}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb['sdajfbdsuf']}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb[sadfsdf]}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb[sadfsdf.dsafds]}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb[sadfsdf['dsafds']]}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb[sadfsdf[98]]}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb.foo[111].addaf}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb[111].addaf}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{testasdfdsbafb.a.b.c[a.b.c[x[1111].yy.z[92]]].addaf[222]['sss'][adfaf].bb[1]}} b",
+        "expected": "a  b"
+    }, {
+        "input": "a {{test}} b",
+        "context": "{\"test\": \"foobar\"}",
+        "expected": "a foobar b"
+    }, {
+        "input": "a {{test.foo}} b",
+        "context": "{\"test\": {\"foo\" : 98}}",
+        "expected": "a 98 b"
+    }, {
+        "input": "a {{test[4]}} b",
+        "context": "{\"test\": [1, 2, 3, 4, \"foo\", 5]}",
+        "expected": "a foo b"
+    }, {
+        "input": "a {{test[\"foo\"]}} b",
+        "context": "{\"test\": {\"foo\" : 98}}",
+        "expected": "a 98 b"
+    }, {
+        "input": "a {{test[foo]}} b",
+        "context": "{\"test\": {\"bar\" : 98}, \"foo\": \"bar\"}",
+        "expected": "a 98 b"
+    }, {
+        "input": "a {{test[foo.bar]}} b",
+        "context": "{\"test\": {\"xxx\" : 3.14}, \"foo\": {\"bar\": \"xxx\"}}",
+        "expected": "a 3.14 b"
+    }, {
+        "input": "a {{test[foo['bar']]}} b",
+        "context": "{\"test\": {\"xxx\" : \"---\"}, \"foo\": {\"bar\": \"xxx\"}}",
+        "expected": "a --- b"
+    }, {
+        "input": "a {{test[a[8]]}} b",
+        "context": "{\"test\": {\"xxx\" : \"---\"}, \"a\": [0, 1, 2, 3, 4, 5, 6, 7, \"xxx\", 9]}",
+        "expected": "a --- b"
+    }, {
+        "input": "a {{test.foo[1].addaf}} b",
+        "context": "{\"test\": {\"foo\": [\"+++\", {\"addaf\": \"---\"}]}}",
+        "expected": "a --- b"
+    }, {
+        "input": "a {{test['foo'][1].addaf}} b",
+        "context": "{\"test\": {\"foo\": [\"+++\", {\"addaf\": \"---\"}]}}",
+        "expected": "a --- b"
+    }, {
+        "input": "a {{foo}} b",
+        "context": "{\"foo\": \"bar\"}",
+        "expected": "a bar b"
+    }, {
+        "input": "a {{test.foo[1].x[1]['y']}} b",
+        "expected": "a 140 b",
+        "context": "{\"test\": {\"foo\": [\"+++\", {\"addaf\": \"---\",\"x\": [1, {\"y\": 0.14E3}, 3]}]}}"
+    }]
+
+}]
