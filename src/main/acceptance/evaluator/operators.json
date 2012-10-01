@@ -3880,71 +3880,70 @@
 		]
 	}, {
 		"name": "ternary operator",
-		"cases": [
-					{
-						"input": "a {{undefined ? 'yes' : 'no'}} b",
-						"expected": "a no b"
-					},
-					{
-						"input": "a {{null ? 'yes' : 'no'}} b",
-						"expected": "a no b"
-					},
-					{
-						"input": "a {{'string' ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{'' ? 'yes' : 'no'}} b",
-						"expected": "a no b"
-					},
-					{
-						"input": "a {{true ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{false ? 'yes' : 'no'}} b",
-						"expected": "a no b"
-					},
-					{
-						"input": "a {{0 ? 'yes' : 'no'}} b",
-						"expected": "a no b"
-					},
-					{
-						"input": "a {{1 ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{10 ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{-10 ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{[1,2,3] ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{[] ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{[key: 42] ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{[] ? 'yes' : 'no'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{true ? 'yes'}} b",
-						"expected": "a yes b"
-					},
-					{
-						"input": "a {{false ? 'yes'}} b",
-						"expected": "a  b"
-					}
+		"cases": [{
+			"input": "a {{undefined ? 'yes' : 'no'}} b",
+			"expected": "a no b"
+		},
+		{
+			"input": "a {{null ? 'yes' : 'no'}} b",
+			"expected": "a no b"
+		},
+		{
+			"input": "a {{'string' ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{'' ? 'yes' : 'no'}} b",
+			"expected": "a no b"
+		},
+		{
+			"input": "a {{true ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{false ? 'yes' : 'no'}} b",
+			"expected": "a no b"
+		},
+		{
+			"input": "a {{0 ? 'yes' : 'no'}} b",
+			"expected": "a no b"
+		},
+		{
+			"input": "a {{1 ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{10 ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{-10 ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{[1,2,3] ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{[] ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{[key: 42] ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{[] ? 'yes' : 'no'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{true ? 'yes'}} b",
+			"expected": "a yes b"
+		},
+		{
+			"input": "a {{false ? 'yes'}} b",
+			"expected": "a  b"
+		}
 		]
 	}
 ]
