@@ -8,67 +8,99 @@
 	"name": "self in for",
 	"cases": [{
 		"input": "a {{for item in this}}{{self is []}}{{/for}} b",
-		"context": "[1, 2, 3]",
+		"context": [1, 2, 3],
 		"expected": "a truetruetrue b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.index is key}}{{/for}} b",
-		"context": "[1, 2, 3]",
+		"context": [1, 2, 3],
 		"expected": "a truetruetrue b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.index}}{{/for}} b",
-		"context": "[1, 2, 3]",
+		"context": [1, 2, 3],
 		"expected": "a 012 b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.index mod 2}}{{/for}} b",
-		"context": "[1, 2, 3]",
+		"context": [1, 2, 3],
 		"expected": "a 010 b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.last}}{{/for}} b",
-		"context": "[1, 2, 3]",
+		"context": [1, 2, 3],
 		"expected": "a 222 b"
 	}, {
 		"input": "a {{for key:item in this}}{{key is self.last}}{{/for}} b",
-		"context": "[1, 2, 3]",
+		"context": [1, 2, 3],
 		"expected": "a falsefalsetrue b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.index is self.last}}{{/for}} b",
-		"context": "[1, 2, 3]",
+		"context": [1, 2, 3],
 		"expected": "a falsefalsetrue b"
 	}, {
 		"input": "a {{for key:item in this}}{{key + '-' + value + '-' + self.index + '-' + self.last}}{{/for}} b",
-		"context": "[1, 2, 3]",
+		"context": [1, 2, 3],
 		"expected": "a 0--0-21--1-22--2-2 b"
 	}, {
 		"input": "a {{for item in this}}{{self is []}}{{/for}} b",
-		"context": "{\"foo\": \"bar\", \"bar\": \"foo\", \"x\": \"y\"}",
+		"context": {
+			"foo": "bar",
+			"bar": "foo",
+			"x": "y"
+		},
 		"expected": "a truetruetrue b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.index is key}}{{/for}} b",
-		"context": "{\"foo\": \"bar\", \"bar\": \"foo\", \"x\": \"y\"}",
+		"context": {
+			"foo": "bar",
+			"bar": "foo",
+			"x": "y"
+		},
 		"expected": "a falsefalsefalse b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.index}}{{/for}} b",
-		"context": "{\"foo\": \"bar\", \"bar\": \"foo\", \"x\": \"y\"}",
+		"context": {
+			"foo": "bar",
+			"bar": "foo",
+			"x": "y"
+		},
 		"expected": "a 012 b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.index mod 2}}{{/for}} b",
-		"context": "{\"foo\": \"bar\", \"bar\": \"foo\", \"x\": \"y\"}",
+		"context": {
+			"foo": "bar",
+			"bar": "foo",
+			"x": "y"
+		},
 		"expected": "a 010 b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.last}}{{/for}} b",
-		"context": "{\"foo\": \"bar\", \"bar\": \"foo\", \"x\": \"y\"}",
+		"context": {
+			"foo": "bar",
+			"bar": "foo",
+			"x": "y"
+		},
 		"expected": "a 222 b"
 	}, {
 		"input": "a {{for key:item in this}}{{key is self.last}}{{/for}} b",
-		"context": "{\"foo\": \"bar\", \"bar\": \"foo\", \"x\": \"y\"}",
+		"context": {
+			"foo": "bar",
+			"bar": "foo",
+			"x": "y"
+		},
 		"expected": "a falsefalsefalse b"
 	}, {
 		"input": "a {{for key:item in this}}{{self.index is self.last}}{{/for}} b",
-		"context": "{\"foo\": \"bar\", \"bar\": \"foo\", \"x\": \"y\"}",
+		"context": {
+			"foo": "bar",
+			"bar": "foo",
+			"x": "y"
+		},
 		"expected": "a falsefalsetrue b"
 	}, {
 		"input": "a {{for key:item in this}}{{key + '-' + value + '-' + self.index + '-' + self.last}}{{/for}} b",
-		"context": "{\"foo\": \"bar\", \"bar\": \"foo\", \"x\": \"y\"}",
+		"context": {
+			"foo": "bar",
+			"bar": "foo",
+			"x": "y"
+		},
 		"expected": "a foo--0-2bar--1-2x--2-2 b"
 	}]
 }, {
