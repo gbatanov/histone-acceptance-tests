@@ -5,7 +5,6 @@
 		  "function": {
 			"name": "test_func",
 			"node": "string",
-			"return": "string",
 			"result": "test function"
 		  },
 		  "input": "a {{'string'.test_func()}} b",
@@ -15,7 +14,6 @@
 		  "function": {
 			"name": "test_func",
 			"node": "number",
-			"return": "string",
 			"result": "test function"
 		  },
 		  "input": "a {{123.test_func()}} b",
@@ -25,8 +23,7 @@
 		  "function": {
 			"name": "test_func",
 			"node": "string",
-			"return": "number",
-			"result": "123.45"
+			"result": 123.45
 		  },
 		  "input": "a {{'string'.test_func()}} b",
 		  "expected": "a 123.45 b"
@@ -35,18 +32,16 @@
 		  "function": {
 			"name": "test_func",
 			"node": "string",
-			"return": "string",
-			"result": "test function :target: eof"
+			"result": "test function {{target.toJSON()}} eof"
 		  },
 		  "input": "a {{'test'.test_func()}} b",
-		  "expected": "a test function (string(test)) eof b"
+		  "expected": "a test function \"test\" eof b"
 		},
 		{
 		  "function": {
 			"name": "test_func",
 			"node": "string",
-			"return": "string",
-			"result": "test function :args: eof"
+			"result": "test function {{args.toJSON()}} eof"
 		  },
 		  "input": "a {{'test'.test_func()}} b",
 		  "expected": "a test function [] eof b"
@@ -55,34 +50,30 @@
 		  "function": {
 			"name": "test_func",
 			"node": "string",
-			"return": "string",
-			"result": "test function :args: eof"
+			"result": "test function {{args.toJSON()}} eof"
 		  },
 		  "input": "a {{'test'.test_func('test')}} b",
-		  "expected": "a test function [string(test)] eof b"
+		  "expected": "a test function [\"test\"] eof b"
 		},
 		{
 		  "function": {
 			"name": "test_func",
 			"node": "string",
-			"return": "string",
-			"result": "test function :args: eof"
+			"result": "test function {{args.toJSON()}} eof"
 		  },
 		  "input": "a {{'test'.test_func('test','abcd',1234)}} b",
-		  "expected": "a test function [string(test)-string(abcd)-number(1234)] eof b"
+		  "expected": "a test function [\"test\",\"abcd\",1234] eof b"
 		},
 		{
 		  "function": [
 			{
 			  "name": "f1",
 			  "node": "string",
-			  "return": "number",
-			  "result": "123.45"
+			  "result": 123.45
 			},
 			{
 			  "name": "f2",
 			  "node": "string",
-			  "return": "string",
 			  "result": "123.45"
 			}
 		  ],
@@ -93,10 +84,9 @@
 		  "function": {
 			"name": "test_func",
 			"node": "string",
-			"return": "number",
-			"result": ":exception:"
+			"result": [1, 2, 3]
 		  },
-		  "input": "a {{'aaa'.test_func().isUndefined()}} b",
+		  "input": "a {{'aaa'.test_func()[1] is 2}} b",
 		  "expected": "a true b"
 		}
 	  ]
