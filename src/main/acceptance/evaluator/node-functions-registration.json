@@ -84,9 +84,10 @@
 		  "function": {
 			"name": "test_func",
 			"node": "string",
-			"result": [1, 2, 3]
+			"result": [1, 2, 3],
+			"exception": true
 		  },
-		  "input": "a {{'aaa'.test_func()[1] is 2}} b",
+		  "input": "a {{'aaa'.test_func().isUndefined()}} b",
 		  "expected": "a true b"
 		}
 	  ]
