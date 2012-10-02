@@ -43,23 +43,43 @@
 }, {
 	"name": "global.baseURI",
 	"cases": [{
-		"global": {"baseURI": "dummy:///"},
+		"property": {
+			"name": "baseURI",
+			"node": "global",
+			"result": "dummy:///"
+		 },
 		"input": "a {{global.baseURI}} b",
 		"expected": "a dummy:/// b"
 	}, {
-		"global": {"baseURI": "dummy:///test/"},
+		"property": {
+			"name": "baseURI",
+			"node": "global",
+			"result": "dummy:///test/"
+		 },
 		"input": "a {{global.baseURI}} b",
 		"expected": "a dummy:///test/ b"
 	}, {
-		"global": {"baseURI": "dummy://some/"},
+		"property": {
+			"name": "baseURI",
+			"node": "global",
+			"result": "dummy://some/"
+		 },
 		"input": "a {{global.baseURI}} b",
 		"expected": "a dummy://some/ b"
 	}, {
-		"global": {"baseURI": "dummy://some/test/"},
+		"property": {
+			"name": "baseURI",
+			"node": "global",
+			"result": "dummy://some/test/"
+		 },
 		"input": "a {{global.baseURI}} b",
 		"expected": "a dummy://some/test/ b"
 	}, {
-		"global": {"baseURI": "dummy://some/test/"},
+		"property": {
+			"name": "baseURI",
+			"node": "global",
+			"result": "dummy://some/test/"
+		 },
 		"input": "a {{macro myMacro}}{{global.baseURI}}{{/macro}} b {{myMacro()}} c",
 		"expected": "a  b dummy://some/test/ c"
 	}]
