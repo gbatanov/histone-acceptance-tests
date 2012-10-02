@@ -1,0 +1,94 @@
+[{
+	"name": "register new global functions",
+	"cases": [{
+		"input": "a {{event().isUndefined()}} b",
+		"expected": "a true b"
+	}, {
+		"function": {
+			"name": "test_func1",
+			"result": "test function"
+		},
+		"input": "a {{test_func1()}} b",
+		"expected": "a test function b"
+	}, {
+		"function": {
+			"name": "test_func2",
+			"result": 123.45
+		},
+		"input": "a {{test_func2()}} b",
+		"expected": "a 123.45 b"
+	}, {
+		"function": {
+			"name": "test_func3",
+			"result": "test function {{args.toJSON()}} eof"
+		},
+		"input": "a {{test_func3()}} b",
+		"expected": "a test function [] eof b"
+	}, {
+		"function": {
+			"name": "test_func4",
+			"result": "test function {{args.toJSON()}} eof"
+		},
+		"input": "a {{test_func4('test')}} b",
+		"expected": "a test function [\"test\"] eof b"
+	}, {
+		"function": {
+			"name": "test_func5",
+			"result": "test function {{args.toJSON()}} eof"
+		},
+		"input": "a {{test_func5('test','abcd',1234)}} b",
+		"expected": "a test function [\"test\",\"abcd\",1234] eof b"
+	}, {
+		"function": {
+			"name": "test_func6",
+			"result": 123.45
+		},
+		"input": "{{test_func6().isNumber()}}",
+		"expected": "true"
+	}, {
+		"function": {
+			"name": "test_func6",
+			"result": 123.45
+		},
+		"input": "a {{test_func6()}} b {{test_func6().isNumber()}} c",
+		"expected": "a 123.45 b true c"
+	}, {
+		"function": {
+			"name": "test_func7",
+			"result": 123,
+			"exception": true
+		},
+		"input": "a {{test_func7().isUndefined()}} b",
+		"expected": "a true b"
+	}]
+}, {
+	"name": "rewrite existent global functions",
+	"cases": [{
+		"input": "a {{min(1,2)}} b",
+		"expected": "a 1 b"
+	}, {
+		"function": {
+			"name": "min",
+			"result": 555
+		},
+		"input": "a {{min(1,2)}} b",
+		"expected": "a 555 b"
+	}, {
+		"input": "a {{include('testresources/tpl/test_for_include.tpl')}} b",
+		"expected": "a include file contents b"
+	}, {
+		"function": {
+			"name": "include",
+			"result": "include {{args.toJSON()}} result"
+		},
+		"input": "a {{include('testresources/tpl/test_for_include.tpl')}} b",
+		"expected": "a include [\"testresources/tpl/test_for_include.tpl\"] result b"
+	}, {
+		"function": {
+			"name": "include",
+			"result": "include {{args.toJSON()}} result"
+		},
+		"input": "a {{global.include('testresources/tpl/test_for_include.tpl')}} b",
+		"expected": "a include [\"testresources/tpl/test_for_include.tpl\"] result b"
+	}]
+}]
