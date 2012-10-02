@@ -37,139 +37,78 @@
 }, {
 	"name": "import",
 	"cases": [{
-			"resourceResolver": { "-type": "default" },
-			"input": "a {{import ':baseURI:testresources/tpl/test_for_import.tpl'}} b {{x}} c {{macro_name()}} d",
-			"expected": "a  b 10 c inner macro output d"
-		  },
-		  {
-			"resourceResolver": { "-type": "default" },
-			"input": "a {{import 'other::baseURI:testresources/tpl/test_for_import.tpl'}} b",
-			"expected": "a  b"
-		  },
-		  {
-			"resourceResolver": { "-type": "default" },
-			"input": "a {{import 'other::baseURI:testresources/tpl/unknown.tpl'}} b",
-			"expected": "a  b"
-		  },
-		  {
-			"resourceResolver": { "-type": "default" },
-			"input": "a {{var x = 30}} b {{x}} c {{import ':baseURI:testresources/tpl/test_for_import.tpl'}} d {{x}} e {{macro_name()}} f",
-			"expected": "a  b 30 c  d 10 e inner macro output f"
-		  },
-		  {
-			"resourceResolver": { "-type": "default" },
-			"input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{import ':baseURI:testresources/tpl/test_for_import.tpl'}} d {{macro_name()}} e",
-			"expected": "a  b local macro c  d inner macro output e"
-		  },
-		  {
-			"resourceResolver": { "-type": "default" },
-			"input": "a {{import 'dummy:/file.tpl'}} b",
-			"expected": "a  b"
-		  },
-		  {
-			"resourceResolver": { "-type": "default" },
-			"input": "a {{import ':baseURI:testresources/tpl/test_for_import_recursive_1.tpl'}} b {{macro1()}} c {{macro2()}} d",
-			"expected": "a  b macro1 output c macro2 output d"
-		  }]
+		"input": "a {{import 'testresources/tpl/test_for_import.tpl'}} b {{x}} c {{macro_name()}} d",
+		"expected": "a  b 10 c inner macro output d"
+	}, {
+		"input": "a {{import 'other://testresources/tpl/test_for_import.tpl'}} b",
+		"expected": "a  b"
+	}, {
+		"input": "a {{import 'other://testresources/tpl/unknown.tpl'}} b",
+		"expected": "a  b"
+	}, {
+		"input": "a {{var x = 30}} b {{x}} c {{import 'testresources/tpl/test_for_import.tpl'}} d {{x}} e {{macro_name()}} f",
+		"expected": "a  b 30 c  d 10 e inner macro output f"
+	}, {
+		"resourceResolver": { "-type": "default" },
+		"input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{import 'testresources/tpl/test_for_import.tpl'}} d {{macro_name()}} e",
+		"expected": "a  b local macro c  d inner macro output e"
+	}, {
+		"input": "a {{import 'dummy:/file.tpl'}} b",
+		"expected": "a  b"
+	}, {
+		"input": "a {{import 'testresources/tpl/test_for_import_recursive_1.tpl'}} b {{macro1()}} c {{macro2()}} d",
+		"expected": "a  b macro1 output c macro2 output d"
+	}]
 }, {
 	"name": "include",
 	"cases": [{
-		"resourceResolver": { "-type": "default" },
-		"input": "a {{include(':baseURI:testresources/tpl/test_for_include.tpl')}} b",
+		"input": "a {{include('testresources/tpl/test_for_include.tpl')}} b",
 		"expected": "a include file contents b"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"input": "a {{include('other::baseURI:testresources/tpl/test_for_include.tpl').isUndefined()}} b",
+	}, {
+		"input": "a {{include('other://testresources/tpl/test_for_include.tpl').isUndefined()}} b",
 		"expected": "a true b"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"input": "a {{include(':baseURI:testresources/tpl/unknown.tpl').isUndefined()}} b",
+	}, {
+		"input": "a {{include('testresources/tpl/unknown.tpl').isUndefined()}} b",
 		"expected": "a true b"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"input": "a {{var x = 30}} b {{x}} c {{include(':baseURI:testresources/tpl/test_for_include.tpl')}} d {{x}} e",
+	}, {
+		"input": "a {{var x = 30}} b {{x}} c {{include('testresources/tpl/test_for_include.tpl')}} d {{x}} e",
 		"expected": "a  b 30 c include file contents d 30 e"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{include(':baseURI:testresources/tpl/test_for_include.tpl')}} d {{macro_name()}} e",
+	}, {
+		"input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{include('testresources/tpl/test_for_include.tpl')}} d {{macro_name()}} e",
 		"expected": "a  b local macro c include file contents d local macro e"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"input": "a {{include(':baseURI:testresources/tpl/test_for_include.tpl')}} b {{macro_name().isUndefined()}} c",
+	}, {
+		"input": "a {{include('testresources/tpl/test_for_include.tpl')}} b {{macro_name().isUndefined()}} c",
 		"expected": "a include file contents b true c"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"input": "a {{include(':baseURI:testresources/tpl/test_for_include_invalid.tpl').isUndefined()}} b",
+	}, {
+		"input": "a {{include('testresources/tpl/test_for_include_invalid.tpl').isUndefined()}} b",
 		"expected": "a true b"
 	}]
 }, {
 	"name": "relative URIs",
 	"cases": [{
-		"global": {
-			  "name": "baseURI",
-		  	"-value": ":baseURI:"
-		},
 		"input": "a {{loadText('testresources/txt/file.txt')}} b",
 		"expected": "a text file content b"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"global": {
-		  "name": "baseURI",
-		  "-value": ":baseURI:"
+	}, {
+		"property": {
+			"name": "baseURI",
+			"node": "global",
+			"result": "dummy:///"
 		},
 		"input": "a {{loadJSON('testresources/json/test_for_json.json')['key']}} b {{loadJSON('testresources/json/test_for_json.json').isMap()}} c",
 		"expected": "a 123 b true c"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"global": {
-		  "name": "baseURI",
-		  "-value": ":baseURI:"
+	}, {
+		"property": {
+			"name": "baseURI",
+			"node": "global",
+			"result": "dummy:///"
 		},
 		"input": "a {{global.baseURI}} b {{include('testresources/tpl/test_for_include_relative.tpl')}} c {{global.baseURI}} d",
-		"expected": "a :baseURI: b relative file :baseURI:testresources/tpl/test_for_include_relative.tpl content c :baseURI: d"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"global": {
-		  "name": "baseURI",
-		  "-value": ":baseURI:"
-		},
+		"expected": "a dummy:/// b relative file dummy:/// content c dummy:/// d"
+	}, {
 		"input": "a {{include('testresources/tpl/unknown.tpl').isUndefined()}} b",
 		"expected": "a true b"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"global": {
-		  "name": "baseURI",
-		  "-value": ":baseURI:"
-		},
-		"input": "a {{global.baseURI}} b {{include('testresources/tpl/test_for_include_subfolder.tpl')}} c {{global.baseURI}} d",
-		"expected": "a :baseURI: b ZA:baseURI:testresources/tpl/subfolder/file_for_include.tplBX c :baseURI: d"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"global": {
-		  "name": "baseURI",
-		  "-value": ":baseURI:"
-		},
+	}, {
 		"input": "a {{import 'testresources/tpl/test_for_import.tpl'}} b {{x}} c {{macro_name()}} d",
 		"expected": "a  b 10 c inner macro output d"
-	  },
-	  {
-		"resourceResolver": { "-type": "default" },
-		"global": {
-		  "name": "baseURI",
-		  "-value": ":baseURI:"
-		},
-		"input": "a {{global.baseURI}} b {{import ':baseURI:testresources/tpl/test_for_import_subfolder.tpl'}} c {{macro1()}} d {{macro2()}} e {{global.baseURI}} f",
-		"expected": "a :baseURI: b  c macro1 :baseURI:testresources/tpl/test_for_import_subfolder.tpl output d macro2 :baseURI:testresources/tpl/subfolder/file_for_import.tpl output e :baseURI: f"
-	  }]
+	}]
 }]
