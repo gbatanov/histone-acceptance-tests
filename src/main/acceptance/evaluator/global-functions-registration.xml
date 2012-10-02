@@ -35,35 +35,35 @@
 			<input>a {{test_func1()}} b</input>
 			<expected>a test function b</expected>
 		</case>
-		
+
 		<!-- test is it works -->
 		<case>
 			<function name="test_func2" return="number">123.45</function>
 			<input>a {{test_func2()}} b</input>
 			<expected>a 123.45 b</expected>
 		</case>
-		
+
 		<!-- check no args passed to function -->
 		<case>
 			<function name="test_func3" return="string">test function :args: eof</function>
 			<input>a {{test_func3()}} b</input>
 			<expected>a test function [] eof b</expected>
 		</case>
-		
+
 		<!-- check single argument passed to function -->
 		<case>
 			<function name="test_func4" return="string">test function :args: eof</function>
 			<input>a {{test_func4('test')}} b</input>
 			<expected>a test function [string(test)] eof b</expected>
 		</case>
-		
+
 		<!-- check args passed into function -->
 		<case>
 			<function name="test_func5" return="string">test function :args: eof</function>
 			<input>a {{test_func5('test','abcd',1234)}} b</input>
 			<expected>a test function [string(test)-string(abcd)-number(1234)] eof b</expected>
 		</case>
-		
+
 		<!-- check for correct return type -->
 		<case>
 			<function name="test_func6" return="number">123.45</function>
@@ -100,7 +100,6 @@
 
 		<!-- check if global include function works -->
 		<case>
-            <resourceResolver type="default"/>
             <input>a {{include(':baseURI:testresources/tpl/test_for_include.tpl')}} b</input>
 			<expected>a include file contents b</expected>
 		</case>
@@ -108,7 +107,6 @@
 		<!-- rewrite global include function with our own -->
 		<case>
 			<function name="include" return="string">include :args: result</function>
-            <resourceResolver type="default"/>
             <input>a {{include(':baseURI:testresources/tpl/test_for_include.tpl')}} b</input>
             <expected>a include [string(:baseURI:testresources/tpl/test_for_include.tpl)] result b</expected>
 		</case>
