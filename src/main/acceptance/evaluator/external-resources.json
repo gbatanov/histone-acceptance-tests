@@ -2,92 +2,91 @@
 	"name": "loadJSON",
 	"cases": [{
 		"input": "a {{loadJSON('testresources/json/test_for_json.json')['key']}} b {{loadJSON('testresources/json/test_for_json.json').isMap()}} c",
-		"expected": "a 123 b true c"
+		"expectedResult": "a 123 b true c"
 	}, {
 		"input": "a {{loadJSON('unknown.json').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}, {
 		"input": "a {{loadJSON('dummy:/file.json').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}, {
 		"input": "a {{loadJSON('testresources/json/test_for_json_array.json')}} b {{loadJSON('testresources/json/test_for_json_array.json').isMap()}} c",
-		"expected": "a 1 2 3 b true c"
+		"expectedResult": "a 1 2 3 b true c"
 	}, {
 		"input": "a {{loadJSON('testresources/json/test_for_json_string.json')}} b {{loadJSON('testresources/json/test_for_json_string.json').isString()}} c",
-		"expected": "a test string b true c"
+		"expectedResult": "a test string b true c"
 	}, {
 		"input": "a {{loadJSON('testresources/json/test_for_json_invalid.json').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}]
 }, {
 	"name": "loadText",
 	"cases": [{
 		"input": "a {{loadText('testresources/txt/file.txt')}} b",
-		"expected": "a text file content b"
+		"expectedResult": "a text file content b"
 	}, {
 		"input": "a {{loadText('dummy:/file.txt').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}, {
 		"input": "a {{loadText('testresources/unknown.txt').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}, {
 		"input": "a {{loadText('testresources/txt/file_with_markup.txt')}} b",
-		"expected": "a text file {{'test'}} content b"
+		"expectedResult": "a text file {{'test'}} content b"
 	}]
 }, {
 	"name": "import",
 	"cases": [{
 		"input": "a {{import 'testresources/tpl/test_for_import.tpl'}} b {{x}} c {{macro_name()}} d",
-		"expected": "a  b 10 c inner macro output d"
+		"expectedResult": "a  b 10 c inner macro output d"
 	}, {
 		"input": "a {{import 'other://testresources/tpl/test_for_import.tpl'}} b",
-		"expected": "a  b"
+		"expectedResult": "a  b"
 	}, {
 		"input": "a {{import 'other://testresources/tpl/unknown.tpl'}} b",
-		"expected": "a  b"
+		"expectedResult": "a  b"
 	}, {
 		"input": "a {{var x = 30}} b {{x}} c {{import 'testresources/tpl/test_for_import.tpl'}} d {{x}} e {{macro_name()}} f",
-		"expected": "a  b 30 c  d 10 e inner macro output f"
+		"expectedResult": "a  b 30 c  d 10 e inner macro output f"
 	}, {
-		"resourceResolver": { "-type": "default" },
 		"input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{import 'testresources/tpl/test_for_import.tpl'}} d {{macro_name()}} e",
-		"expected": "a  b local macro c  d inner macro output e"
+		"expectedResult": "a  b local macro c  d inner macro output e"
 	}, {
 		"input": "a {{import 'dummy:/file.tpl'}} b",
-		"expected": "a  b"
+		"expectedResult": "a  b"
 	}, {
 		"input": "a {{import 'testresources/tpl/test_for_import_recursive_1.tpl'}} b {{macro1()}} c {{macro2()}} d",
-		"expected": "a  b macro1 output c macro2 output d"
+		"expectedResult": "a  b macro1 output c macro2 output d"
 	}]
 }, {
 	"name": "include",
 	"cases": [{
 		"input": "a {{include('testresources/tpl/test_for_include.tpl')}} b",
-		"expected": "a include file contents b"
+		"expectedResult": "a include file contents b"
 	}, {
 		"input": "a {{include('other://testresources/tpl/test_for_include.tpl').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}, {
 		"input": "a {{include('testresources/tpl/unknown.tpl').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}, {
 		"input": "a {{var x = 30}} b {{x}} c {{include('testresources/tpl/test_for_include.tpl')}} d {{x}} e",
-		"expected": "a  b 30 c include file contents d 30 e"
+		"expectedResult": "a  b 30 c include file contents d 30 e"
 	}, {
 		"input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{include('testresources/tpl/test_for_include.tpl')}} d {{macro_name()}} e",
-		"expected": "a  b local macro c include file contents d local macro e"
+		"expectedResult": "a  b local macro c include file contents d local macro e"
 	}, {
 		"input": "a {{include('testresources/tpl/test_for_include.tpl')}} b {{macro_name().isUndefined()}} c",
-		"expected": "a include file contents b true c"
+		"expectedResult": "a include file contents b true c"
 	}, {
 		"input": "a {{include('testresources/tpl/test_for_include_invalid.tpl').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}]
 }, {
 	"name": "relative URIs",
 	"cases": [{
 		"input": "a {{loadText('testresources/txt/file.txt')}} b",
-		"expected": "a text file content b"
+		"expectedResult": "a text file content b"
 	}, {
 		"property": {
 			"name": "baseURI",
@@ -95,7 +94,7 @@
 			"result": "dummy:///"
 		},
 		"input": "a {{loadJSON('testresources/json/test_for_json.json')['key']}} b {{loadJSON('testresources/json/test_for_json.json').isMap()}} c",
-		"expected": "a 123 b true c"
+		"expectedResult": "a 123 b true c"
 	}, {
 		"property": {
 			"name": "baseURI",
@@ -103,12 +102,12 @@
 			"result": "dummy:///"
 		},
 		"input": "a {{global.baseURI}} b {{include('testresources/tpl/test_for_include_relative.tpl')}} c {{global.baseURI}} d",
-		"expected": "a dummy:/// b relative file dummy:/// content c dummy:/// d"
+		"expectedResult": "a dummy:/// b relative file dummy:/// content c dummy:/// d"
 	}, {
 		"input": "a {{include('testresources/tpl/unknown.tpl').isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}, {
 		"input": "a {{import 'testresources/tpl/test_for_import.tpl'}} b {{x}} c {{macro_name()}} d",
-		"expected": "a  b 10 c inner macro output d"
+		"expectedResult": "a  b 10 c inner macro output d"
 	}]
 }]

@@ -2,9 +2,9 @@
 	"name": "constructions",
 	"cases": [{
 		"input": "{{}}",
-		"expected": ""
+		"expectedResult": ""
 	}, {
 		"input": "a{{}}b",
-		"expected": "ab"
+		"expectedResult": "ab"
 	}]
 }]

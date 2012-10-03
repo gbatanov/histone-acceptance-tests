@@ -2,43 +2,43 @@
 	"name": "global for function calls",
 	"cases": [{
 		"input": "a {{global.max(1,2)}} b",
-		"expected": "a 2 b"
+		"expectedResult": "a 2 b"
 	}, {
 		"input": "a {{macro max(x,y)}}555{{/macro}} b {{global.max(1,2)}} c {{max(1,2)}} d",
-		"expected": "a  b 2 c 555 d"
+		"expectedResult": "a  b 2 c 555 d"
 	}, {
 		"function": {
 			"name": "max",
 			"result": 555
 		},
 		"input": "a {{global.max(1,2)}} b {{max(1,2)}} c",
-		"expected": "a 555 b 555 c"
+		"expectedResult": "a 555 b 555 c"
 	}, {
 		"input": "a {{global.undefinedFunction().isUndefined()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}]
 }, {
 	"name": "global as it is",
 	"cases": [{
 		"input": "a {{global.isMap()}} b",
-		"expected": "a true b"
+		"expectedResult": "a true b"
 	}]
 }, {
 	"name": "global and context",
 	"cases": [{
 		"input": "a {{global.isMap()}} b {{global}} c {{this['global']}} d",
 		"context": {"global": "123"},
-		"expected": "a true b  c 123 d"
+		"expectedResult": "a true b  c 123 d"
 	}, {
 		"input": "a {{this}} b {{global}} c",
 		"context": "test",
-		"expected": "a test b  c"
+		"expectedResult": "a test b  c"
 	}, {
 		"input": "a {{for x in [1, 2, 3]}}{{global.isMap()}} {{/for}} b",
-		"expected": "a true true true  b"
+		"expectedResult": "a true true true  b"
 	}, {
 		"input": "a {{macro myMacro}}{{global.isMap()}}{{/macro}} b {{myMacro()}} c",
-		"expected": "a  b true c"
+		"expectedResult": "a  b true c"
 	}]
 }, {
 	"name": "global.baseURI",
@@ -49,7 +49,7 @@
 			"result": "dummy:///"
 		 },
 		"input": "a {{global.baseURI}} b",
-		"expected": "a dummy:/// b"
+		"expectedResult": "a dummy:/// b"
 	}, {
 		"property": {
 			"name": "baseURI",
@@ -57,7 +57,7 @@
 			"result": "dummy:///test/"
 		 },
 		"input": "a {{global.baseURI}} b",
-		"expected": "a dummy:///test/ b"
+		"expectedResult": "a dummy:///test/ b"
 	}, {
 		"property": {
 			"name": "baseURI",
@@ -65,7 +65,7 @@
 			"result": "dummy://some/"
 		 },
 		"input": "a {{global.baseURI}} b",
-		"expected": "a dummy://some/ b"
+		"expectedResult": "a dummy://some/ b"
 	}, {
 		"property": {
 			"name": "baseURI",
@@ -73,7 +73,7 @@
 			"result": "dummy://some/test/"
 		 },
 		"input": "a {{global.baseURI}} b",
-		"expected": "a dummy://some/test/ b"
+		"expectedResult": "a dummy://some/test/ b"
 	}, {
 		"property": {
 			"name": "baseURI",
@@ -81,6 +81,6 @@
 			"result": "dummy://some/test/"
 		 },
 		"input": "a {{macro myMacro}}{{global.baseURI}}{{/macro}} b {{myMacro()}} c",
-		"expected": "a  b dummy://some/test/ c"
+		"expectedResult": "a  b dummy://some/test/ c"
 	}]
 }]

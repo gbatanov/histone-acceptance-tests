@@ -2,333 +2,333 @@
 		"name": "min",
 		"cases": [{
 				"input": "a {{min()}} b",
-				"expected": "a  b"
+				"expectedResult": "a  b"
 		}, {
 				"input": "a {{min().isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{min(399).isNumber()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{min(-10, 0, 10)}} b",
-				"expected": "a -10 b"
+				"expectedResult": "a -10 b"
 		}, {
 				"input": "a {{min('string', 0, 10)}} b",
-				"expected": "a 0 b"
+				"expectedResult": "a 0 b"
 		}, {
 				"input": "a {{min('string', 'foo', 10) is 10}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{min(1000, 200, 3000, 4000, 3, 1000, 200)}} b",
-				"expected": "a 3 b"
+				"expectedResult": "a 3 b"
 		}, {
 				"input": "a {{min(-33.30, 0, 1.30)}} b",
-				"expected": "a -33.3 b"
+				"expectedResult": "a -33.3 b"
 		}, {
 				"input": "a {{min('string', 0, 32.103)}} b",
-				"expected": "a 0 b"
+				"expectedResult": "a 0 b"
 		}, {
 				"input": "a {{min('string', 'foo', 13.03) is 13.03}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{min(100.03, 200.3, 3000.8, 4000.12, 3.2, 1000.2, 200.122)}} b",
-				"expected": "a 3.2 b"
+				"expectedResult": "a 3.2 b"
 		}, {
 				"input": "a {{min(-10E3, 0, 10E2)}} b",
-				"expected": "a -10000 b"
+				"expectedResult": "a -10000 b"
 		}, {
 				"input": "a {{min('string', 0E3, 10E3)}} b",
-				"expected": "a 0 b"
+				"expectedResult": "a 0 b"
 		}, {
 				"input": "a {{min('string', 'foo', 10E3) is 10E3}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{min(1000E2, 200E2, 3000E+2, 4000E3, 3E+4, 1000E2, 200E0)}} b",
-				"expected": "a 200 b"
+				"expectedResult": "a 200 b"
 		}, {
 				"input": "a {{min(-33.30E1, 0E1, 1.30E3)}} b",
-				"expected": "a -333 b"
+				"expectedResult": "a -333 b"
 		}, {
 				"input": "a {{min('string', 0E+0, 32.103E3)}} b",
-				"expected": "a 0 b"
+				"expectedResult": "a 0 b"
 		}, {
 				"input": "a {{min('string', 'foo', 13.03E2) is 13.03E2}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{min(100.03E+8, 200.3E1, 3000.8, 4000.12E1, 3.2E0, 1000.2E+0, 200.122E2)}} b",
-				"expected": "a 3.2 b"
+				"expectedResult": "a 3.2 b"
 		}, {
 				"input": "a {{min(-10E-3, 0, 10E-2)}} b",
-				"expected": "a -0.01 b"
+				"expectedResult": "a -0.01 b"
 		}, {
 				"input": "a {{min('string', 0E-3, 10E-3)}} b",
-				"expected": "a 0 b"
+				"expectedResult": "a 0 b"
 		}, {
 				"input": "a {{min('string', 'foo', 10E-3) is 10E-3}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{min(1000E-2, 200E-2, 3000E-2, 4000E-3, 3E-4, 1000E-2, 200E-0)}} b",
-				"expected": "a 0.0003 b"
+				"expectedResult": "a 0.0003 b"
 		}, {
 				"input": "a {{min(-33.30E-1, 0E-1, 1.30E-3)}} b",
-				"expected": "a -3.33 b"
+				"expectedResult": "a -3.33 b"
 		}, {
 				"input": "a {{min('string', 0E-0, 32.103E-3)}} b",
-				"expected": "a 0 b"
+				"expectedResult": "a 0 b"
 		}, {
 				"input": "a {{min('string', 'foo', 13.03E-2) is 13.03E-2}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{min(100.03E-8, 200.3E-1, 3000.8, 4000.12E-1, 3.2E-0, 1000.2E-0, 200.122E2)}} b",
-				"expected": "a 0.0000010003 b"
+				"expectedResult": "a 0.0000010003 b"
 		}]
 }, {
 		"name": "max",
 		"cases": [{
 				"input": "a {{max()}} b",
-				"expected": "a  b"
+				"expectedResult": "a  b"
 		}, {
 				"input": "a {{max().isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{max(-128).isNumber()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{max(-10, 0, 10)}} b",
-				"expected": "a 10 b"
+				"expectedResult": "a 10 b"
 		}, {
 				"input": "a {{max('string', 0, 10)}} b",
-				"expected": "a 10 b"
+				"expectedResult": "a 10 b"
 		}, {
 				"input": "a {{max('string', 'foo', 10) is 10}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{max(1000, 200, 3000, 4000, 3, 1000, 200)}} b",
-				"expected": "a 4000 b"
+				"expectedResult": "a 4000 b"
 		}, {
 				"input": "a {{max(-33.30, 0, 1.30)}} b",
-				"expected": "a 1.3 b"
+				"expectedResult": "a 1.3 b"
 		}, {
 				"input": "a {{max('string', 0, 32.103)}} b",
-				"expected": "a 32.103 b"
+				"expectedResult": "a 32.103 b"
 		}, {
 				"input": "a {{max('string', 'foo', 13.03) is 13.03}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{max(100.03, 200.3, 3000.8, 4000.12, 3.2, 1000.2, 200.122)}} b",
-				"expected": "a 4000.12 b"
+				"expectedResult": "a 4000.12 b"
 		}, {
 				"input": "a {{max(-10E3, 0, 10E2)}} b",
-				"expected": "a 1000 b"
+				"expectedResult": "a 1000 b"
 		}, {
 				"input": "a {{max('string', 0E3, 10E3)}} b",
-				"expected": "a 10000 b"
+				"expectedResult": "a 10000 b"
 		}, {
 				"input": "a {{max('string', 'foo', 10E3) is 10E3}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{max(1000E2, 200E2, 3000E+2, 4000E3, 3E+4, 1000E2, 200E0)}} b",
-				"expected": "a 4000000 b"
+				"expectedResult": "a 4000000 b"
 		}, {
 				"input": "a {{max(-33.30E1, 0E1, 1.30E3)}} b",
-				"expected": "a 1300 b"
+				"expectedResult": "a 1300 b"
 		}, {
 				"input": "a {{max('string', 0E+0, 32.103E3)}} b",
-				"expected": "a 32103 b"
+				"expectedResult": "a 32103 b"
 		}, {
 				"input": "a {{max('string', 'foo', 13.03E2) is 13.03E2}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{max(100.03E+8, 200.3E1, 3000.8, 4000.12E1, 3.2E0, 1000.2E+0, 200.122E2)}} b",
-				"expected": "a 10003000000 b"
+				"expectedResult": "a 10003000000 b"
 		}, {
 				"input": "a {{max(-10E-3, 0, 10E-2)}} b",
-				"expected": "a 0.1 b"
+				"expectedResult": "a 0.1 b"
 		}, {
 				"input": "a {{max('string', 0E-3, 10E-3)}} b",
-				"expected": "a 0.01 b"
+				"expectedResult": "a 0.01 b"
 		}, {
 				"input": "a {{max('string', 'foo', 10E-3) is 10E-3}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{max(1000E-2, 200E-2, 3000E-2, 4000E-3, 3E-4, 1000E-2, 200E-0)}} b",
-				"expected": "a 200 b"
+				"expectedResult": "a 200 b"
 		}, {
 				"input": "a {{max(-33.30E-1, 0E-1, 1.30E-3)}} b",
-				"expected": "a 0.0013 b"
+				"expectedResult": "a 0.0013 b"
 		}, {
 				"input": "a {{max('string', 0E-0, 32.103E-3)}} b",
-				"expected": "a 0.032103 b"
+				"expectedResult": "a 0.032103 b"
 		}, {
 				"input": "a {{max('string', 'foo', 13.03E-2) is 13.03E-2}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{max(100.03E-8, 200.3E-1, 3000.8, 4000.12E-1, 3.2E-0, 1000.2E-0, 200.122E2)}} b",
-				"expected": "a 20012.2 b"
+				"expectedResult": "a 20012.2 b"
 		}]
 }, {
 		"name": "dayOfWeek",
 		"cases": [{
 				"input": "a {{dayOfWeek(2012, 4, 2)}} b",
-				"expected": "a 1 b"
+				"expectedResult": "a 1 b"
 		}, {
 				"input": "a {{dayOfWeek(2012, 4, 3)}} b",
-				"expected": "a 2 b"
+				"expectedResult": "a 2 b"
 		}, {
 				"input": "a {{dayOfWeek(2012, 4, 4)}} b",
-				"expected": "a 3 b"
+				"expectedResult": "a 3 b"
 		}, {
 				"input": "a {{dayOfWeek(2012, 4, 5)}} b",
-				"expected": "a 4 b"
+				"expectedResult": "a 4 b"
 		}, {
 				"input": "a {{dayOfWeek(2012, 4, 6)}} b",
-				"expected": "a 5 b"
+				"expectedResult": "a 5 b"
 		}, {
 				"input": "a {{dayOfWeek(2012, 4, 7)}} b",
-				"expected": "a 6 b"
+				"expectedResult": "a 6 b"
 		}, {
 				"input": "a {{dayOfWeek(2012, 4, 8)}} b",
-				"expected": "a 7 b"
+				"expectedResult": "a 7 b"
 		}, {
 				"input": "a {{dayOfWeek(2012,1,1).isNumber()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{dayOfWeek(2012,1,1)}} b",
-				"expected": "a 7 b"
+				"expectedResult": "a 7 b"
 		}, {
 				"input": "a {{dayOfWeek(2012,1,32).isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{dayOfWeek(2012,2,29)}} b",
-				"expected": "a 3 b"
+				"expectedResult": "a 3 b"
 		}, {
 				"input": "a {{dayOfWeek(2011,2,28)}} b",
-				"expected": "a 1 b"
+				"expectedResult": "a 1 b"
 		}, {
 				"input": "a {{dayOfWeek(2011,2,29).isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{dayOfWeek(2011,3,1)}} b",
-				"expected": "a 2 b"
+				"expectedResult": "a 2 b"
 		}, {
 				"input": "a {{dayOfWeek('2011','3','1')}} b",
-				"expected": "a 2 b"
+				"expectedResult": "a 2 b"
 		}, {
 				"input": "a {{dayOfWeek('a',3,1).isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{dayOfWeek(2011,'a',1).isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{dayOfWeek(2011,3,'a').isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}]
 }, {
 		"name": "daysInMonth",
 		"cases": [{
 				"input": "a {{daysInMonth(2012, 4)}} b",
-				"expected": "a 30 b"
+				"expectedResult": "a 30 b"
 		}, {
 				"input": "a {{daysInMonth(2012, 3)}} b",
-				"expected": "a 31 b"
+				"expectedResult": "a 31 b"
 		}, {
 				"input": "a {{daysInMonth(2012, 2)}} b",
-				"expected": "a 29 b"
+				"expectedResult": "a 29 b"
 		}, {
 				"input": "a {{daysInMonth(1900, 2)}} b",
-				"expected": "a 28 b"
+				"expectedResult": "a 28 b"
 		}, {
 				"input": "a {{daysInMonth(2011, 2)}} b",
-				"expected": "a 28 b"
+				"expectedResult": "a 28 b"
 		}, {
 				"input": "a {{daysInMonth(1900, 2).isNumber()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{daysInMonth(1900,0).isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{daysInMonth(1900,13).isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{daysInMonth(1900).isUndefined()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{daysInMonth('2012',2)}} b",
-				"expected": "a 29 b"
+				"expectedResult": "a 29 b"
 		}, {
 				"input": "a {{daysInMonth(2012,'2')}} b",
-				"expected": "a 29 b"
+				"expectedResult": "a 29 b"
 		}, {
 				"input": "a {{daysInMonth('2012','2')}} b",
-				"expected": "a 29 b"
+				"expectedResult": "a 29 b"
 		}]
 }, {
 		"name": "uniqueId",
 		"cases": [{
 				"input": "a {{uniqueId().isString()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}, {
 				"input": "a {{uniqueId() isNot uniqueId()}} b",
-				"expected": "a true b"
+				"expectedResult": "a true b"
 		}]
 }, {
 		"name": "range",
 		"cases": [{
 				"input": "a {{var x = range(1,1)}} b {{x}} c {{x is [1]}} d",
-				"expected": "a  b 1 c true d"
+				"expectedResult": "a  b 1 c true d"
 		}, {
 				"input": "a {{var x = range(1,3)}} b {{x}} c {{x is [1,2,3]}} d",
-				"expected": "a  b 1 2 3 c true d"
+				"expectedResult": "a  b 1 2 3 c true d"
 		}, {
 				"input": "a {{var x = range(3,1)}} b {{x}} c {{x is [3,2,1]}} d",
-				"expected": "a  b 3 2 1 c true d"
+				"expectedResult": "a  b 3 2 1 c true d"
 		}, {
 				"input": "a {{var x = range(-10,-10)}} b {{x}} c {{x is [-10]}} d",
-				"expected": "a  b -10 c true d"
+				"expectedResult": "a  b -10 c true d"
 		}, {
 				"input": "a {{var x = range(-3,-1)}} b {{x}} c {{x is [-3,-2,-1]}} d",
-				"expected": "a  b -3 -2 -1 c true d"
+				"expectedResult": "a  b -3 -2 -1 c true d"
 		}, {
 				"input": "a {{var x = range(-1,-3)}} b {{x}} c {{x is [-1,-2,-3]}} d",
-				"expected": "a  b -1 -2 -3 c true d"
+				"expectedResult": "a  b -1 -2 -3 c true d"
 		}, {
 				"input": "a {{var x = range(-2,2)}} b {{x}} c {{x is [-2,-1,0,1,2]}} d",
-				"expected": "a  b -2 -1 0 1 2 c true d"
+				"expectedResult": "a  b -2 -1 0 1 2 c true d"
 		}, {
 				"input": "a {{var x = range(2,-2)}} b {{x}} c {{x is [2,1,0,-1,-2]}} d",
-				"expected": "a  b 2 1 0 -1 -2 c true d"
+				"expectedResult": "a  b 2 1 0 -1 -2 c true d"
 		}, {
 				"input": "a {{var x = range('1',2)}} b {{x}} c {{x is [1,2]}} d",
-				"expected": "a  b 1 2 c true d"
+				"expectedResult": "a  b 1 2 c true d"
 		}, {
 				"input": "a {{var x = range(1,'2')}} b {{x}} c {{x is [1,2]}} d",
-				"expected": "a  b 1 2 c true d"
+				"expectedResult": "a  b 1 2 c true d"
 		}, {
 				"input": "a {{var x = range('1','2')}} b {{x}} c {{x is [1,2]}} d",
-				"expected": "a  b 1 2 c true d"
+				"expectedResult": "a  b 1 2 c true d"
 		}, {
 				"input": "a {{var x = range(1.1)}} b {{x.isUndefined()}} c",
-				"expected": "a  b true c"
+				"expectedResult": "a  b true c"
 		}, {
 				"input": "a {{var x = range(1.1,2)}} b {{x.isUndefined()}} c",
-				"expected": "a  b true c"
+				"expectedResult": "a  b true c"
 		}, {
 				"input": "a {{var x = range(1.1,2.2)}} b {{x.isUndefined()}} c",
-				"expected": "a  b true c"
+				"expectedResult": "a  b true c"
 		}, {
 				"input": "a {{var x = range(1,2.2)}} b {{x.isUndefined()}} c",
-				"expected": "a  b true c"
+				"expectedResult": "a  b true c"
 		}, {
 				"input": "a {{var x = range(1,3,'adsfasdfdsf')}} b {{x}} c {{x is [1,2,3]}} d",
-				"expected": "a  b 1 2 3 c true d"
+				"expectedResult": "a  b 1 2 3 c true d"
 		}, {
 				"input": "a {{var x = range('aaa',2)}} b {{x.isUndefined()}} c",
-				"expected": "a  b true c"
+				"expectedResult": "a  b true c"
 		}, {
 				"input": "a {{var x = range(2,'aaa')}} b {{x.isUndefined()}} c",
-				"expected": "a  b true c"
+				"expectedResult": "a  b true c"
 		}, {
 				"input": "a {{var x = range('aaa','bbb')}} b {{x.isUndefined()}} c",
-				"expected": "a  b true c"
+				"expectedResult": "a  b true c"
 		}]
 }]

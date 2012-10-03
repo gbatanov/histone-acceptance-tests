@@ -2,84 +2,84 @@
 	"name": "macro statement",
 	"cases": [{
 		"input": "a {{macro myMacro}}{{/macro}} b",
-		"expected": "a  b"
+		"expectedResult": "a  b"
 	}, {
 		"input": "a {{macro myMacro}}hello{{/macro}} b",
-		"expected": "a  b"
+		"expectedResult": "a  b"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello{{/macro}} b",
-		"expected": "a  b"
+		"expectedResult": "a  b"
 	}, {
 		"input": "a {{macro myMacro}}{{/macro}} b {{myMacro()}}",
-		"expected": "a  b "
+		"expectedResult": "a  b "
 	}, {
 		"input": "a {{macro myMacro}}hello{{/macro}} b {{myMacro()}}",
-		"expected": "a  b hello"
+		"expectedResult": "a  b hello"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello{{/macro}} b {{myMacro()}}",
-		"expected": "a  b hello"
+		"expectedResult": "a  b hello"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{myMacro()}}",
-		"expected": "a  b hello:,,"
+		"expectedResult": "a  b hello:,,"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{myMacro(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)}}",
-		"expected": "a  b hello:1,2,3"
+		"expectedResult": "a  b hello:1,2,3"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b is undefined}},{{c is undefined}}{{/macro}} b {{myMacro(1)}}",
-		"expected": "a  b hello:1,true,true"
+		"expectedResult": "a  b hello:1,true,true"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{myMacro('x')}}",
-		"expected": "a  b hello:x,,"
+		"expectedResult": "a  b hello:x,,"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{myMacro('x', 'y')}}",
-		"expected": "a  b hello:x,y,"
+		"expectedResult": "a  b hello:x,y,"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{myMacro('x', 'y', 'z')}}",
-		"expected": "a  b hello:x,y,z"
+		"expectedResult": "a  b hello:x,y,z"
 	}, {
 		"input": "a {{x}}{{macro myMacro}}{{var x = 10}}{{/macro}} b {{x}} {{myMacro()}} {{x}}",
-		"expected": "a  b   "
+		"expectedResult": "a  b   "
 	}, {
 		"input": "a {{x}}{{macro myMacro}}{{var x = 10}}{{x}}{{/macro}} b {{x}} {{myMacro()}} {{x}}",
-		"expected": "a  b  10 "
+		"expectedResult": "a  b  10 "
 	}, {
 		"input": "a {{var myMacro = 10}}{{macro myMacro}}HELLO WORLD{{/macro}} - {{myMacro}} - {{myMacro()}} c",
-		"expected": "a  - 10 - HELLO WORLD c"
+		"expectedResult": "a  - 10 - HELLO WORLD c"
 	}, {
 		"input": "a {{var x = 10}}{{macro myMacro}}{{x}}{{/macro}} {{myMacro()}} {{x}}",
-		"expected": "a  10 10"
+		"expectedResult": "a  10 10"
 	}, {
 		"input": "a {{var x = 10}}{{macro myMacro(x)}}{{x}}{{/macro}} {{myMacro(x)}} {{x}}",
-		"expected": "a  10 10"
+		"expectedResult": "a  10 10"
 	}, {
 		"input": "a {{macro myMacro}}{{/macro}} b {{call myMacro()}}{{/call}}",
-		"expected": "a  b "
+		"expectedResult": "a  b "
 	}, {
 		"input": "a {{macro myMacro}}hello{{/macro}} b {{call myMacro()}}{{/call}}",
-		"expected": "a  b hello"
+		"expectedResult": "a  b hello"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello{{/macro}} b {{call myMacro()}}{{/call}}",
-		"expected": "a  b hello"
+		"expectedResult": "a  b hello"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{call myMacro()}}{{/call}}",
-		"expected": "a  b hello:,,"
+		"expectedResult": "a  b hello:,,"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{call myMacro('x')}}{{/call}}",
-		"expected": "a  b hello:x,,"
+		"expectedResult": "a  b hello:x,,"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{call myMacro('x', 'y')}}{{/call}}",
-		"expected": "a  b hello:x,y,"
+		"expectedResult": "a  b hello:x,y,"
 	}, {
 		"input": "a {{macro myMacro(a, b, c)}}hello:{{a}},{{b}},{{c}}{{/macro}} b {{call myMacro('x', 'y', 'z')}}{{/call}}",
-		"expected": "a  b hello:x,y,z"
+		"expectedResult": "a  b hello:x,y,z"
 	}, {
 		"input": "a {{x}}{{macro myMacro}}{{var x = 10}}{{/macro}} b {{x}} {{call myMacro()}}{{/call}} {{x}}",
-		"expected": "a  b   "
+		"expectedResult": "a  b   "
 	}]
 }, {
 	"name": "macro overrides global function",
 	"cases": [{
 		"input": "a {{macro max(x,y)}}555{{/macro}} b {{max(1,2)}} c",
-		"expected": "a  b 555 c"
+		"expectedResult": "a  b 555 c"
 	}]
 }]
