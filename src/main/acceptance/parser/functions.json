@@ -2,7 +2,7 @@
 	"name": "functions",
 	"cases": [{
 		"input": "{{foo()[1]}}",
-		"expected": [
+		"expectedAST": [
 			[105, [
 				[106, null, "foo", null],
 				[101, 1]
@@ -10,7 +10,7 @@
 		]
 	}, {
 		"input": "{{dayOfWeek(2012, 4, 2)}}",
-		"expected": [
+		"expectedAST": [
 			[106, null, "dayOfWeek", [
 				[101, 2012],
 				[101, 4],
@@ -19,137 +19,137 @@
 		]
 	}, {
 		"input": "{{\"string\"()}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "("
 		}
 	}, {
 		"input": "a {{macro name}} b {{/macro}} c",
-		"expected": ["a ", [1003, "name", [],
+		"expectedAST": ["a ", [1003, "name", [],
 			[" b "]
 		], " c"]
 	}, {
 		"input": "a {{macro",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "identifier",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{macro name",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{macro name(",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "identifier",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{macro name(aa",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": ")",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{macro name(aa,",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "identifier",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{macro name(aa,)",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "identifier",
 			"found": ")"
 		}
 	}, {
 		"input": "a {{macro name()}} b {{/macro}} c",
-		"expected": ["a ", [1003, "name", [],
+		"expectedAST": ["a ", [1003, "name", [],
 			[" b "]
 		], " c"]
 	}, {
 		"input": "a {{macro name(arg1, arg2, arg3)}} b {{/macro}} c",
-		"expected": ["a ", [1003, "name", ["arg1", "arg2", "arg3"],
+		"expectedAST": ["a ", [1003, "name", ["arg1", "arg2", "arg3"],
 			[" b "]
 		], " c"]
 	}, {
 		"input": "a {{macro name(a,b,c)",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{macro name(a,b,c)}} bbb",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/macro}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{call name}} b {{/call}} c",
-		"expected": ["a ", [106, null, "name", [
+		"expectedAST": ["a ", [106, null, "name", [
 			[109, [" b "]]
 		]], " c"]
 	}, {
 		"input": "a {{call",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "identifier",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{call name",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{call name(",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "expression",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{call name(10*2",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": ")",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{call name('string',",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "expression",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{call name('string', bar)",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{call name()}} b {{/call}} c",
-		"expected": ["a ", [106, null, "name", [
+		"expectedAST": ["a ", [106, null, "name", [
 			[109, [" b "]]
 		]], " c"]
 	}, {
 		"input": "a {{call name(argA, argB, argC)}} b {{/call}} c",
-		"expected": ["a ", [106, null, "name", [
+		"expectedAST": ["a ", [106, null, "name", [
 			[105, ["argA"]],
 			[105, ["argB"]],
 			[105, ["argC"]],
@@ -157,21 +157,21 @@
 		]], " c"]
 	}, {
 		"input": "a {{call name('string', bar)}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/call}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "{{foo(3.14E+3}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": ")",
 			"found": "}}"
 		}
 	}, {
 		"input": "{{true.foo(11)}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, [
 				[16]
 			]], "foo", [
@@ -180,7 +180,7 @@
 		]
 	}, {
 		"input": "{{false.foo(11)}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, [
 				[17]
 			]], "foo", [
@@ -189,78 +189,78 @@
 		]
 	}, {
 		"input": "{{null.foo()}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, [
 				[100]
 			]], "foo", null]
 		]
 	}, {
 		"input": "{{this.foo()}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, ["this"]], "foo", null]
 		]
 	}, {
 		"input": "{{self.foo()}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, ["self"]], "foo", null]
 		]
 	}, {
 		"input": "{{test.foo(}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "expression",
 			"found": "}}"
 		}
 	}, {
 		"input": "{{'string'.foo()}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, [
 				[103, "string"]
 			]], "foo", null]
 		]
 	}, {
 		"input": "{{111.foo(11}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": ")",
 			"found": "}}"
 		}
 	}, {
 		"input": "{{12.foo()}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, [
 				[101, 12]
 			]], "foo", null]
 		]
 	}, {
 		"input": "{{17.62.foo()}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, [
 				[102, 17.62]
 			]], "foo", null]
 		]
 	}, {
 		"input": "{{17..62.foo()}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "identifier",
 			"found": ".62"
 		}
 	}, {
 		"input": "{{test()}}",
-		"expected": [
+		"expectedAST": [
 			[106, null, "test", null]
 		]
 	}, {
 		"input": "{{17(#}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "("
 		}
 	}, {
 		"input": "{{test(1, 'string', 7.14)}}",
-		"expected": [
+		"expectedAST": [
 			[106, null, "test", [
 				[101, 1],
 				[103, "string"],
@@ -269,12 +269,12 @@
 		]
 	}, {
 		"input": "{{foo.test()}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, ["foo"]], "test", null]
 		]
 	}, {
 		"input": "{{foo.test(\"hey\", \"ho\")}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, ["foo"]], "test", [
 				[103, "hey"],
 				[103, "ho"]
@@ -282,7 +282,7 @@
 		]
 	}, {
 		"input": "{{foo['test'](\"hey\", \"ho\")}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, ["foo"]],
 				[103, "test"],
 				[
@@ -293,7 +293,7 @@
 		]
 	}, {
 		"input": "{{foo(\"hey\", \"ho\").isNumber()}}",
-		"expected": [
+		"expectedAST": [
 			[106, [105, [
 				[106, null, "foo", [
 					[103, "hey"],
@@ -303,14 +303,14 @@
 		]
 	}, {
 		"input": "{{foo(14)(1, 2, 3)}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "("
 		}
 	}, {
 		"input": "{{foo(14)(1, 2, 3).do}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "("

@@ -2,35 +2,35 @@
 	"name": "constructions",
 	"cases": [{
 		"input": "{{if true",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "{{if true}}{{else",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "{{for x in items",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "{{for x in items}}{{else",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{10 is 10 ? true is true ? '1' : '2' : '3'}} b",
-		"expected": ["a ", [104, [3, [101, 10],
+		"expectedAST": ["a ", [104, [3, [101, 10],
 			[101, 10]
 		],
 			[104, [3, [16],
@@ -43,7 +43,7 @@
 		], " b"]
 	}, {
 		"input": "a {{10 is 10 ? true is false ? '1' : '2' : '3'}} b",
-		"expected": ["a ", [104, [3, [101, 10],
+		"expectedAST": ["a ", [104, [3, [101, 10],
 			[101, 10]
 		],
 			[104, [3, [16],
@@ -56,7 +56,7 @@
 		], " b"]
 	}, {
 		"input": "a {{10 is 11 ? true is false ? '1' : '2' : '3'}} b",
-		"expected": ["a ", [104, [3, [101, 10],
+		"expectedAST": ["a ", [104, [3, [101, 10],
 			[101, 11]
 		],
 			[104, [3, [16],
@@ -69,7 +69,7 @@
 		], " b"]
 	}, {
 		"input": "a {{if 10 is 10}} b {{/if}} c",
-		"expected": ["a ", [1000, [
+		"expectedAST": ["a ", [1000, [
 			[
 				[3, [101, 10],
 					[101, 10]
@@ -79,7 +79,7 @@
 		]], " c"]
 	}, {
 		"input": "a {{if 10 is 20}} b {{elseif true}} c {{/if}} d",
-		"expected": ["a ", [1000, [
+		"expectedAST": ["a ", [1000, [
 			[
 				[3, [101, 10],
 					[101, 20]
@@ -93,7 +93,7 @@
 		]], " d"]
 	}, {
 		"input": "a {{if 10 is 20}} b {{else}} c {{/if}} d",
-		"expected": ["a ", [1000, [
+		"expectedAST": ["a ", [1000, [
 			[
 				[3, [101, 10],
 					[101, 20]
@@ -107,7 +107,7 @@
 		]], " d"]
 	}, {
 		"input": "a {{if 10 is 20}} b {{elseif true is false}} c {{else}} d {{/if}}",
-		"expected": ["a ", [1000, [
+		"expectedAST": ["a ", [1000, [
 			[
 				[3, [101, 10],
 					[101, 20]
@@ -127,7 +127,7 @@
 		]]]
 	}, {
 		"input": "a {{for item in items}} b {{item.foo}} c {{/for}} d",
-		"expected": ["a ", [1002, ["item"],
+		"expectedAST": ["a ", [1002, ["item"],
 			[105, ["items"]],
 			[
 				[" b ", [105, ["item", "foo"]], " c "]
@@ -135,7 +135,7 @@
 		], " d"]
 	}, {
 		"input": "a {{for key:item in foo}} b {{key}} c {{item}} d {{/for}} e",
-		"expected": ["a ", [1002, ["item", "key"],
+		"expectedAST": ["a ", [1002, ["item", "key"],
 			[105, ["foo"]],
 			[
 				[" b ", [105, ["key"]], " c ", [105, ["item"]], " d "]
@@ -143,7 +143,7 @@
 		], " e"]
 	}, {
 		"input": "a {{for item in itemsX}} b {{else}} c {{/for}} d",
-		"expected": ["a ", [1002, ["item"],
+		"expectedAST": ["a ", [1002, ["item"],
 			[105, ["itemsX"]],
 			[
 				[" b "],
@@ -152,7 +152,7 @@
 		], " d"]
 	}, {
 		"input": "a {{for items in arr}} b {{/for}} c",
-		"expected": ["a ", [1002, ["items"],
+		"expectedAST": ["a ", [1002, ["items"],
 			[105, ["arr"]],
 			[
 				[" b "]
@@ -160,56 +160,56 @@
 		], " c"]
 	}, {
 		"input": "a {{for}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "identifier",
 			"found": "}}"
 		}
 	}, {
 		"input": "a {{for test}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "in",
 			"found": "}}"
 		}
 	}, {
 		"input": "a {{for test:}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "identifier",
 			"found": "}}"
 		}
 	}, {
 		"input": "a {{for key:value}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "in",
 			"found": "}}"
 		}
 	}, {
 		"input": "a {{for key:value in}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "expression",
 			"found": "}}"
 		}
 	}, {
 		"input": "a {{for key:value in items}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/for}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{for key:value in items}} b {{else}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/for}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{for items in arr}} b {{else}} c {{/for}} d",
-		"expected": ["a ", [1002, ["items"],
+		"expectedAST": ["a ", [1002, ["items"],
 			[105, ["arr"]],
 			[
 				[" b "],
@@ -218,7 +218,7 @@
 		], " d"]
 	}, {
 		"input": "a {{for key:items in arr}} b {{else}} c {{/for}} d",
-		"expected": ["a ", [1002, ["items", "key"],
+		"expectedAST": ["a ", [1002, ["items", "key"],
 			[105, ["arr"]],
 			[
 				[" b "],
@@ -227,14 +227,14 @@
 		], " d"]
 	}, {
 		"input": "a {{for key:value in items}} b {{else}} c {{/mmm}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/for}}",
 			"found": "mmm"
 		}
 	}, {
 		"input": "frag{{if true}}frag{{/if}}frag",
-		"expected": ["frag", [1000, [
+		"expectedAST": ["frag", [1000, [
 			[
 				[16],
 				["frag"]
@@ -242,28 +242,28 @@
 		]], "frag"]
 	}, {
 		"input": "frag{{if}}frag{{/if}}frag",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "expression",
 			"found": "}}"
 		}
 	}, {
 		"input": "frag{{if true}}frag",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/if}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "frag{{if true}}frag{{/fff}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/if}}",
 			"found": "fff"
 		}
 	}, {
 		"input": "a {{if true}} b {{else}} c {{/if}} d",
-		"expected": ["a ", [1000, [
+		"expectedAST": ["a ", [1000, [
 			[
 				[16],
 				[" b "]
@@ -275,14 +275,14 @@
 		]], " d"]
 	}, {
 		"input": "frag{{if true}}frag{{else}} bla",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/if}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "a {{if true}} b {{elseif false}} c {{else}} d {{/if}} e",
-		"expected": ["a ", [1000, [
+		"expectedAST": ["a ", [1000, [
 			[
 				[16],
 				[" b "]
@@ -298,14 +298,14 @@
 		]], " e"]
 	}, {
 		"input": "frag{{if true}}frag{{elseif}} bla",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "expression",
 			"found": "}}"
 		}
 	}, {
 		"input": "a {{if true}} b {{elseif false}} c {{elseif 43}} d {{else}} e {{/if}} f",
-		"expected": ["a ", [1000, [
+		"expectedAST": ["a ", [1000, [
 			[
 				[16],
 				[" b "]
@@ -325,14 +325,14 @@
 		]], " f"]
 	}, {
 		"input": "frag{{if true}}frag{{elseif false}} bla",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/if}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "frag{{if true}}frag{{elseif false}} bla {{else}}",
-		"exception": {
+		"expectedException": {
 			"line": "1",
 			"expected": "{{/if}}",
 			"found": "EOF"
