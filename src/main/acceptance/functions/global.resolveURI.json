@@ -1,0 +1,139 @@
+[{
+	"name": "resolveURI - normal examples",
+	"cases": [{
+		"input": "{{resolveURI('g:h', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "g:h"
+	}, {
+		"input": "{{resolveURI('g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g"
+	}, {
+		"input": "{{resolveURI('./g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g"
+	}, {
+		"input": "{{resolveURI('g/', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g/"
+	}, {
+		"input": "{{resolveURI('/g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/g"
+	}, {
+		"input": "{{resolveURI('//g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://g"
+	}, {
+		"input": "{{resolveURI('?y', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/d;p?y"
+	}, {
+		"input": "{{resolveURI('g?y', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g?y"
+	}, {
+		"input": "{{resolveURI('#s', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/d;p?q#s"
+	}, {
+		"input": "{{resolveURI('g#s', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g#s"
+	}, {
+		"input": "{{resolveURI('g?y#s', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g?y#s"
+	}, {
+		"input": "{{resolveURI(';x', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/;x"
+	}, {
+		"input": "{{resolveURI('g;x', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g;x"
+	}, {
+		"input": "{{resolveURI('g;x?y#s', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g;x?y#s"
+	}, {
+		"input": "{{resolveURI('', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/d;p?q"
+	}, {
+		"input": "{{resolveURI('.', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/"
+	}, {
+		"input": "{{resolveURI('./', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/"
+	}, {
+		"input": "{{resolveURI('..', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/"
+	}, {
+		"input": "{{resolveURI('../', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/"
+	}, {
+		"input": "{{resolveURI('../g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/g"
+	}, {
+		"input": "{{resolveURI('../..', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/"
+	}, {
+		"input": "{{resolveURI('../../', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/"
+	}, {
+		"input": "{{resolveURI('../../g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/g"
+	}]
+}, {
+	"name": "resolveURI - abnormal examples",
+	"cases": [{
+		"input": "{{resolveURI('../../../g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/g"
+	}, {
+		"input": "{{resolveURI('../../../../g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/g"
+	}, {
+		"input": "{{resolveURI('/./g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/g"
+	}, {
+		"input": "{{resolveURI('/../g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/g"
+	}, {
+		"input": "{{resolveURI('g.', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g."
+	}, {
+		"input": "{{resolveURI('.g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/.g"
+	}, {
+		"input": "{{resolveURI('g..', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g.."
+	}, {
+		"input": "{{resolveURI('..g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/..g"
+	}, {
+		"input": "{{resolveURI('./../g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/g"
+	}, {
+		"input": "{{resolveURI('./g/.', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g/"
+	}, {
+		"input": "{{resolveURI('g/./h', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g/h"
+	}, {
+		"input": "{{resolveURI('g/../h', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/h"
+	}, {
+		"input": "{{resolveURI('g;x=1/./y', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g;x=1/y"
+	}, {
+		"input": "{{resolveURI('g;x=1/../y', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/y"
+	}, {
+		"input": "{{resolveURI('g?y/./x', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g?y/./x"
+	}, {
+		"input": "{{resolveURI('g?y/../x', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g?y/../x"
+	}, {
+		"input": "{{resolveURI('g#s/./x', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g#s/./x"
+	}, {
+		"input": "{{resolveURI('g#s/../x', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g#s/../x"
+	}, {
+		"input": "{{resolveURI('http:g', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http:g"
+	}]
+}, {
+	"name": "resolveURI - additional examples",
+	"cases": [{
+		"input": "{{resolveURI('./g:h', 'http://a/b/c/d;p?q')}}",
+		"expectedResult": "http://a/b/c/g:h"
+	}]
+}]

@@ -1,0 +1,28 @@
+[{
+	"name": "rand",
+	"cases": [{
+		"input": "a {{rand().isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{rand('foo', 'bar').isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{rand(0.4, 5.8).isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{rand('foo').isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{rand(0.4).isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{rand(0).isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{rand(null, 300).isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{rand(0, 1) isNot rand(2, 3)}} b",
+		"expectedResult": "a true b"
+	}]
+}]
