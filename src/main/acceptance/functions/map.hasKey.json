@@ -1,0 +1,16 @@
+[{
+	"name": "map.hasKey",
+	"cases": [{
+		"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].hasKey('foo')}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].hasKey('y')}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].hasKey('foo').isBoolean()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[\"123\": \"bar\", \"x\": \"y\"].hasKey(123)}} b",
+		"expectedResult": "a true b"
+	}]
+}]

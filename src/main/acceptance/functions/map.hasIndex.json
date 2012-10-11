@@ -1,0 +1,16 @@
+[{
+	"name": "map.hasIndex",
+	"cases": [{
+		"input": "a {{[1, 2, 3].hasIndex(0)}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{[1, 2, 3].hasIndex(10)}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{[1, 2, 3].hasIndex(2)}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{[1, 2, 3].hasIndex(2).isBoolean()}} b",
+		"expectedResult": "a false b"
+	}]
+}]

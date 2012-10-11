@@ -1,0 +1,13 @@
+[{
+	"name": "map.join",
+	"cases": [{
+		"input": "a {{[2, 3, 4].join()}} b",
+		"expectedResult": "a 234 b"
+	}, {
+		"input": "a {{[2, 3, 4].join('|')}} b",
+		"expectedResult": "a 2|3|4 b"
+	}, {
+		"input": "a {{[2, 3, 4].join('|').isString()}} b",
+		"expectedResult": "a true b"
+	}]
+}]

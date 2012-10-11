@@ -1,0 +1,13 @@
+[{
+	"name": "map.values",
+	"cases": [{
+		"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].values()}} b",
+		"expectedResult": "a bar y b"
+	}, {
+		"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].values().isMap()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[\"foo\": \"bar\", \"x\": \"y\"].values().size()}} b",
+		"expectedResult": "a 2 b"
+	}]
+}]
