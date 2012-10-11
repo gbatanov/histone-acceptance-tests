@@ -1,0 +1,22 @@
+[{
+	"name": "Number.floor",
+	"cases": [{
+		"input": "a {{0.60.floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{0.40.floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{5.floor()}} b",
+		"expectedResult": "a 5 b"
+	}, {
+		"input": "a {{5.1.floor()}} b",
+		"expectedResult": "a 5 b"
+	}, {
+		"input": "a {{-5.9.floor()}} b",
+		"expectedResult": "a -6 b"
+	}, {
+		"input": "a {{-5.9.floor().isNumber()}} b",
+		"expectedResult": "a true b"
+	}]
+}]

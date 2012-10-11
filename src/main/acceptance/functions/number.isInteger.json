@@ -1,0 +1,13 @@
+[{
+	"name": "Number.isInteger",
+	"cases": [{
+		"input": "a {{10.isInteger()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{0.3.isInteger()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-3.33.isInteger()}} b",
+		"expectedResult": "a false b"
+	}]
+}]

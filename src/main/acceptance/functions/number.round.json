@@ -1,0 +1,19 @@
+[{
+	"name": "Number.round",
+	"cases": [{
+		"input": "a {{0.60.round()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{0.50.round()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{0.49.round()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{-4.40.round()}} b",
+		"expectedResult": "a -4 b"
+	}, {
+		"input": "a {{-4.60.round()}} b",
+		"expectedResult": "a -5 b"
+	}]
+}]

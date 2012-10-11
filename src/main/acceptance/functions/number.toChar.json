@@ -1,0 +1,16 @@
+[{
+	"name": "Number.toChar",
+	"cases": [{
+		"input": "a {{65.toChar()}} b",
+		"expectedResult": "a A b"
+	}, {
+		"input": "a {{65.toChar().isString()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{65.toChar().charCodeAt(0)}} b",
+		"expectedResult": "a 65 b"
+	}, {
+		"input": "a {{65.toChar().charCodeAt(0).isNumber()}} b",
+		"expectedResult": "a true b"
+	}]
+}]
