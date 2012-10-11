@@ -1,0 +1,94 @@
+[{
+	"name": ".isString",
+	"cases": [{
+		"input": "a {{undefined.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{undefined.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{null.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{null.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{true.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{true.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{false.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{false.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{\"string\".isString()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{123.8.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{123.8.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{.123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{.123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{0.123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{0.123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{123E-3.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{123E-3.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-123.8.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-123.8.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-.123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-.123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-0.123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-0.123.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-123E-3.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-123E-3.isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{[1, 2, 3].isString()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{[\"foo\": \"bar\"].isString()}} b",
+		"expectedResult": "a false b"
+	}]
+}]

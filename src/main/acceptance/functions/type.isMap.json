@@ -1,0 +1,55 @@
+[{
+	"name": ".isMap",
+	"cases": [{
+		"input": "a {{undefined.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{null.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{true.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{false.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{\"string\".isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{123.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{123.8.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{.123.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{0.123.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{123E-3.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-123.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-123.8.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-.123.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-0.123.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{-123E-3.isMap()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{[1, 2, 3].isMap()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[\"foo\": \"bar\"].isMap()}} b",
+		"expectedResult": "a true b"
+	}]
+}]
