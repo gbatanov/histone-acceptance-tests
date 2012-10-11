@@ -1,0 +1,98 @@
+[{
+	"name": "maps like array",
+	"cases": [{
+		"input": "{{[]}}",
+		"expectedAST": [
+			[107, []]
+		]
+	}, {
+		"input": "{{[1, '2', 3.14]}}",
+		"expectedAST": [
+			[107, [
+				[null, [101, 1]],
+				[null, [103, "2"]],
+				[null, [102, 3.14]]
+			]]
+		]
+	}, {
+		"input": "{{[}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{[1,]}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "expression",
+			"found": "]"
+		}
+	}, {
+		"input": "{{[1,}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{[1}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "]",
+			"found": "}}"
+		}
+	}]
+}, {
+	"name": "map like object",
+	"cases": [{
+		"input": "{{[foo: bar}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "]",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{[]}}",
+		"expectedAST": [
+			[107, []]
+		]
+	}, {
+		"input": "{{[foo: 1, \"str\": '2', 12: 3.14]}}",
+		"expectedAST": [
+			[107, [
+				["foo", [101, 1]],
+				["str", [103, "2"]],
+				["12", [102, 3.14]]
+			]]
+		]
+	}, {
+		"input": "{{[1,]}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "expression",
+			"found": "]"
+		}
+	}, {
+		"input": "{{[macro: 1}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "expression",
+			"found": "macro"
+		}
+	}, {
+		"input": "{{[1:}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{[1:'foo',}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "expression",
+			"found": "}}"
+		}
+	}]
+}]

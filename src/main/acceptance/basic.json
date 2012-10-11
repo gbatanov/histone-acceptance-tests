@@ -1,0 +1,10 @@
+[{
+	"name": "constructions",
+	"cases": [{
+		"input": "{{}}",
+		"expectedResult": ""
+	}, {
+		"input": "a{{}}b",
+		"expectedResult": "ab"
+	}]
+}]

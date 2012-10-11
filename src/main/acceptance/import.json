@@ -1,0 +1,44 @@
+[{
+	"name": "func import",
+	"cases": [{
+		"input": "{{import",
+		"expectedException": {
+			"line": "1",
+			"expected": "string",
+			"found": "EOF"
+		}
+	}, {
+		"input": "{{import}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "string",
+			"found": "}}"
+		}
+	}, {
+		"input": "{{import bla}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "string",
+			"found": "bla"
+		}
+	}, {
+		"input": "{{import 'template.tpl'}}",
+		"expectedAST": [
+			[110, "template.tpl"]
+		]
+	}, {
+		"input": "{{import 'template.tpl',}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": ","
+		}
+	}, {
+		"input": "{{import 't1.tpl', 't2.tpl'}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": ","
+		}
+	}]
+}]

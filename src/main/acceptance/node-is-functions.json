@@ -1,0 +1,355 @@
+[{
+		"name": ".isUndefined",
+		"cases": [{
+				"input": "a {{undefined.isUndefined()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{null.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{true.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{false.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{\"string\".isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.8.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{.123.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{0.123.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123E-3.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123.8.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-.123.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-0.123.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123E-3.isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[1, 2, 3].isUndefined()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\"].isUndefined()}} b",
+				"expectedResult": "a false b"
+		}]
+}, {
+		"name": ".isNull",
+		"cases": [{
+				"input": "a {{undefined.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{null.isNull()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{true.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{false.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{\"string\".isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.8.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{.123.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{0.123.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123E-3.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123.8.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-.123.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-0.123.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123E-3.isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[1, 2, 3].isNull()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\"].isNull()}} b",
+				"expectedResult": "a false b"
+		}]
+}, {
+		"name": ".isBoolean",
+		"cases": [{
+				"input": "a {{undefined.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{null.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{true.isBoolean()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{false.isBoolean()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{\"string\".isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.8.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{.123.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{0.123.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123E-3.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123.8.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-.123.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-0.123.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123E-3.isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[1, 2, 3].isBoolean()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\"].isBoolean()}} b",
+				"expectedResult": "a false b"
+		}]
+}, {
+		"name": ".isString",
+		"cases": [{
+				"input": "a {{undefined.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{undefined.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{null.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{null.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{true.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{true.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{false.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{false.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{\"string\".isString()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.8.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.8.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{.123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{.123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{0.123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{0.123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123E-3.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123E-3.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123.8.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123.8.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-.123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-.123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-0.123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-0.123.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123E-3.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123E-3.isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[1, 2, 3].isString()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\"].isString()}} b",
+				"expectedResult": "a false b"
+		}]
+}, {
+		"name": ".isNumber",
+		"cases": [{
+				"input": "a {{undefined.isNumber()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{null.isNumber()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{true.isNumber()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{false.isNumber()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{\"string\".isNumber()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{123.8.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{.123.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{0.123.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{123E-3.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{-123.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{-123.8.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{-.123.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{-0.123.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{-123E-3.isNumber()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{[1, 2, 3].isNumber()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\"].isNumber()}} b",
+				"expectedResult": "a false b"
+		}]
+}, {
+		"name": ".isMap",
+		"cases": [{
+				"input": "a {{undefined.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{null.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{true.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{false.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{\"string\".isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123.8.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{.123.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{0.123.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{123E-3.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123.8.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-.123.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-0.123.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{-123E-3.isMap()}} b",
+				"expectedResult": "a false b"
+		}, {
+				"input": "a {{[1, 2, 3].isMap()}} b",
+				"expectedResult": "a true b"
+		}, {
+				"input": "a {{[\"foo\": \"bar\"].isMap()}} b",
+				"expectedResult": "a true b"
+		}]
+}]
