@@ -1,0 +1,70 @@
+[{
+	"name": "String.slice",
+	"cases": [{
+		"input": "a {{\"test\".slice(0).isString()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"test\".slice(100).isString()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"test\".slice(-1).isString()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"test\".slice(-100).isString()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"0123456\".slice(0)}} b",
+		"expectedResult": "a 0123456 b"
+	}, {
+		"input": "a {{\"0123456\".slice(2)}} b",
+		"expectedResult": "a 23456 b"
+	}, {
+		"input": "a {{\"0123456\".slice(100)}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{\"0123456\".slice(-2)}} b",
+		"expectedResult": "a 56 b"
+	}, {
+		"input": "a {{\"0123456\".slice(-100)}} b",
+		"expectedResult": "a 0123456 b"
+	}, {
+		"input": "a {{\"0123456\".slice(0,2)}} b",
+		"expectedResult": "a 01 b"
+	}, {
+		"input": "a {{\"0123456\".slice(1,2)}} b",
+		"expectedResult": "a 12 b"
+	}, {
+		"input": "a {{\"0123456\".slice(0,100)}} b",
+		"expectedResult": "a 0123456 b"
+	}, {
+		"input": "a {{\"0123456\".slice(1,100)}} b",
+		"expectedResult": "a 123456 b"
+	}, {
+		"input": "a {{\"0123456\".slice(0,-2)}} b",
+		"expectedResult": "a 01234 b"
+	}, {
+		"input": "a {{\"0123456\".slice(1,-2)}} b",
+		"expectedResult": "a 1234 b"
+	}, {
+		"input": "a {{\"0123456\".slice(1,-100)}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{\"0123456\".slice(-4,3)}} b",
+		"expectedResult": "a 345 b"
+	}, {
+		"input": "a {{\"0123456\".slice(-5,-2)}} b",
+		"expectedResult": "a 234 b"
+	}, {
+		"input": "a {{'string'.slice(1220,0)}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{'string'.slice(1220,0).isString()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{'string'.slice(0,-10000)}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{'string'.slice(0,-10000).isString()}} b",
+		"expectedResult": "a true b"
+	}]
+}]

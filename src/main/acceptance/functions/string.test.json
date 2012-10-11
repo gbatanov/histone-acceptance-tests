@@ -1,0 +1,10 @@
+[{
+	"name": "String.test",
+	"cases": [{
+		"input": "a {{\"test\".test('[a-z]')}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"test\".test('22')}} b",
+		"expectedResult": "a false b"
+	}]
+}]

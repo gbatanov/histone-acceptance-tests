@@ -1,0 +1,19 @@
+[{
+	"name": "String.charCodeAt",
+	"cases": [{
+		"input": "a {{\"string\".charCodeAt(3)}} b",
+		"expectedResult": "a 105 b"
+	}, {
+		"input": "a {{\"string\".charCodeAt(0)}} b",
+		"expectedResult": "a 115 b"
+	}, {
+		"input": "a {{\"string\".charCodeAt(-150)}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{\"string\".charCodeAt(5)}} b",
+		"expectedResult": "a 103 b"
+	}, {
+		"input": "a {{\"string\".charCodeAt(6)}} b",
+		"expectedResult": "a  b"
+	}]
+}]

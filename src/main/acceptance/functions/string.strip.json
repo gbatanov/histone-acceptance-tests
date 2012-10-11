@@ -1,0 +1,46 @@
+[{
+	"name": "String.strip",
+	"cases": [{
+		"input": "a {{\" test\".strip()}} b",
+		"expectedResult": "a test b"
+	}, {
+		"input": "a {{\"test \".strip()}} b",
+		"expectedResult": "a test b"
+	}, {
+		"input": "a {{\" test \".strip()}} b",
+		"expectedResult": "a test b"
+	}, {
+		"input": "a {{\"\\ntest\\n\".strip(\"\\n\")}} b",
+		"expectedResult": "a test b"
+	}, {
+		"input": "a {{\"\\n\\r\\ftest\\n\".strip(\"\\n\\r\\f\")}} b",
+		"expectedResult": "a test b"
+	}, {
+		"input": "a {{\"\\n\\r\\ttest\\t\\r\\n\".strip()}} b",
+		"expectedResult": "a test b"
+	}, {
+		"input": "a {{\"\\ntest\\r\\f\\n\".strip(\"\\n\\r\\f\")}} b",
+		"expectedResult": "a test b"
+	}, {
+		"input": "a {{\"123t5es5t098\".strip(\"1234567890\")}} b",
+		"expectedResult": "a t5es5t b"
+	}, {
+		"input": "a {{\" 121test212 \".strip('1','2')}} b",
+		"expectedResult": "a  121test212  b"
+	}, {
+		"input": "a {{\"121test3212\".strip('12',3)}} b",
+		"expectedResult": "a test3 b"
+	}, {
+		"input": "a {{\"121test212\".strip('1','2')}} b",
+		"expectedResult": "a test b"
+	}, {
+		"input": "a {{\"121test212\".strip(1,'2')}} b",
+		"expectedResult": "a 121test21 b"
+	}, {
+		"input": "a {{\"121test212\".strip(['1','2'])}} b",
+		"expectedResult": "a 121test212 b"
+	}, {
+		"input": "a {{\"121test212\".strip([1,'2'])}} b",
+		"expectedResult": "a 121test212 b"
+	}]
+}]

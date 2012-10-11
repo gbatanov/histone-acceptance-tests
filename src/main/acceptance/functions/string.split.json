@@ -1,0 +1,19 @@
+[{
+	"name": "String.split",
+	"cases": [{
+		"input": "a {{\"string\".split('')}} b",
+		"expectedResult": "a s t r i n g b"
+	}, {
+		"input": "a {{\"string\".split('').isMap()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"string\".split()}} b",
+		"expectedResult": "a s t r i n g b"
+	}, {
+		"input": "a {{\"string\".split('sdafdsafdsaf')}} b",
+		"expectedResult": "a string b"
+	}, {
+		"input": "a {{\"s.t.r.i.n.g\".split('.')}} b",
+		"expectedResult": "a s t r i n g b"
+	}]
+}]
