@@ -1,0 +1,19 @@
+[{
+	"name": ".toNumber",
+	"cases": [{
+		"input": "a {{\"string\".toNumber()}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{\"string\".toNumber().isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"12E+3\".toNumber()}} b",
+		"expectedResult": "a 12000 b"
+	}, {
+		"input": "a {{\"12E-3\".toNumber().isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"\\r\\n\\t 1 \\n\\t\\r\".toNumber()}} b",
+		"expectedResult": "a 1 b"
+	}]
+}]
