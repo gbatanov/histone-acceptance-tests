@@ -1,0 +1,184 @@
+[{
+	"name": "Number.pow",
+	"cases": [{
+		"input": "a {{2.pow().isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{2.pow('foo').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{2.pow(0)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{3.14.pow(0)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{-2.pow(0)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{-3.14.pow(0)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{2.pow(1)}} b",
+		"expectedResult": "a 2 b"
+	}, {
+		"input": "a {{3.14.pow(1)}} b",
+		"expectedResult": "a 3.14 b"
+	}, {
+		"input": "a {{-2.pow(1)}} b",
+		"expectedResult": "a -2 b"
+	}, {
+		"input": "a {{-3.14.pow(1)}} b",
+		"expectedResult": "a -3.14 b"
+	}, {
+		"input": "a {{2.pow(-1)}} b",
+		"expectedResult": "a 0.5 b"
+	}, {
+		"input": "a {{3.14.pow(-1).floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{3.14.pow(-1).ceil()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{-2.pow(-1)}} b",
+		"expectedResult": "a -0.5 b"
+	}, {
+		"input": "a {{-3.14.pow(-1).floor()}} b",
+		"expectedResult": "a -1 b"
+	}, {
+		"input": "a {{-3.14.pow(-1).ceil()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{2.pow(2)}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{2.pow(2.5).floor()}} b",
+		"expectedResult": "a 5 b"
+	}, {
+		"input": "a {{2.pow(2.5).ceil()}} b",
+		"expectedResult": "a 6 b"
+	}, {
+		"input": "a {{2.pow(3)}} b",
+		"expectedResult": "a 8 b"
+	}, {
+		"input": "a {{2.pow(3.2).floor()}} b",
+		"expectedResult": "a 9 b"
+	}, {
+		"input": "a {{2.pow(3.2).ceil()}} b",
+		"expectedResult": "a 10 b"
+	}, {
+		"input": "a {{3.pow(2)}} b",
+		"expectedResult": "a 9 b"
+	}, {
+		"input": "a {{3.pow(2.5).floor()}} b",
+		"expectedResult": "a 15 b"
+	}, {
+		"input": "a {{3.pow(2.5).ceil()}} b",
+		"expectedResult": "a 16 b"
+	}, {
+		"input": "a {{3.pow(3)}} b",
+		"expectedResult": "a 27 b"
+	}, {
+		"input": "a {{3.pow(3.2).floor()}} b",
+		"expectedResult": "a 33 b"
+	}, {
+		"input": "a {{3.pow(3.2).ceil()}} b",
+		"expectedResult": "a 34 b"
+	}, {
+		"input": "a {{-2.pow(2)}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{-2.pow(2.5).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{-2.pow(3)}} b",
+		"expectedResult": "a -8 b"
+	}, {
+		"input": "a {{-2.pow(3.2).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{-3.pow(2)}} b",
+		"expectedResult": "a 9 b"
+	}, {
+		"input": "a {{-3.pow(2.5).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{-3.pow(3)}} b",
+		"expectedResult": "a -27 b"
+	}, {
+		"input": "a {{-3.pow(3.2).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{2.pow(-2)}} b",
+		"expectedResult": "a 0.25 b"
+	}, {
+		"input": "a {{2.pow(-2.5).floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{2.pow(-2.5).ceil()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{2.pow(-3)}} b",
+		"expectedResult": "a 0.125 b"
+	}, {
+		"input": "a {{2.pow(-3.2).floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{2.pow(-3.2).ceil()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{3.pow(-2).floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{3.pow(-2).ceil()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{3.pow(-2.5).floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{3.pow(-2.5).ceil()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{3.pow(-3).floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{3.pow(-3).ceil()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{3.pow(-3.2).floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{3.pow(-3.2).ceil()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{-2.pow(-2)}} b",
+		"expectedResult": "a 0.25 b"
+	}, {
+		"input": "a {{-2.pow(-2.5).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{-2.pow(-3)}} b",
+		"expectedResult": "a -0.125 b"
+	}, {
+		"input": "a {{-2.pow(-3.2).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{-3.pow(-2).floor()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{-3.pow(-2).ceil()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{-3.pow(-2.5).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{-3.pow(-3).floor()}} b",
+		"expectedResult": "a -1 b"
+	}, {
+		"input": "a {{-3.pow(-3).ceil()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{-3.pow(-3.2).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}]
+}]
