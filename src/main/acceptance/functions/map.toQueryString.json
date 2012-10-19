@@ -1,0 +1,82 @@
+[{
+	"name": "map.toQueryString",
+	"cases": [{
+		"input": "{{['foo': 'bar', 'x': 'y'].toQueryString()}}",
+		"expectedResult": "foo=bar&x=y"
+	}, {
+		"input": "{{[1, 2, 3].toQueryString()}}",
+		"expectedResult": "0=1&1=2&2=3"
+	}, {
+		"input": "{{[foo: 'bar', 'num'].toQueryString()}}",
+		"expectedResult": "foo=bar&0=num"
+	}, {
+		"input": "{{['num', foo: 'bar'].toQueryString()}}",
+		"expectedResult": "0=num&foo=bar"
+	}, {
+		"input": "{{[user:[name:'Bob Smith',age:47,sex:'M',dob:'5/12/1956'],pastimes:['golf','opera','poker','rap'],children:[bobby:[age:12,sex:'M'],sally:[age:8,sex:'F']],'CEO'].toQueryString('flags_')}}",
+		"expectedResult": "user[name]=Bob%20Smith&user[age]=47&user[sex]=M&user[dob]=5%2F12%2F1956&pastimes[0]=golf&pastimes[1]=opera&pastimes[2]=poker&pastimes[3]=rap&children[bobby][age]=12&children[bobby][sex]=M&children[sally][age]=8&children[sally][sex]=F&flags_0=CEO"
+	}, {
+		"input": "{{['undefined': undefined, 'null': null, 'bool-true': true, 'bool-false': false, 'number': 3E-32, 'url': 'my-super-url', 'count': global.min, 'array': [1, 2, 3], 'array-arrays': [['a', 'b', 'c'], ['f1', 'f2', 'f3'], ['MX', 'MY', 'MZ']], 'object': ['foo': 'bar'], 'object-objects': ['foo': ['x': 'bar'], 'bar': ['y': 123, 123], 'bla': ['mmm': 'CDCDCD']] ].toQueryString('flags_')}}",
+		"expectedResult": "null=null&bool-true=true&bool-false=false&number=0.00000000000000000000000000000003&url=my-super-url&array[0]=1&array[1]=2&array[2]=3&array-arrays[0][0]=a&array-arrays[0][1]=b&array-arrays[0][2]=c&array-arrays[1][0]=f1&array-arrays[1][1]=f2&array-arrays[1][2]=f3&array-arrays[2][0]=MX&array-arrays[2][1]=MY&array-arrays[2][2]=MZ&object[foo]=bar&object-objects[foo][x]=bar&object-objects[bar][y]=123&object-objects[bar][0]=123&object-objects[bla][mmm]=CDCDCD"
+	}]
+}, {
+	"name": "map.toQueryString('var')",
+	"cases": [{
+		"input": "{{['foo': 'bar', 'x': 'y'].toQueryString('var')}}",
+		"expectedResult": "foo=bar&x=y"
+	}, {
+		"input": "{{[1, 2, 3].toQueryString('var')}}",
+		"expectedResult": "var0=1&var1=2&var2=3"
+	}, {
+		"input": "{{[foo: 'bar', 'num'].toQueryString('var')}}",
+		"expectedResult": "foo=bar&var0=num"
+	}, {
+		"input": "{{['num', foo: 'bar'].toQueryString('var')}}",
+		"expectedResult": "var0=num&foo=bar"
+	}]
+}, {
+	"name": "map.toQueryString(null, '|')",
+	"cases": [{
+		"input": "{{['foo': 'bar', 'x': 'y'].toQueryString(null, '|')}}",
+		"expectedResult": "foo=bar|x=y"
+	}, {
+		"input": "{{[1, 2, 3].toQueryString(null, '|')}}",
+		"expectedResult": "0=1|1=2|2=3"
+	}, {
+		"input": "{{[foo: 'bar', 'num'].toQueryString(null, '|')}}",
+		"expectedResult": "foo=bar|0=num"
+	}, {
+		"input": "{{['num', foo: 'bar'].toQueryString(null, '|')}}",
+		"expectedResult": "0=num|foo=bar"
+	}]
+}, {
+	"name": "map.toQueryString(null, '|')",
+	"cases": [{
+		"input": "{{['foo': 'bar', 'x': 'y'].toQueryString(null, '|')}}",
+		"expectedResult": "foo=bar|x=y"
+	}, {
+		"input": "{{[1, 2, 3].toQueryString(null, '|')}}",
+		"expectedResult": "0=1|1=2|2=3"
+	}, {
+		"input": "{{[foo: 'bar', 'num'].toQueryString(null, '|')}}",
+		"expectedResult": "foo=bar|0=num"
+	}, {
+		"input": "{{['num', foo: 'bar'].toQueryString(null, '|')}}",
+		"expectedResult": "0=num|foo=bar"
+	}]
+}, {
+	"name": "map.toQueryString('arr', ',')",
+	"cases": [{
+		"input": "{{['foo': 'bar', 'x': 'y'].toQueryString('arr', ',')}}",
+		"expectedResult": "foo=bar,x=y"
+	}, {
+		"input": "{{[1, 2, 3].toQueryString('arr', ',')}}",
+		"expectedResult": "arr0=1,arr1=2,arr2=3"
+	}, {
+		"input": "{{[foo: 'bar', 'num'].toQueryString('arr', ',')}}",
+		"expectedResult": "foo=bar,arr0=num"
+	}, {
+		"input": "{{['num', foo: 'bar'].toQueryString('arr', ',')}}",
+		"expectedResult": "arr0=num,foo=bar"
+	}]
+}]
