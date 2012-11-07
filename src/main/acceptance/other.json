@@ -9,10 +9,10 @@
 		}
 	}, {
 		"input": "hello {{}} world",
-		"expectedAST": ["hello ", " world"]
+		"expectedAST": ["hello  world"]
 	}, {
 		"input": "a {{% hello {{10 * 2}} world %}} b",
-		"expectedAST": ["a ", " hello {{10 * 2}} world ", " b"]
+		"expectedAST": ["a  hello {{10 * 2}} world  b"]
 	}, {
 		"input": "{{+}}",
 		"expectedException": {
@@ -42,13 +42,13 @@
 		"expectedAST": ["fragment1 fragment2"]
 	}, {
 		"input": "fragment1 {{* comment *}} fragment2",
-		"expectedAST": ["fragment1 ", " fragment2"]
+		"expectedAST": ["fragment1  fragment2"]
 	}, {
-		"input": "fragment1 {{* comment{{* *}} fragment2",
-		"expectedAST": ["fragment1 ", " fragment2"]
+		"input": "fragment1  fragment2",
+		"expectedAST": ["fragment1  fragment2"]
 	}, {
 		"input": "fragment1 {{* comment*}} *}} fragment2",
-		"expectedAST": ["fragment1 ", " *}} fragment2"]
+		"expectedAST": ["fragment1  *}} fragment2"]
 	}, {
 		"input": "{{* comment without closing block",
 		"expectedException": {
