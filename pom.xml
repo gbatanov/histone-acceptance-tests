@@ -47,32 +47,6 @@
             </resource>
         </resources>
         <plugins>
-            <!--<plugin>-->
-                <!--<groupId>com.google.code.maven-license-plugin</groupId>-->
-                <!--<artifactId>maven-license-plugin</artifactId>-->
-                <!--<version>1.4.0</version>-->
-                <!--<configuration>-->
-                    <!--<basedir>${basedir}</basedir>-->
-                    <!--<header>src/etc/HEADER.txt</header>-->
-                    <!--<quiet>false</quiet>-->
-                    <!--<failIfMissing>true</failIfMissing>-->
-                    <!--<encoding>UTF-8</encoding>-->
-                    <!--<includes>-->
-                        <!--<include>src/main/acceptance/**</include>-->
-                    <!--</includes>-->
-                    <!--<excludes>-->
-                        <!--<exclude>src/main/acceptance/testresources/**</exclude>-->
-                    <!--</excludes>-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<phase>test</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>check</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
             <plugin>
                 <groupId>eu.numberfour.maven.plugins</groupId>
                 <artifactId>file-list-maven-plugin</artifactId>
