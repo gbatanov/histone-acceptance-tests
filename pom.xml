@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.histone</groupId>
     <artifactId>histone-acceptance-test-cases</artifactId>
@@ -46,32 +47,32 @@
             </resource>
         </resources>
         <plugins>
-            <plugin>
-                <groupId>com.google.code.maven-license-plugin</groupId>
-                <artifactId>maven-license-plugin</artifactId>
-                <version>1.4.0</version>
-                <configuration>
-                    <basedir>${basedir}</basedir>
-                    <header>src/etc/HEADER.txt</header>
-                    <quiet>false</quiet>
-                    <failIfMissing>true</failIfMissing>
-                    <encoding>UTF-8</encoding>
-                    <includes>
-                        <include>src/main/acceptance/**</include>
-                    </includes>
-                    <excludes>
-                        <exclude>src/main/acceptance/evaluator/testresources/**</exclude>
-                    </excludes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>com.google.code.maven-license-plugin</groupId>-->
+                <!--<artifactId>maven-license-plugin</artifactId>-->
+                <!--<version>1.4.0</version>-->
+                <!--<configuration>-->
+                    <!--<basedir>${basedir}</basedir>-->
+                    <!--<header>src/etc/HEADER.txt</header>-->
+                    <!--<quiet>false</quiet>-->
+                    <!--<failIfMissing>true</failIfMissing>-->
+                    <!--<encoding>UTF-8</encoding>-->
+                    <!--<includes>-->
+                        <!--<include>src/main/acceptance/**</include>-->
+                    <!--</includes>-->
+                    <!--<excludes>-->
+                        <!--<exclude>src/main/acceptance/testresources/**</exclude>-->
+                    <!--</excludes>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>test</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>check</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>eu.numberfour.maven.plugins</groupId>
                 <artifactId>file-list-maven-plugin</artifactId>
@@ -79,31 +80,21 @@
                 <configuration>
                     <caseSensitive>true</caseSensitive>
                     <includes>
-                        <include>**/*.xml</include>
+                        <include>**/*.json</include>
                     </includes>
+                    <excludes>
+                        <exclude>testresources/**</exclude>
+                    </excludes>
+                    <baseDir>src/main/acceptance/</baseDir>
+                    <outputFile>target/classes/acceptance-test-cases.json</outputFile>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>1-generate-file-list-parser</id>
+                        <id>generate-file-list-parser</id>
                         <phase>prepare-package</phase>
                         <goals>
                             <goal>list</goal>
                         </goals>
-                        <configuration>
-                            <baseDir>src/main/acceptance/parser</baseDir>
-                            <outputFile>target/classes/parser/cases.json</outputFile>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>2-generate-file-list-evaluator</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>list</goal>
-                        </goals>
-                        <configuration>
-                            <baseDir>src/main/acceptance/evaluator</baseDir>
-                            <outputFile>target/classes/evaluator/cases.json</outputFile>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -121,8 +112,8 @@
         <url>https://github.com/MegafonWebLab/histone-acceptance-tests</url>
         <connection>scm:git:git://github.com/MegafonWebLab/histone-acceptance-tests.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/MegafonWebLab/histone-acceptance-tests.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
     <distributionManagement>
         <repository>
             <id>histone</id>
@@ -145,7 +136,7 @@
             <url>http://weblab.megafon.ru/maven/release</url>
         </repository>
         <repository>
-            <snapshots />
+            <snapshots/>
             <id>snapshots</id>
             <name>snapshot</name>
             <url>http://weblab.megafon.ru/maven/snapshot</url>
