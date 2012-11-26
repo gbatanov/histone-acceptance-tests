@@ -85,7 +85,7 @@
         <url>https://github.com/MegafonWebLab/histone-acceptance-tests</url>
         <connection>scm:git:git://github.com/MegafonWebLab/histone-acceptance-tests.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/MegafonWebLab/histone-acceptance-tests.git</developerConnection>
-        <tag>v1.1.0</tag>
+        <tag>v1.1.1</tag>
     </scm>
     <distributionManagement>
         <repository>
