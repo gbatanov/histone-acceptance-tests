@@ -315,7 +315,13 @@
 			"items": [1, 2, 3]
 		},
 		"expectedResult": "a 0:1 1:2 2:3  b"
-	}, {
+    }, {
+        "input": "a {{for k1:v1 in items}}{{k1}}:{{v1}} {{for k2:v2 in items}}({{k2}}:{{v2}}){{/for}} {{/for}}b",
+        "context": {
+            "items": [1, 2, 3]
+        },
+        "expectedResult": "a 0:9 (0:9)(1:8)(2:7) 1:8 (0:9)(1:8)(2:7) 2:7 (0:9)(1:8)(2:7) b"
+    }, {
 		"input": "a {{for key:x in items}}{{key}}:{{x}} {{else}}#{{/for}} b",
 		"context": {
 			"items": {

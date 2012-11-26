@@ -109,6 +109,9 @@
 		"input": "a {{for key:item in [1, 2, 3]}}{{for key:item in [9,8,7,6]}}{{self.last}}{{/for}}{{/for}} b",
 		"expectedResult": "a 333333333333 b"
 	}, {
+        "input": "a {{for key:item in [1, 2, 3]}}{{self.index}}:{{for key:item in [9,8,7,6]}}{{self.index}}{{/for}} {{/for}}b",
+        "expectedResult": "a 0:0123 1:0123 2:0123 b"
+    }, {
 		"input": "a {{macro myMacro}}{{macro innerMacro}}{{self.arguments}}{{/macro}}{{innerMacro(9,8,7)}}{{/macro}}{{call myMacro(1, 3, 4)}}foo{{/call}} b",
 		"expectedResult": "a 9 8 7 b"
 	}]
