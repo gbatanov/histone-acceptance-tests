@@ -1,6 +1,30 @@
 [{
 	"name": "nested-template-tags",
 	"cases": [{
+		"input": "{{'STRING' + {{}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "{{'STRING' + {{\n}}",
+		"expectedException": {
+			"line": "2",
+			"expected": "}}",
+			"found": "EOF"
+		}
+	}, {
+		"input": "{{'STRING' + {{<<<{{2 * 2}}>>>}}}}",
+		"expectedAST": [
+	        [9, [103, "STRING"],
+	            [109, ["<<<", [11, [101, 2],
+	                [101, 2]
+	            ], ">>>"]]
+	        ]
+	    ],
+	    "expectedResult": "STRING<<<4>>>"
+	}, {
 		"input": "{{var x = {{HELLO WORLD}}}}{{x}}",
 		"expectedAST": [
 	        [1001, "x", [109, ["HELLO WORLD"]]],
@@ -64,5 +88,31 @@
 	        ]]
 	    ],
 	    "expectedResult": "[true,\"HEY HO LET'S GO\",123]"
+	}, {
+		"input": "{{macro widget1(value)}}<div style=\"border: 1px solid red;\">{{value}}</div>{{/macro}}{{macro widget2(value)}}<div style=\"border: 1px solid blue;\">{{value}}</div>{{/macro}}{{widget1({{====={{widget2('WORLD')}}====={{widget2({{{{widget1({{====={{widget2('WORLD')}}====={{widget2({{HEY}})}}=====}})}}}})}}=====}})}}",
+		"expectedAST": [
+	        [1003, "widget1", ["value"],
+	            ["<div style=\"border: 1px solid red;\">", [105, ["value"]], "</div>"]
+	        ],
+	        [1003, "widget2", ["value"],
+	            ["<div style=\"border: 1px solid blue;\">", [105, ["value"]], "</div>"]
+	        ],
+	        [106, null, "widget1", [
+	            [109, ["=====", [106, null, "widget2", [
+	                [103, "WORLD"]
+	            ]], "=====", [106, null, "widget2", [
+	                [109, [
+	                    [106, null, "widget1", [
+	                        [109, ["=====", [106, null, "widget2", [
+	                            [103, "WORLD"]
+	                        ]], "=====", [106, null, "widget2", [
+	                            [109, ["HEY"]]
+	                        ]], "====="]]
+	                    ]]
+	                ]]
+	            ]], "====="]]
+	        ]]
+	    ],
+	    "expectedResult": "<div style=\"border: 1px solid red;\">=====<div style=\"border: 1px solid blue;\">WORLD</div>=====<div style=\"border: 1px solid blue;\"><div style=\"border: 1px solid red;\">=====<div style=\"border: 1px solid blue;\">WORLD</div>=====<div style=\"border: 1px solid blue;\">HEY</div>=====</div></div>=====</div>"
 	}]
 }]
