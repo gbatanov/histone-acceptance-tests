@@ -12,5 +12,17 @@
 	}, {
 		"input": "a {{[\"123\": \"bar\", \"x\": \"y\"].hasKey(123)}} b",
 		"expectedResult": "a true b"
-	}]
+	},{
+        "input": "a {{[1, 2, 3].hasKey(0)}} b",
+        "expectedResult": "a true b"
+    }, {
+        "input": "a {{[1, 2, 3].hasKey(10)}} b",
+        "expectedResult": "a false b"
+    }, {
+        "input": "a {{[1, 2, 3].hasKey(2)}} b",
+        "expectedResult": "a true b"
+    }, {
+        "input": "a {{[1, 2, 3].hasKey(2).isBoolean()}} b",
+        "expectedResult": "a true b"
+    }]
 }]

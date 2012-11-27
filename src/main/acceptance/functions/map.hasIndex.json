@@ -1,5 +1,6 @@
 [{
 	"name": "map.hasIndex",
+    "comment": "Function Map.hasIndex() was removed. Use map.hasKey() instead.",
 	"cases": [{
 		"input": "a {{[1, 2, 3].hasIndex(0)}} b",
 		"expectedResult": "a  b"
