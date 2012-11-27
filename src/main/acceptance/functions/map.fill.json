@@ -1,0 +1,52 @@
+[{
+	"name": "map.resize",
+	"cases": [{
+		"input": "a {{[].resize().toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[1, 2, 3].resize().toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}, {
+		"input": "a {{[].resize('.').toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[1].resize('.').toJSON()}} b",
+		"expectedResult": "a [1] b"
+	}, {
+		"input": "a {{[1, 2, 3].resize('.').toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}, {
+		"input": "a {{[].resize(1).toJSON()}} b",
+		"expectedResult": "a [0] b"
+	}, {
+		"input": "a {{[].resize(2).toJSON()}} b",
+		"expectedResult": "a [0,0] b"
+	}, {
+		"input": "a {{[].resize(3).toJSON()}} b",
+		"expectedResult": "a [0,0,0] b"
+	}, {
+		"input": "a {{[].resize(-1).toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[].resize(-2).toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[].resize(-3).toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[1, 2, 3, 4, 5].resize(5).toJSON()}} b",
+		"expectedResult": "a [1,2,3,4,5] b"
+	}, {
+		"input": "a {{[1, 2, 3, 4, 5].resize(4).toJSON()}} b",
+		"expectedResult": "a [1,2,3,4] b"
+	}, {
+		"input": "a {{[1, 2, 3, 4, 5].resize(3).toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}, {
+		"input": "a {{[1, 2, 3, 4, 5].resize(2).toJSON()}} b",
+		"expectedResult": "a [1,2] b"
+	}, {
+		"input": "a {{[1, 2, 3, 4, 5].resize(1).toJSON()}} b",
+		"expectedResult": "a [1] b"
+	}]
+}]

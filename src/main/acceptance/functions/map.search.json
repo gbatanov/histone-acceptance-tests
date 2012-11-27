@@ -1,0 +1,142 @@
+[{
+	"name": "map.search",
+	"cases": [{
+		"input": "a {{[].search()}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{[].search().isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[-10, -20, 0, 30, 40].search(-10)}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{['FOO', 30, 0, true, false].search(30)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{[-10, -20, 0, 30, 40].search(30)}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{['FOO', 30, 0, true, false].search(true)}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40].search(-10)}} b",
+		"expectedResult": "a foo b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40].search(-20)}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40].search(0)}} b",
+		"expectedResult": "a bar b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40].search(30)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40].search(40)}} b",
+		"expectedResult": "a 2 b"
+	}, {
+		"input": "a {{[-10, -10, 0, 30, 40].search(-10)}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{['FOO', 30, 30, true, false].search(30)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{[-10, -20, 0, 30, 40, 30].search(30)}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{['FOO', 30, 0, true, true].search(true)}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10)}} b",
+		"expectedResult": "a foo b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -20].search(-20)}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 0, 30, 40].search(0)}} b",
+		"expectedResult": "a bar b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, 30].search(30)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, 40].search(40)}} b",
+		"expectedResult": "a 2 b"
+	}, {
+		"input": "a {{[-10, -20, 0, 30, 40].search(-10, 0)}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{[-10, -20, 0, 30, 40].search(-10, 1).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{['FOO', 30, 0, true, false].search(30, 0)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{['FOO', 30, 0, true, false].search(30, 1)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{['FOO', 30, 0, true, false].search(30, 2).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[-10, -20, 0, 30, 40].search(30, 0)}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{[-10, -20, 0, 30, 40].search(30, 30).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[-10, -10, 0, 30, 40].search(-10, 0)}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{[-10, -10, 0, 30, 40].search(-10, 0)}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{[-10, -10, 0, 30, 40].search(-10, 1)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{[-10, -10, 0, 30, 40].search(-10, 2).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{['FOO', 30, 30, true, false].search(30, 0)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{['FOO', 30, 30, true, false].search(30, 1)}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{['FOO', 30, 30, true, false].search(30, 2)}} b",
+		"expectedResult": "a 2 b"
+	}, {
+		"input": "a {{['FOO', 30, 30, true, false].search(30, 3).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, 0)}} b",
+		"expectedResult": "a foo b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, 1)}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -1)}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -2)}} b",
+		"expectedResult": "a foo b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -3)}} b",
+		"expectedResult": "a foo b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -4)}} b",
+		"expectedResult": "a foo b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -5)}} b",
+		"expectedResult": "a foo b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -6)}} b",
+		"expectedResult": "a foo b"
+	}, {
+		"input": "a {{[-10, 'foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -7)}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{['foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -7).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[3.14, 'foo': -10, -20, 'bar': 0, 30, 40, -10].search(-10, -7).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}]
+}]

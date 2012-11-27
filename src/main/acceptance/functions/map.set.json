@@ -1,0 +1,52 @@
+[{
+	"name": "map.set",
+	"cases": [{
+		"input": "a {{[].set(true, 'bar').toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[].set(122, 'bar').toJSON()}} b",
+		"expectedResult": "a {\"122\":\"bar\"} b"
+	}, {
+		"input": "a {{[].set('3.14', 'bar').toJSON()}} b",
+		"expectedResult": "a {\"3.14\":\"bar\"} b"
+	}, {
+		"input": "a {{[].set('foo', 'bar').toJSON()}} b",
+		"expectedResult": "a {\"foo\":\"bar\"} b"
+	}, {
+		"input": "a {{[].set(true, undefined).toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[].set(122, undefined).toJSON()}} b",
+		"expectedResult": "a {} b"
+	}, {
+		"input": "a {{[].set('3.14', undefined).toJSON()}} b",
+		"expectedResult": "a {} b"
+	}, {
+		"input": "a {{[].set('foo', undefined).toJSON()}} b",
+		"expectedResult": "a {} b"
+	}, {
+		"input": "a {{[].set(true, null).toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[].set(122, null).toJSON()}} b",
+		"expectedResult": "a {\"122\":null} b"
+	}, {
+		"input": "a {{[].set('3.14', null).toJSON()}} b",
+		"expectedResult": "a {\"3.14\":null} b"
+	}, {
+		"input": "a {{[].set('foo', null).toJSON()}} b",
+		"expectedResult": "a {\"foo\":null} b"
+	}, {
+		"input": "a {{[].set(true, [1, 2, 3]).toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[].set(122, [1, 2, 3]).toJSON()}} b",
+		"expectedResult": "a {\"122\":[1,2,3]} b"
+	}, {
+		"input": "a {{[].set('3.14', [1, 2, 3]).toJSON()}} b",
+		"expectedResult": "a {\"3.14\":[1,2,3]} b"
+	}, {
+		"input": "a {{[].set('foo', [1, 2, 3]).toJSON()}} b",
+		"expectedResult": "a {\"foo\":[1,2,3]} b"
+	}]
+}]
