@@ -48,8 +48,8 @@
 			"node": "global",
 			"result": "dummy:///"
 		 },
-		"input": "a {{global.baseURI}} b",
-		"expectedResult": "a dummy:/// b"
+		"input": "a {{global.baseURI}} b {{baseURI}} c",
+		"expectedResult": "a dummy:/// b dummy:/// c"
 	}, {
 		"property": {
 			"name": "baseURI",
