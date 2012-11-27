@@ -74,21 +74,21 @@
 		"input": "a {{min(1,2)}} b",
 		"expectedResult": "a 555 b"
 	}, {
-		"input": "a {{include('testresources/tpl/test_for_include.tpl')}} b",
+		"input": "a {{include('../testresources/tpl/test_for_include.tpl')}} b",
 		"expectedResult": "a include file contents b"
 	}, {
 		"function": {
 			"name": "include",
 			"result": "include {{args.toJSON()}} result"
 		},
-		"input": "a {{include('testresources/tpl/test_for_include.tpl')}} b",
-		"expectedResult": "a include [\"testresources/tpl/test_for_include.tpl\"] result b"
+		"input": "a {{include('../testresources/tpl/test_for_include.tpl')}} b",
+		"expectedResult": "a include [\"../testresources/tpl/test_for_include.tpl\"] result b"
 	}, {
 		"function": {
 			"name": "include",
 			"result": "include {{args.toJSON()}} result"
 		},
-		"input": "a {{global.include('testresources/tpl/test_for_include.tpl')}} b",
-		"expectedResult": "a include [\"testresources/tpl/test_for_include.tpl\"] result b"
+		"input": "a {{global.include('../testresources/tpl/test_for_include.tpl')}} b",
+		"expectedResult": "a include [\"../testresources/tpl/test_for_include.tpl\"] result b"
 	}]
 }]
