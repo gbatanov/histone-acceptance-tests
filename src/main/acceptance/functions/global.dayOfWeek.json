@@ -2,7 +2,7 @@
 	"name": "dayOfWeek",
 	"cases": [{
 			"input": "a {{dayOfWeek(2012, 4, 2)}} b",
-			"expectedResult": "a 1 b"
+			"expectedResult": "a 2 b"
 	}, {
 			"input": "a {{dayOfWeek(2012, 4, 3)}} b",
 			"expectedResult": "a 2 b"
