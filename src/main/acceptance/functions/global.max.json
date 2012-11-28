@@ -81,10 +81,7 @@
 	}, {
 			"input": "a {{max(100.03E-8, 200.3E-1, 3000.8, 4000.12E-1, 3.2E-0, 1000.2E-0, 200.122E2)}} b",
 			"expectedResult": "a 20012.2 b"
-	},
-
-
-	{
+	}, {
 		"input": "a {{max([])}} b",
 		"expectedResult": "a  b"
 	}, {
