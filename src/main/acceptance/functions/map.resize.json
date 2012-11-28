@@ -57,5 +57,5 @@
 	}, {
 		"input": "a {{[].resize(3, true).toJSON()}} b",
 		"expectedResult": "a [true,true,true] b"
-	}, ]
+	}]
 }]
