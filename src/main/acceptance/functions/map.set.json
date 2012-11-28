@@ -50,7 +50,7 @@
 		"expectedResult": "a {\"foo\":[1,2,3]} b"
     }, {
         "comment": "Function set shouldn't change current Map, but should return clone with changed items",
-        "input": "a {{var x = []}} b {{x.set('foo', 'test').toJSON()}} c {{x}} d",
+        "input": "a {{var x = []}} b {{x.set('foo', 'test').toJSON()}} c {{x.toJSON()}} d",
         "expectedResult": "a  b {\"foo\":\"test\"} c [] d"
     }]
 }]
