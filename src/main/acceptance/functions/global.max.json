@@ -81,5 +81,71 @@
 	}, {
 			"input": "a {{max(100.03E-8, 200.3E-1, 3000.8, 4000.12E-1, 3.2E-0, 1000.2E-0, 200.122E2)}} b",
 			"expectedResult": "a 20012.2 b"
+	},
+
+
+	{
+		"input": "a {{max([])}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{max([]).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{max([-10, -20, 0, 30, 40])}} b",
+		"expectedResult": "a 40 b"
+	}, {
+		"input": "a {{max(['FOO', 30, 0, true, false])}} b",
+		"expectedResult": "a 30 b"
+	}, {
+		"input": "a {{max([a: 'FOO', b: 30, c: 0, d: true, false])}} b",
+		"expectedResult": "a 30 b"
+	}, {
+		"input": "a {{max([], 111)}} b",
+		"expectedResult": "a 111 b"
+	}, {
+		"input": "a {{max([], 32).isNumber()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{max([-10, -20, 0, 30, 40], -180)}} b",
+		"expectedResult": "a 40 b"
+	}, {
+		"input": "a {{max(['FOO', 30, 0, true, false], 120)}} b",
+		"expectedResult": "a 120 b"
+	}, {
+		"input": "a {{max([a: 'FOO', b: 30, c: 0, d: true, false], -10)}} b",
+		"expectedResult": "a 30 b"
+	}, {
+		"input": "a {{max([], [])}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{max([], []).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{max([-10, -20, 0, 30, 40], [-180, -250])}} b",
+		"expectedResult": "a 40 b"
+	}, {
+		"input": "a {{max(['FOO', 30, 0, true, false], [120, 1, 2])}} b",
+		"expectedResult": "a 120 b"
+	}, {
+		"input": "a {{max([a: 'FOO', b: 30, c: 0, d: true, false], [x: -10, -30])}} b",
+		"expectedResult": "a 30 b"
+	}, {
+		"input": "a {{max([[]], [[]])}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{max([[]], [[]]).isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{max([-10, -20, 0, 30, 40], [-180, [0, [-250]]])}} b",
+		"expectedResult": "a 40 b"
+	}, {
+		"input": "a {{max(['FOO', [30, [[0], true, false]]], [120, [-1, 2]])}} b",
+		"expectedResult": "a 120 b"
+	}, {
+		"input": "a {{max(['FOO', [30, [[-10], true, false]]], [120, [1, 2]])}} b",
+		"expectedResult": "a 120 b"
+	}, {
+		"input": "a {{max(['FOO', [30, [[-10], true, false]]], [120, [1, x:-122]])}} b",
+		"expectedResult": "a 120 b"
 	}]
 }]
