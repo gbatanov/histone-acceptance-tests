@@ -17,13 +17,13 @@
 		"expectedResult": "a [1,2,3] b"
 	}, {
 		"input": "a {{[].resize(1).toJSON()}} b",
-		"expectedResult": "a [0] b"
+		"expectedResult": "a [null] b"
 	}, {
 		"input": "a {{[].resize(2).toJSON()}} b",
-		"expectedResult": "a [0,0] b"
+		"expectedResult": "a [null,null] b"
 	}, {
 		"input": "a {{[].resize(3).toJSON()}} b",
-		"expectedResult": "a [0,0,0] b"
+		"expectedResult": "a [null,null,null] b"
 	}, {
 		"input": "a {{[].resize(-1).toJSON()}} b",
 		"expectedResult": "a [] b"
@@ -48,5 +48,14 @@
 	}, {
 		"input": "a {{[1, 2, 3, 4, 5].resize(1).toJSON()}} b",
 		"expectedResult": "a [1] b"
-	}]
+	}, {
+		"input": "a {{[].resize(1, 0).toJSON()}} b",
+		"expectedResult": "a [0] b"
+	}, {
+		"input": "a {{[].resize(2, '.').toJSON()}} b",
+		"expectedResult": "a [\".\",\".\"] b"
+	}, {
+		"input": "a {{[].resize(3, true).toJSON()}} b",
+		"expectedResult": "a [true,true,true] b"
+	}, ]
 }]
