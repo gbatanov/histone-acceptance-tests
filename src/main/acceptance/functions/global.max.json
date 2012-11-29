@@ -133,8 +133,8 @@
 		"input": "a {{max([[]], [[]]).isUndefined()}} b",
 		"expectedResult": "a true b"
 	}, {
-		"input": "a {{max([-10, -20, 0, 30, 40], [-180, [0, [-250]]])}} b",
-		"expectedResult": "a 40 b"
+		"input": "a {{max([-10, -20, 0, 30, 40], [180, [0, [250]]])}} b",
+		"expectedResult": "a 250 b"
 	}, {
 		"input": "a {{max(['FOO', [30, [[0], true, false]]], [120, [-1, 2]])}} b",
 		"expectedResult": "a 120 b"
@@ -142,7 +142,7 @@
 		"input": "a {{max(['FOO', [30, [[-10], true, false]]], [120, [1, 2]])}} b",
 		"expectedResult": "a 120 b"
 	}, {
-		"input": "a {{max(['FOO', [30, [[-10], true, false]]], [120, [1, x:-122]])}} b",
-		"expectedResult": "a 120 b"
+		"input": "a {{max(['FOO', [30, [[-10], true, false]]], [120, [1, x:122]])}} b",
+		"expectedResult": "a 122 b"
 	}]
 }]
