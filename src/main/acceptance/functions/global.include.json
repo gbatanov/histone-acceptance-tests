@@ -1,6 +1,9 @@
 [{
 	"name": "global.include",
 	"cases": [{
+		"input": "a {{include('../testresources/tpl/DOESNT_EXIST.tpl').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
 		"input": "a {{include('../testresources/tpl/test_for_include_ast_1.tpl')}} b",
 		"expectedResult": "a 123456 b"
 	}, {

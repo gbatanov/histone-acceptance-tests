@@ -1,6 +1,9 @@
 [{
 	"name": "global.loadJSON",
 	"cases": [{
+		"input": "a {{loadJSON('../testresources/json/DOESNT_EXIST.json').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
 		"input": "a {{loadJSON('../testresources/json/test_for_json_array.json').toJSON()}} b",
 		"expectedResult": "a [1,2,3] b"
 	}, {
