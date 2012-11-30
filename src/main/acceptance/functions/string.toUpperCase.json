@@ -1,0 +1,16 @@
+[{
+	"name": "string.toUpperCase",
+	"cases": [{
+		"input": "a {{'AAAA'.toUpperCase()}} b",
+		"expectedResult": "a AAAA b"
+	}, {
+		"input": "a {{'aaaa'.toUpperCase()}} b",
+		"expectedResult": "a AAAA b"
+	}, {
+		"input": "a {{'AaAa'.toUpperCase()}} b",
+		"expectedResult": "a AAAA b"
+	}, {
+		"input": "a {{'гистон'.toUpperCase()}} b",
+		"expectedResult": "a ГИСТОН b"
+	}]
+}]

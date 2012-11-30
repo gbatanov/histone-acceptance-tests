@@ -1,0 +1,16 @@
+[{
+	"name": "string.toLowerCase",
+	"cases": [{
+		"input": "a {{'aaaa'.toLowerCase()}} b",
+		"expectedResult": "a aaaa b"
+	}, {
+		"input": "a {{'AAAA'.toLowerCase()}} b",
+		"expectedResult": "a aaaa b"
+	}, {
+		"input": "a {{'AaAa'.toLowerCase()}} b",
+		"expectedResult": "a aaaa b"
+	}, {
+		"input": "a {{'ГИСТОН'.toLowerCase()}} b",
+		"expectedResult": "a гистон b"
+	}]
+}]
