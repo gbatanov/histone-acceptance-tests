@@ -21,5 +21,8 @@
 	}, {
 		"input": "a {{'ZA' + resolveURI('../testresources/tpl/subfolder/file_for_include.tpl', global.baseURI) + 'BX' is include('../testresources/tpl/test_for_include_subfolder.tpl')}} b",
 		"expectedResult": "a true b"
+	}, {
+		"input": "a {{include('../testresources/tpl/test_for_include_1.tpl', [foo: 'bar'])}} b",
+		"expectedResult": "a {\"foo\":\"bar\"} b"
 	}]
 }]
