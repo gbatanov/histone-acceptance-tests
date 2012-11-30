@@ -1,6 +1,12 @@
 [{
 	"name": "type.toBoolean",
 	"cases": [{
+		"input": "a {{undefined.toBoolean()}} b",
+		"expectedResult": "a false b"
+	}, {
+		"input": "a {{null.toBoolean()}} b",
+		"expectedResult": "a false b"
+	}, {
 		"input": "a {{[].toBoolean()}} b",
 		"expectedResult": "a true b"
 	}, {
