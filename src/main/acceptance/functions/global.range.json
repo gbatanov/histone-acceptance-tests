@@ -1,5 +1,5 @@
 [{
-	"name": "range",
+	"name": "global.range",
 	"cases": [{
 			"input": "a {{var x = range(1,1)}} b {{x}} c {{x is [1]}} d",
 			"expectedResult": "a  b 1 c true d"
