@@ -17,13 +17,13 @@
 		"expectedResult": "a [] b"
 	}, {
 		"input": "a {{[].set(122, undefined).toJSON()}} b",
-		"expectedResult": "a {} b"
+		"expectedResult": "a [] b"
 	}, {
 		"input": "a {{[].set('3.14', undefined).toJSON()}} b",
-		"expectedResult": "a {} b"
+		"expectedResult": "a [] b"
 	}, {
 		"input": "a {{[].set('foo', undefined).toJSON()}} b",
-		"expectedResult": "a {} b"
+		"expectedResult": "a [] b"
 	}, {
 		"input": "a {{[].set(true, null).toJSON()}} b",
 		"expectedResult": "a [] b"
