@@ -1,5 +1,5 @@
 [{
-	"name": ".isString",
+	"name": "type.isString",
 	"cases": [{
 		"input": "a {{undefined.isString()}} b",
 		"expectedResult": "a false b"

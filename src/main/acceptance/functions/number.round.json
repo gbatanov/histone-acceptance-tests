@@ -1,5 +1,5 @@
 [{
-	"name": "Number.round",
+	"name": "number.round",
 	"cases": [{
 		"input": "a {{0.60.round()}} b",
 		"expectedResult": "a 1 b"

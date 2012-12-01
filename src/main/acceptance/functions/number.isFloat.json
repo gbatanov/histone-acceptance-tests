@@ -1,5 +1,5 @@
 [{
-	"name": "Number.isFloat",
+	"name": "number.isFloat",
 	"cases": [{
 		"input": "a {{10.isFloat()}} b",
 		"expectedResult": "a false b"

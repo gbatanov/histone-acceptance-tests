@@ -1,10 +1,10 @@
 [{
-	"name": "uniqueId",
+	"name": "global.uniqueId",
 	"cases": [{
-			"input": "a {{uniqueId().isString()}} b",
-			"expectedResult": "a true b"
+		"input": "a {{uniqueId().isString()}} b",
+		"expectedResult": "a true b"
 	}, {
-			"input": "a {{uniqueId() isNot uniqueId()}} b",
-			"expectedResult": "a true b"
+		"input": "a {{uniqueId() isNot uniqueId()}} b",
+		"expectedResult": "a true b"
 	}]
 }]

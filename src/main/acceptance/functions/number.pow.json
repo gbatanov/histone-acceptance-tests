@@ -1,5 +1,5 @@
 [{
-	"name": "Number.pow",
+	"name": "number.pow",
 	"cases": [{
 		"input": "a {{2.pow().isUndefined()}} b",
 		"expectedResult": "a true b"

@@ -1,5 +1,5 @@
 [{
-	"name": ".isNull",
+	"name": "type.isNull",
 	"cases": [{
 		"input": "a {{undefined.isNull()}} b",
 		"expectedResult": "a false b"

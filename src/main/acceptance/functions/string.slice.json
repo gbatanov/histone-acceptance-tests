@@ -1,5 +1,5 @@
 [{
-	"name": "String.slice",
+	"name": "string.slice",
 	"cases": [{
 		"input": "a {{\"test\".slice(0).isString()}} b",
 		"expectedResult": "a true b"

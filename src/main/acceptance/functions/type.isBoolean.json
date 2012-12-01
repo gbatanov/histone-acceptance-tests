@@ -1,5 +1,5 @@
 [{
-	"name": ".isBoolean",
+	"name": "type.isBoolean",
 	"cases": [{
 		"input": "a {{undefined.isBoolean()}} b",
 		"expectedResult": "a false b"

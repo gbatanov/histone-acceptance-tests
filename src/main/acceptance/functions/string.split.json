@@ -1,5 +1,5 @@
 [{
-	"name": "String.split",
+	"name": "string.split",
 	"cases": [{
 		"input": "a {{\"string\".split('')}} b",
 		"expectedResult": "a s t r i n g b"

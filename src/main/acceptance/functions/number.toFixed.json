@@ -1,5 +1,5 @@
 [{
-	"name": "Number.toFixed",
+	"name": "number.toFixed",
 	"cases": [{
 		"input": "a {{2.toFixed()}} b",
 		"expectedResult": "a 2 b"
