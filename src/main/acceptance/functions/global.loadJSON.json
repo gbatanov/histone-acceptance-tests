@@ -19,10 +19,14 @@
 		"input": "a {{loadJSON('../testresources/json/test_for_json.jsonp').isUndefined()}} b",
 		"expectedResult": "a true b"
 	}, {
-		"input": "a {{loadJSON('../testresources/json/test_for_json.jsonp', true).toJSON()}} b",
+        "ignore": ["java"],
+        "comment": "Ignored until HSTJ-28 will be implemented",
+        "input": "a {{loadJSON('../testresources/json/test_for_json.jsonp', true).toJSON()}} b",
 		"expectedResult": "a [1,2,3] b"
 	}, {
-		"input": "a {{loadJSON('../testresources/json/test_for_json2.jsonp', true).toJSON()}} b",
+        "ignore": ["java"],
+        "comment": "Ignored until HSTJ-28 will be implemented",
+        "input": "a {{loadJSON('../testresources/json/test_for_json2.jsonp', true).toJSON()}} b",
 		"expectedResult": "a [1,2,3] b"
 	}]
 }]
