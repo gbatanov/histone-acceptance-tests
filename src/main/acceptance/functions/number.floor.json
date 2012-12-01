@@ -1,5 +1,5 @@
 [{
-	"name": "Number.floor",
+	"name": "number.floor",
 	"cases": [{
 		"input": "a {{0.60.floor()}} b",
 		"expectedResult": "a 0 b"

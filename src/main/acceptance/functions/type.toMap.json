@@ -1,0 +1,49 @@
+[{
+	"name": "type.toMap",
+	"cases": [{
+		"input": "a {{undefined.toMap().toJSON()}} b",
+		"expectedResult": "a [null] b"
+	}, {
+		"input": "a {{null.toMap().toJSON()}} b",
+		"expectedResult": "a [null] b"
+	}, {
+		"input": "a {{null.toMap().toJSON()}} b",
+		"expectedResult": "a [null] b"
+	}, {
+		"input": "a {{'STRING'.toMap().toJSON()}} b",
+		"expectedResult": "a [\"STRING\"] b"
+	}, {
+		"input": "a {{true.toMap().toJSON()}} b",
+		"expectedResult": "a [true] b"
+	}, {
+		"input": "a {{false.toMap().toJSON()}} b",
+		"expectedResult": "a [false] b"
+	}, {
+		"input": "a {{10.toMap().toJSON()}} b",
+		"expectedResult": "a [10] b"
+	}, {
+		"input": "a {{0.toMap().toJSON()}} b",
+		"expectedResult": "a [0] b"
+	}, {
+		"input": "a {{-10.toMap().toJSON()}} b",
+		"expectedResult": "a [-10] b"
+	}, {
+		"input": "a {{2.45.toMap().toJSON()}} b",
+		"expectedResult": "a [2.45] b"
+	}, {
+		"input": "a {{-10.toMap().toJSON()}} b",
+		"expectedResult": "a [-10] b"
+	}, {
+		"input": "a {{[].toMap().toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[1, 2, 3].toMap().toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}, {
+		"input": "a {{[foo: 'bar', x: 'y'].toMap().toJSON() is [foo: 'bar', x: 'y'].toJSON()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[1, foo: 'bar', x: 'y', 2].toMap().toJSON() is [1, foo: 'bar', x: 'y', 2].toJSON()}} b",
+		"expectedResult": "a true b"
+	}]
+}]

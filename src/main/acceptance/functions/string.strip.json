@@ -1,5 +1,5 @@
 [{
-	"name": "String.strip",
+	"name": "string.strip",
 	"cases": [{
 		"input": "a {{\" test\".strip()}} b",
 		"expectedResult": "a test b"

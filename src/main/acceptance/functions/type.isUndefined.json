@@ -1,5 +1,5 @@
 [{
-	"name": ".isUndefined",
+	"name": "type.isUndefined",
 	"cases": [{
 		"input": "a {{undefined.isUndefined()}} b",
 		"expectedResult": "a true b"

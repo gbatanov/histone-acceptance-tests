@@ -1,13 +1,13 @@
 [{
-	"name": "rand",
-    "comment": "If both arguments are specified, then they sets bounds to random numbers. Bound are included.",
+	"name": "global.rand",
+	"comment": "If both arguments are specified, then they sets bounds to random numbers. Bound are included.",
 	"cases": [{
 		"input": "a {{rand().isNumber()}} b",
 		"expectedResult": "a true b"
-    }, {
-        "input": "a {{rand(1, 1)}} b",
-        "expectedResult": "a 1 b"
-    }, {
+	}, {
+		"input": "a {{rand(1, 1)}} b",
+		"expectedResult": "a 1 b"
+	}, {
 		"input": "a {{rand('foo', 'bar').isNumber()}} b",
 		"expectedResult": "a true b"
 	}, {

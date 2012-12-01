@@ -1,5 +1,5 @@
 [{
-	"name": ".toString",
+	"name": "type.toString",
 	"cases": [{
 		"input": "a {{null}} b",
 		"expectedResult": "a null b"

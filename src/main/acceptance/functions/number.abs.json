@@ -1,5 +1,5 @@
 [{
-	"name": "Number.abs",
+	"name": "number.abs",
 	"cases": [{
 		"input": "a {{0.abs()}} b",
 		"expectedResult": "a 0 b"

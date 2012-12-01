@@ -1,0 +1,28 @@
+[{
+	"name": "global.include",
+	"cases": [{
+		"input": "a {{include('../testresources/tpl/DOESNT_EXIST.tpl').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{include('../testresources/tpl/test_for_include_ast_1.tpl')}} b",
+		"expectedResult": "a 123456 b"
+	}, {
+		"input": "a {{include('../testresources/tpl/test_for_include_ast_2.tpl')}} b",
+		"expectedResult": "a 123456 b"
+	}, {
+		"input": "a {{include('../testresources/tpl/test_for_include.tpl')}} b",
+		"expectedResult": "a include file contents b"
+	}, {
+		"input": "a {{include('../testresources/tpl/test_for_include_invalid.tpl')}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{resolveURI('../testresources/tpl/test_for_include_relative.tpl', global.baseURI) is include('../testresources/tpl/test_for_include_relative.tpl').split(' ')[2]}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{'ZA' + resolveURI('../testresources/tpl/subfolder/file_for_include.tpl', global.baseURI) + 'BX' is include('../testresources/tpl/test_for_include_subfolder.tpl')}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{include('../testresources/tpl/test_for_include_1.tpl', [foo: 'bar'])}} b",
+		"expectedResult": "a {\"foo\":\"bar\"} b"
+	}]
+}]

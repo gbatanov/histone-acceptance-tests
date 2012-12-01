@@ -1,5 +1,5 @@
 [{
-	"name": "Number.isInteger",
+	"name": "number.isInteger",
 	"cases": [{
 		"input": "a {{10.isInteger()}} b",
 		"expectedResult": "a true b"

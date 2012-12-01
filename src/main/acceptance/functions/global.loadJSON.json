@@ -1,0 +1,28 @@
+[{
+	"name": "global.loadJSON",
+	"cases": [{
+		"input": "a {{loadJSON('../testresources/json/DOESNT_EXIST.json').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadJSON('../testresources/json/test_for_json_array.json').toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}, {
+		"input": "a {{loadJSON('../testresources/json/test_for_json_invalid.json').toJSON()}} b",
+		"expectedResult": "a null b"
+	}, {
+		"input": "a {{loadJSON('../testresources/json/test_for_json_string.json').toJSON()}} b",
+		"expectedResult": "a \"test string\" b"
+	}, {
+		"input": "a {{loadJSON('../testresources/json/test_for_json.json').toJSON()}} b",
+		"expectedResult": "a {\"key\":123} b"
+	}, {
+		"input": "a {{loadJSON('../testresources/json/test_for_json.jsonp').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadJSON('../testresources/json/test_for_json.jsonp', true).toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}, {
+		"input": "a {{loadJSON('../testresources/json/test_for_json2.jsonp', true).toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}]
+}]

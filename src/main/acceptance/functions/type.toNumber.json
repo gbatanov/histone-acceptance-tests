@@ -1,5 +1,5 @@
 [{
-	"name": ".toNumber",
+	"name": "type.toNumber",
 	"cases": [{
 		"input": "a {{\"string\".toNumber()}} b",
 		"expectedResult": "a  b"

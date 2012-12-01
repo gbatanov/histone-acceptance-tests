@@ -1,5 +1,5 @@
 [{
-	"name": "String.test",
+	"name": "string.test",
 	"cases": [{
 		"input": "a {{\"test\".test('[a-z]')}} b",
 		"expectedResult": "a true b"

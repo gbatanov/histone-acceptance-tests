@@ -1,5 +1,5 @@
 [{
-	"name": "Number.ceil",
+	"name": "number.ceil",
 	"cases": [{
 		"input": "a {{0.60.ceil()}} b",
 		"expectedResult": "a 1 b"

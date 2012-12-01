@@ -1,5 +1,5 @@
 [{
-	"name": "String.charCodeAt",
+	"name": "string.charCodeAt",
 	"cases": [{
 		"input": "a {{\"string\".charCodeAt(3)}} b",
 		"expectedResult": "a 105 b"

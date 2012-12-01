@@ -1,0 +1,16 @@
+[{
+	"name": "string.size",
+	"cases": [{
+		"input": "a {{''.size()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{'234'.size()}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{'AA'.size()}} b",
+		"expectedResult": "a 2 b"
+	}, {
+		"input": "a {{'0123456789'.size().isNumber()}} b",
+		"expectedResult": "a true b"
+	}]
+}]

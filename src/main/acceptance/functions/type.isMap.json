@@ -1,5 +1,5 @@
 [{
-	"name": ".isMap",
+	"name": "type.isMap",
 	"cases": [{
 		"input": "a {{undefined.isMap()}} b",
 		"expectedResult": "a false b"

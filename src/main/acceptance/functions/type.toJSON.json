@@ -1,5 +1,5 @@
 [{
-	"name": ".toJSON",
+	"name": "type.toJSON",
 	"cases": [{
 		"input": "a {{[foo: null].toJSON()}} b",
 		"expectedResult": "a {\"foo\":null} b"
