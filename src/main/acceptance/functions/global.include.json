@@ -4,13 +4,9 @@
 		"input": "a {{include('../testresources/tpl/DOESNT_EXIST.tpl').isUndefined()}} b",
 		"expectedResult": "a true b"
 	}, {
-        "ignore":["java"],
-        "comment":"Ignored until HSTJ-7 will be implemented",
 		"input": "a {{include('../testresources/tpl/test_for_include_ast_1.tpl')}} b",
 		"expectedResult": "a 123456 b"
 	}, {
-        "ignore":["java"],
-        "comment":"Ignored until HSTJ-7 will be implemented",
         "input": "a {{include('../testresources/tpl/test_for_include_ast_2.tpl')}} b",
 		"expectedResult": "a 123456 b"
 	}, {
