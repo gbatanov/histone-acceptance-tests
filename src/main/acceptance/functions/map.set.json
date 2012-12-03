@@ -49,6 +49,12 @@
 		"input": "a {{[].set('foo', [1, 2, 3]).toJSON()}} b",
 		"expectedResult": "a {\"foo\":[1,2,3]} b"
     }, {
+        "input": "a {{var x = [0, 0, 0, 0]}} {{var y = x.set(1, 10)}} b {{x.toJSON()}} c {{y.toJSON()}} d",
+        "expectedResult": "a   b [0,0,0,0] c [0,10,0,0] d"
+    }, {
+        "input": "a {{var x = [1, 2, 3, 4]}} {{var y = x.set(2, undefined)}} b {{x.toJSON()}} c {{y.toJSON()}} d",
+        "expectedResult": "a   b [1,2,3,4] c [1,3,4] d"
+    }, {
         "comment": "Function set shouldn't change current Map, but should return clone with changed items",
         "input": "a {{var x = []}} b {{x.set('foo', 'test').toJSON()}} c {{x.toJSON()}} d",
         "expectedResult": "a  b {\"foo\":\"test\"} c [] d"
