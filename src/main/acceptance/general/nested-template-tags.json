@@ -17,102 +17,102 @@
 	}, {
 		"input": "{{'STRING' + {{<<<{{2 * 2}}>>>}}}}",
 		"expectedAST": [
-	        [9, [103, "STRING"],
-	            [109, ["<<<", [11, [101, 2],
-	                [101, 2]
-	            ], ">>>"]]
-	        ]
-	    ],
-	    "expectedResult": "STRING<<<4>>>"
+			[9, [103, "STRING"],
+				[109, ["<<<", [11, [101, 2],
+					[101, 2]
+				], ">>>"]]
+			]
+		],
+		"expectedResult": "STRING<<<4>>>"
 	}, {
 		"input": "{{var x = {{HELLO WORLD}}}}{{x}}",
 		"expectedAST": [
-	        [1001, "x", [109, ["HELLO WORLD"]]],
-	        [105, ["x"]]
-	    ],
-	    "expectedResult": "HELLO WORLD"
+			[1001, "x", [109, ["HELLO WORLD"]]],
+			[105, ["x"]]
+		],
+		"expectedResult": "HELLO WORLD"
 	}, {
 		"input": "{{'FOO = ' + {{HELLO WORLD}}}}",
 		"expectedAST": [
-	        [9, [103, "FOO = "],
-	            [109, ["HELLO WORLD"]]
-	        ]
-	    ],
-	    "expectedResult": "FOO = HELLO WORLD"
+			[9, [103, "FOO = "],
+				[109, ["HELLO WORLD"]]
+			]
+		],
+		"expectedResult": "FOO = HELLO WORLD"
 	}, {
 		"input": "{{'FOO = ' + {{HELLO {{2 * 2}} WORLD}}}}",
 		"expectedAST": [
-	        [9, [103, "FOO = "],
-	            [109, ["HELLO ", [11, [101, 2],
-	                [101, 2]
-	            ], " WORLD"]]
-	        ]
-	    ],
-	    "expectedResult": "FOO = HELLO 4 WORLD"
+			[9, [103, "FOO = "],
+				[109, ["HELLO ", [11, [101, 2],
+					[101, 2]
+				], " WORLD"]]
+			]
+		],
+		"expectedResult": "FOO = HELLO 4 WORLD"
 	}, {
 		"input": "{{'FOO = ' + {{HELLO {{2 * 2 + {{ TEST}}}} WORLD}}}}",
 		"expectedAST": [
-	        [9, [103, "FOO = "],
-	            [109, ["HELLO ", [9, [11, [101, 2],
-	                [101, 2]
-	            ],
-	                [109, [" TEST"]]
-	            ], " WORLD"]]
-	        ]
-	    ],
-	    "expectedResult": "FOO = HELLO 4 TEST WORLD"
+			[9, [103, "FOO = "],
+				[109, ["HELLO ", [9, [11, [101, 2],
+					[101, 2]
+				],
+					[109, [" TEST"]]
+				], " WORLD"]]
+			]
+		],
+		"expectedResult": "FOO = HELLO 4 TEST WORLD"
 	}, {
 		"input": "{{[{{HELLO WORLD}}, {{NASA BANK}}, {{ELEKTRO KROT}}].toJSON()}}",
 		"expectedAST": [
-	        [106, [105, [
-	            [107, [
-	                [null, [109, ["HELLO WORLD"]]],
-	                [null, [109, ["NASA BANK"]]],
-	                [null, [109, ["ELEKTRO KROT"]]]
-	            ]]
-	        ]], "toJSON", null]
-	    ],
-	    "expectedResult": "[\"HELLO WORLD\",\"NASA BANK\",\"ELEKTRO KROT\"]"
+			[106, [105, [
+				[107, [
+					[null, [109, ["HELLO WORLD"]]],
+					[null, [109, ["NASA BANK"]]],
+					[null, [109, ["ELEKTRO KROT"]]]
+				]]
+			]], "toJSON", null]
+		],
+		"expectedResult": "[\"HELLO WORLD\",\"NASA BANK\",\"ELEKTRO KROT\"]"
 	}, {
 		"input": "{{macro foo()}}{{self.arguments.toJSON()}}{{/macro}}{{foo(true, {{HEY HO LET'S GO}}, 123)}}",
 		"expectedAST": [
-	        [1003, "foo", [],
-	            [
-	                [106, [105, ["self", "arguments"]], "toJSON", null]
-	            ]
-	        ],
-	        [106, null, "foo", [
-	            [16],
-	            [109, ["HEY HO LET'S GO"]],
-	            [101, 123]
-	        ]]
-	    ],
-	    "expectedResult": "[true,\"HEY HO LET'S GO\",123]"
+			[1003, "foo", [],
+				[
+					[106, [105, ["self", "arguments"]], "toJSON", null]
+				]
+			],
+			[106, null, "foo", [
+				[16],
+				[109, ["HEY HO LET'S GO"]],
+				[101, 123]
+			]]
+		],
+		"expectedResult": "[true,\"HEY HO LET'S GO\",123]"
 	}, {
 		"input": "{{macro widget1(value)}}<div style=\"border: 1px solid red;\">{{value}}</div>{{/macro}}{{macro widget2(value)}}<div style=\"border: 1px solid blue;\">{{value}}</div>{{/macro}}{{widget1({{====={{widget2('WORLD')}}====={{widget2({{{{widget1({{====={{widget2('WORLD')}}====={{widget2({{HEY}})}}=====}})}}}})}}=====}})}}",
 		"expectedAST": [
-	        [1003, "widget1", ["value"],
-	            ["<div style=\"border: 1px solid red;\">", [105, ["value"]], "</div>"]
-	        ],
-	        [1003, "widget2", ["value"],
-	            ["<div style=\"border: 1px solid blue;\">", [105, ["value"]], "</div>"]
-	        ],
-	        [106, null, "widget1", [
-	            [109, ["=====", [106, null, "widget2", [
-	                [103, "WORLD"]
-	            ]], "=====", [106, null, "widget2", [
-	                [109, [
-	                    [106, null, "widget1", [
-	                        [109, ["=====", [106, null, "widget2", [
-	                            [103, "WORLD"]
-	                        ]], "=====", [106, null, "widget2", [
-	                            [109, ["HEY"]]
-	                        ]], "====="]]
-	                    ]]
-	                ]]
-	            ]], "====="]]
-	        ]]
-	    ],
-	    "expectedResult": "<div style=\"border: 1px solid red;\">=====<div style=\"border: 1px solid blue;\">WORLD</div>=====<div style=\"border: 1px solid blue;\"><div style=\"border: 1px solid red;\">=====<div style=\"border: 1px solid blue;\">WORLD</div>=====<div style=\"border: 1px solid blue;\">HEY</div>=====</div></div>=====</div>"
+			[1003, "widget1", ["value"],
+				["<div style=\"border: 1px solid red;\">", [105, ["value"]], "</div>"]
+			],
+			[1003, "widget2", ["value"],
+				["<div style=\"border: 1px solid blue;\">", [105, ["value"]], "</div>"]
+			],
+			[106, null, "widget1", [
+				[109, ["=====", [106, null, "widget2", [
+					[103, "WORLD"]
+				]], "=====", [106, null, "widget2", [
+					[109, [
+						[106, null, "widget1", [
+							[109, ["=====", [106, null, "widget2", [
+								[103, "WORLD"]
+							]], "=====", [106, null, "widget2", [
+								[109, ["HEY"]]
+							]], "====="]]
+						]]
+					]]
+				]], "====="]]
+			]]
+		],
+		"expectedResult": "<div style=\"border: 1px solid red;\">=====<div style=\"border: 1px solid blue;\">WORLD</div>=====<div style=\"border: 1px solid blue;\"><div style=\"border: 1px solid red;\">=====<div style=\"border: 1px solid blue;\">WORLD</div>=====<div style=\"border: 1px solid blue;\">HEY</div>=====</div></div>=====</div>"
 	}]
 }]

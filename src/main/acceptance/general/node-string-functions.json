@@ -1,62 +1,61 @@
 [{
-
-		"name": "strings",
-		"cases": [{
-				"input": "a {{'string'[0]}} b",
-				"expectedResult": "a s b"
-		}, {
-				"input": "a {{'string'[1]}} b",
-				"expectedResult": "a t b"
-		}, {
-				"input": "a {{'string'[10]}} b",
-				"expectedResult": "a  b"
-		}, {
-				"input": "a {{'string'[-1]}} b",
-				"expectedResult": "a g b"
-		}, {
-				"input": "a {{'string'[-5]}} b",
-				"expectedResult": "a t b"
-		}, {
-				"input": "a {{'string'[-15]}} b",
-				"expectedResult": "a  b"
-		}, {
-				"input": "a {{'hello world'}} b",
-				"expectedResult": "a hello world b"
-		}, {
-				"input": "a {{\"hello world\"}} b",
-				"expectedResult": "a hello world b"
-		}, {
-				"input": "a {{'hello\\nworld'}} b",
-				"expectedResult": "a hello\nworld b"
-		}, {
-				"input": "a {{\"string\"[3]}} b",
-				"expectedResult": "a i b"
-		}, {
-				"input": "a {{\"string\"[0]}} b",
-				"expectedResult": "a s b"
-		}, {
-				"input": "a {{\"string\"[-150]}} b",
-				"expectedResult": "a  b"
-		}, {
-				"input": "a {{\"string\"[250]}} b",
-				"expectedResult": "a  b"
-		}, {
-				"input": "a {{\"string\"['3']}} b",
-				"expectedResult": "a i b"
-		}, {
-				"input": "a {{\"string\"['0']}} b",
-				"expectedResult": "a s b"
-		}, {
-				"input": "a {{\"string\".length.isUndefined()}} b",
-				"expectedResult": "a true b"
-		}, {
-				"input": "a {{\"string\".size()}} b",
-				"expectedResult": "a 6 b"
-		}, {
-				"input": "a {{\"STRING\".toLowerCase()}} b",
-				"expectedResult": "a string b"
-		}, {
-				"input": "a {{\"string\".toUpperCase()}} b",
-				"expectedResult": "a STRING b"
-		}]
+	"name": "strings",
+	"cases": [{
+		"input": "a {{'string'[0]}} b",
+		"expectedResult": "a s b"
+	}, {
+		"input": "a {{'string'[1]}} b",
+		"expectedResult": "a t b"
+	}, {
+		"input": "a {{'string'[10]}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{'string'[-1]}} b",
+		"expectedResult": "a g b"
+	}, {
+		"input": "a {{'string'[-5]}} b",
+		"expectedResult": "a t b"
+	}, {
+		"input": "a {{'string'[-15]}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{'hello world'}} b",
+		"expectedResult": "a hello world b"
+	}, {
+		"input": "a {{\"hello world\"}} b",
+		"expectedResult": "a hello world b"
+	}, {
+		"input": "a {{'hello\\nworld'}} b",
+		"expectedResult": "a hello\nworld b"
+	}, {
+		"input": "a {{\"string\"[3]}} b",
+		"expectedResult": "a i b"
+	}, {
+		"input": "a {{\"string\"[0]}} b",
+		"expectedResult": "a s b"
+	}, {
+		"input": "a {{\"string\"[-150]}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{\"string\"[250]}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{\"string\"['3']}} b",
+		"expectedResult": "a i b"
+	}, {
+		"input": "a {{\"string\"['0']}} b",
+		"expectedResult": "a s b"
+	}, {
+		"input": "a {{\"string\".length.isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{\"string\".size()}} b",
+		"expectedResult": "a 6 b"
+	}, {
+		"input": "a {{\"STRING\".toLowerCase()}} b",
+		"expectedResult": "a string b"
+	}, {
+		"input": "a {{\"string\".toUpperCase()}} b",
+		"expectedResult": "a STRING b"
+	}]
 }]
