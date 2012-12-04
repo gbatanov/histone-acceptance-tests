@@ -300,8 +300,6 @@
 			"found": "."
 		}
 	}, {
-        "ignore":["java"],
-        "comment":"Ignored until HSTJ-30 will be implemented",
         "input": "{{10E3}}",
 		"expectedAST": [
 			[102, 10000]
@@ -314,8 +312,6 @@
 			"found": "B2"
 		}
 	}, {
-        "ignore":["java"],
-        "comment":"Ignored until HSTJ-30 will be implemented",
         "input": "{{10E+2}}",
 		"expectedAST": [
 			[102, 1000]
@@ -333,8 +329,6 @@
 			"found": "E"
 		}
 	}, {
-        "ignore":["java"],
-        "comment":"Ignored until HSTJ-30 will be implemented",
         "input": "{{.27E3}}",
 		"expectedAST": [
 			[102, 270]
@@ -805,8 +799,6 @@
 			]
 		]
 	}, {
-        "ignore":["java"],
-        "comment":"Ignored until HSTJ-30 will be implemented",
         "input": "{{null ? 10 ? 3.14 : \"string\" : 1E5 ? '' : .1E-2}}",
 		"expectedAST": [
 			[104, [100],
