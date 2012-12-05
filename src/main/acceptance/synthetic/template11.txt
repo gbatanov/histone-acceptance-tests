@@ -1,0 +1,24 @@
+
+
+
+	<div>character at index(0) = "H"</div>
+
+	<div>character at index(1) = "e"</div>
+
+	<div>character at index(2) = "l"</div>
+
+	<div>character at index(3) = "l"</div>
+
+	<div>character at index(4) = "o"</div>
+
+	<div>character at index(5) = " "</div>
+
+	<div>character at index(6) = "w"</div>
+
+	<div>character at index(7) = "o"</div>
+
+	<div>character at index(8) = "r"</div>
+
+	<div>character at index(9) = "l"</div>
+
+	<div>character at index(10) = "d"</div>

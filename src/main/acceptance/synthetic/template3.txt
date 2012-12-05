@@ -1,0 +1,50 @@
+
+<div style="border: 1px solid red;">
+	
+		
+			<strong>first item:</strong>
+		
+		
+			<div style="padding: 4px; border: 2px solid green; margin: 1px;">
+				1
+			</div>
+		
+	
+		
+		
+			<div style="padding: 4px; border: 2px solid blue; margin: 1px;">
+				2
+			</div>
+		
+	
+		
+		
+			<div style="padding: 4px; border: 2px solid green; margin: 1px;">
+				3
+			</div>
+		
+	
+		
+		
+			<div style="padding: 4px; border: 2px solid blue; margin: 1px;">
+				4
+			</div>
+		
+	
+		
+		
+			<div style="padding: 4px; border: 2px solid green; margin: 1px;">
+				5
+			</div>
+		
+	
+		
+			<strong>last item:</strong>
+		
+		
+			<div style="padding: 4px; border: 2px solid blue; margin: 1px;">
+				6
+			</div>
+		
+	
+</div>

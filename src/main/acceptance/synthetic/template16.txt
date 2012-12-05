@@ -1,0 +1,11 @@
+
+
+
+
+<div>11.07.2012 is Wednesday</div>
+
+
+<div>22.11.1963 is Friday</div>
+
+
+<div>25.07.1985 is Thursday</div>

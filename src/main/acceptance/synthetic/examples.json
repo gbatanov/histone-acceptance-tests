@@ -1,0 +1,64 @@
+[{
+	"name": "various examples taken from histone console",
+	"cases": [{
+		"input": "{{include('template1.tpl') is loadText('template1.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template2.tpl') is loadText('template2.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template3.tpl') is loadText('template3.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template4.tpl') is loadText('template4.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template5.tpl') is loadText('template5.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template6.tpl') is loadText('template6.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template7.tpl') is loadText('template7.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template8.tpl') is loadText('template8.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template9.tpl') is loadText('template9.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template9.tpl') is loadText('template9.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template10.tpl') is loadText('template10.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template11.tpl') is loadText('template11.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template12.tpl') is loadText('template12.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template13.tpl') is loadText('template13.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template14.tpl') is loadText('template14.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template15.tpl') is loadText('template15.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template16.tpl') is loadText('template16.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template16.tpl') is loadText('template16.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template17.tpl') is loadText('template17.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template18.tpl') is loadText('template18.txt')}}",
+		"expectedResult": "true"
+	}]
+}]

@@ -1,0 +1,8 @@
+
+
+
+<div>myHTML = 
+	<span style="border: 1px solid red;">
+		<strong><i>Hello world!</i></strong>
+	</span>
+</div>

@@ -1,0 +1,45 @@
+
+
+
+
+	<div>
+		
+			"<strong style="color: red;">foobar</strong>"
+			<span>is invalid email address</span>
+		
+	</div>
+
+	<div>
+		
+			"<strong style="color: red;">dsfsdafd@</strong>"
+			<span>is invalid email address</span>
+		
+	</div>
+
+	<div>
+		
+			"<strong style="color: red;">@xxxxxx</strong>"
+			<span>is invalid email address</span>
+		
+	</div>
+
+	<div>
+		
+			"<strong style="color: red;">sadfdsf@cccc</strong>"
+			<span>is invalid email address</span>
+		
+	</div>
+
+	<div>
+		
+			"<strong style="color: red;">@xxxxxx.com</strong>"
+			<span>is invalid email address</span>
+		
+	</div>
+
+	<div>
+		
+			"<strong style="color: green;">weblab@megafon.ru</strong>"
+			<span>is valid email address</span>
+		
+	</div>

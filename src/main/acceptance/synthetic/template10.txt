@@ -1,0 +1,4 @@
+
+
+<div>myString = "   [   one two three   ]   "</div>
+<div>myString = "one two three"</div>
