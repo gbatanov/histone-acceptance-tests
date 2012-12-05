@@ -113,8 +113,6 @@
 			"node": "global",
 			"result": "dummy:///"
 		},
-        "ignore": ["java"],
-        "comment": "How should we work with dummy:/// URI in tests?",
         "input": "a {{global.baseURI}} b {{include('../testresources/tpl/test_for_include_relative.tpl')}} c {{global.baseURI}} d",
 		"expectedResult": "a dummy:/// b relative file dummy:/// content c dummy:/// d"
 	}, {

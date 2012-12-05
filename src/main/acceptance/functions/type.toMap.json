@@ -19,16 +19,12 @@
 		"input": "a {{false.toMap().toJSON()}} b",
 		"expectedResult": "a [false] b"
 	}, {
-        "ignore":["java"],
-        "comment":"Ignored until HSTJ-30 will be implemented",
         "input": "a {{10.toMap().toJSON()}} b",
 		"expectedResult": "a [10] b"
 	}, {
 		"input": "a {{0.toMap().toJSON()}} b",
 		"expectedResult": "a [0] b"
 	}, {
-        "ignore":["java"],
-        "comment":"Ignored until HSTJ-30 will be implemented",
         "input": "a {{-10.toMap().toJSON()}} b",
 		"expectedResult": "a [-10] b"
 	}, {

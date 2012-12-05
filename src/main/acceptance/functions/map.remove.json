@@ -1,0 +1,76 @@
+[{
+	"name": "map.remove",
+	"cases": [{
+		"input": "a {{[].remove().toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(33330).toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(0).toJSON()}} b",
+		"expectedResult": "a {\"1\":2,\"2\":3} b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(2).toJSON()}} b",
+		"expectedResult": "a [1,2] b"
+	}, {
+		"input": "a {{[1, 2, 3].size() isNot [1, 2, 3].remove(1).size()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(1).size()}} b",
+		"expectedResult": "a 2 b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(0).size()}} b",
+		"expectedResult": "a 2 b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(2).size()}} b",
+		"expectedResult": "a 2 b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(1, 2).toJSON()}} b",
+		"expectedResult": "a [1] b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(1, 2).size()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(1, 2, 0).toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[1, 2, 3].remove(1, 2, 0).size()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove('x').toJSON()}} b",
+		"expectedResult": "a {\"foo\":1,\"bar\":2} b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove(0).size()}} b",
+		"expectedResult": "a 3 b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove(0).toJSON()}} b",
+		"expectedResult": "a {\"foo\":1,\"bar\":2,\"x\":3} b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove('foo').toJSON()}} b",
+		"expectedResult": "a {\"bar\":2,\"x\":3} b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove('bar').toJSON()}} b",
+		"expectedResult": "a {\"foo\":1,\"x\":3} b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove('x').toJSON()}} b",
+		"expectedResult": "a {\"foo\":1,\"bar\":2} b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove('x', 'foo').toJSON()}} b",
+		"expectedResult": "a {\"bar\":2} b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove('x', 'foo', 'bar').toJSON()}} b",
+		"expectedResult": "a [] b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove('x', 'foo').size()}} b",
+		"expectedResult": "a 1 b"
+	}, {
+		"input": "a {{[foo:1, bar:2, x:3].remove('x', 'foo', 'bar').size()}} b",
+		"expectedResult": "a 0 b"
+	}, {
+		"input": "{{var AAA = [foo:1, bar:2, x:3]}}{{AAA.remove('x').toJSON()}}{{AAA.toJSON()}}",
+		"expectedResult": "{\"foo\":1,\"bar\":2}{\"foo\":1,\"bar\":2,\"x\":3}"
+	}, {
+		"input": "{{macro m(arr)}}{{var keys = arr.keys()}}{{if keys.size()}}{{arr[keys[0]]}}{{m(arr.remove(keys[0]))}}{{/if}}{{/macro}}{{m([1, 2, 3, 4])}}",
+		"expectedResult": "1234"
+	}]
+}]
