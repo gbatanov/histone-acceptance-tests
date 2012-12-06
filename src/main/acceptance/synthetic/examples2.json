@@ -4,9 +4,6 @@
 		"input": "{{include('template18.tpl') is loadText('template18.txt')}}",
 		"expectedResult": "true"
 	}, {
-		"input": "{{include('template19.tpl') is loadText('template19.txt')}}",
-		"expectedResult": "true"
-	}, {
 		"input": "{{include('template20.tpl') is loadText('template20.txt')}}",
 		"expectedResult": "true"
 	}, {
