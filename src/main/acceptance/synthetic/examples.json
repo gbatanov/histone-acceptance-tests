@@ -57,17 +57,5 @@
 	}, {
 		"input": "{{include('template17.tpl') is loadText('template17.txt')}}",
 		"expectedResult": "true"
-	}, {
-		"input": "{{include('template18.tpl') is loadText('template18.txt')}}",
-		"expectedResult": "true"
-	}, {
-		"input": "{{include('template19.tpl') is loadText('template19.txt')}}",
-		"expectedResult": "true"
-	}, {
-		"input": "{{include('template20.tpl') is loadText('template20.txt')}}",
-		"expectedResult": "true"
-	}, {
-		"input": "{{include('template21.tpl') is loadText('template21.txt')}}",
-		"expectedResult": "true"
 	}]
 }]
