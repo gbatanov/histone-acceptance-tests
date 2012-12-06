@@ -1,0 +1,1935 @@
+
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/1/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">26
+			
+				<li class="calendar-prevMonth">27
+			
+				<li class="calendar-prevMonth">28
+			
+				<li class="calendar-prevMonth">29
+			
+				<li class="calendar-prevMonth">30
+			
+				<li class="calendar-prevMonth">31
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+				<li class=""><strong>31</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/2/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">30
+			
+				<li class="calendar-prevMonth">31
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+				<li>7
+			
+				<li>8
+			
+				<li>9
+			
+				<li>10
+			
+				<li>11
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/3/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">27
+			
+				<li class="calendar-prevMonth">28
+			
+				<li class="calendar-prevMonth">29
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+				<li class=""><strong>31</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+				<li>7
+			
+				<li>8
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/4/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">26
+			
+				<li class="calendar-prevMonth">27
+			
+				<li class="calendar-prevMonth">28
+			
+				<li class="calendar-prevMonth">29
+			
+				<li class="calendar-prevMonth">30
+			
+				<li class="calendar-prevMonth">31
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/5/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">30
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+				<li class=""><strong>31</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+				<li>7
+			
+				<li>8
+			
+				<li>9
+			
+				<li>10
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/6/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">28
+			
+				<li class="calendar-prevMonth">29
+			
+				<li class="calendar-prevMonth">30
+			
+				<li class="calendar-prevMonth">31
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+				<li>7
+			
+				<li>8
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/7/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">25
+			
+				<li class="calendar-prevMonth">26
+			
+				<li class="calendar-prevMonth">27
+			
+				<li class="calendar-prevMonth">28
+			
+				<li class="calendar-prevMonth">29
+			
+				<li class="calendar-prevMonth">30
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+				<li class=""><strong>31</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/8/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">30
+			
+				<li class="calendar-prevMonth">31
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+				<li class=""><strong>31</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+				<li>7
+			
+				<li>8
+			
+				<li>9
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/9/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">27
+			
+				<li class="calendar-prevMonth">28
+			
+				<li class="calendar-prevMonth">29
+			
+				<li class="calendar-prevMonth">30
+			
+				<li class="calendar-prevMonth">31
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+				<li>7
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/10/2012
+		</div>
+		<ul class="calendar-days">
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+				<li class=""><strong>31</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+				<li>7
+			
+				<li>8
+			
+				<li>9
+			
+				<li>10
+			
+				<li>11
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/11/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">29
+			
+				<li class="calendar-prevMonth">30
+			
+				<li class="calendar-prevMonth">31
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+				<li>7
+			
+				<li>8
+			
+				<li>9
+			
+		</ul>
+	</div>
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<style type="text/css">
+		.calendar {
+			padding: 1px;
+			overflow: hidden;
+			border-radius: 6px;
+			display: inline-block;
+			background-color: #333333;
+			border: 2px solid #CDCDCD;
+		}
+		
+		.calendar-date {
+			color: white;
+			font-size: 10px;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		.calendar-days {
+			width: 175px;
+			margin: 0px;
+			font-size: 0px;
+			padding: 0px;
+			margin-right: -1px;
+			margin-bottom: -1px;
+		}
+		
+		.calendar-days strong {
+			color: white;
+		}
+		
+		.calendar-days li {
+			display: inline-block;
+			list-style-type: none;
+			background-color: gray;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 10px;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			text-align: center;
+			color: #4B4B4B;
+		}
+		
+		.calendar-currentDay strong {
+			color: blue;
+		}
+	</style>
+	
+	<div class="calendar">
+		<div class="calendar-date">
+			10/12/2012
+		</div>
+		<ul class="calendar-days">
+			
+				<li class="calendar-prevMonth">26
+			
+				<li class="calendar-prevMonth">27
+			
+				<li class="calendar-prevMonth">28
+			
+				<li class="calendar-prevMonth">29
+			
+				<li class="calendar-prevMonth">30
+			
+			
+			
+				<li class=""><strong>1</strong>
+			
+				<li class=""><strong>2</strong>
+			
+				<li class=""><strong>3</strong>
+			
+				<li class=""><strong>4</strong>
+			
+				<li class=""><strong>5</strong>
+			
+				<li class=""><strong>6</strong>
+			
+				<li class=""><strong>7</strong>
+			
+				<li class=""><strong>8</strong>
+			
+				<li class=""><strong>9</strong>
+			
+				<li class="
+					calendar-currentDay
+				"><strong>10</strong>
+			
+				<li class=""><strong>11</strong>
+			
+				<li class=""><strong>12</strong>
+			
+				<li class=""><strong>13</strong>
+			
+				<li class=""><strong>14</strong>
+			
+				<li class=""><strong>15</strong>
+			
+				<li class=""><strong>16</strong>
+			
+				<li class=""><strong>17</strong>
+			
+				<li class=""><strong>18</strong>
+			
+				<li class=""><strong>19</strong>
+			
+				<li class=""><strong>20</strong>
+			
+				<li class=""><strong>21</strong>
+			
+				<li class=""><strong>22</strong>
+			
+				<li class=""><strong>23</strong>
+			
+				<li class=""><strong>24</strong>
+			
+				<li class=""><strong>25</strong>
+			
+				<li class=""><strong>26</strong>
+			
+				<li class=""><strong>27</strong>
+			
+				<li class=""><strong>28</strong>
+			
+				<li class=""><strong>29</strong>
+			
+				<li class=""><strong>30</strong>
+			
+				<li class=""><strong>31</strong>
+			
+			
+			
+				<li>1
+			
+				<li>2
+			
+				<li>3
+			
+				<li>4
+			
+				<li>5
+			
+				<li>6
+			
+		</ul>
+	</div>
+	
+
+

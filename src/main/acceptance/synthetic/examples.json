@@ -63,5 +63,11 @@
 	}, {
 		"input": "{{include('template19.tpl') is loadText('template19.txt')}}",
 		"expectedResult": "true"
+	}, {
+		"input": "{{include('template20.tpl') is loadText('template20.txt')}}",
+		"expectedResult": "true"
+	}, {
+		"input": "{{include('template21.tpl') is loadText('template21.txt')}}",
+		"expectedResult": "true"
 	}]
 }]
