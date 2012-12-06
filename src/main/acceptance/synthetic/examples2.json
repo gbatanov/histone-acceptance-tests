@@ -1,0 +1,7 @@
+[{
+	"name": "various examples taken from histone console",
+	"cases": [{
+		"input": "{{include('template2.tpl') is loadText('template2.txt')}}",
+		"expectedResult": "true"
+	}]
+}]
