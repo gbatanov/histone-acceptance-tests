@@ -1,6 +1,4 @@
 [{
-    "ignore": ["java"],
-    "comment": "Ignore until HSTJ-21 will be resolved",
     "name": "resolveURI - normal examples",
 	"cases": [{
 		"input": "{{resolveURI('g:h', 'http://a/b/c/d;p?q')}}",
@@ -73,8 +71,6 @@
 		"expectedResult": "http://a/g"
 	}]
 }, {
-    "ignore": ["java"],
-    "comment": "Ignore until HSTJ-21 will be resolved",
     "name": "resolveURI - abnormal examples",
 	"cases": [{
 		"input": "{{resolveURI('../../../g', 'http://a/b/c/d;p?q')}}",
@@ -135,8 +131,6 @@
 		"expectedResult": "http:g"
 	}]
 }, {
-    "ignore": ["java"],
-    "comment": "Ignore until HSTJ-21 will be resolved",
     "name": "resolveURI - additional examples",
 	"cases": [{
 		"input": "{{resolveURI('./g:h', 'http://a/b/c/d;p?q')}}",
