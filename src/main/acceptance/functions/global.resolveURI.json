@@ -1141,4 +1141,13 @@
 		"input": "{{resolveURI('example.com', 'http://user:info@')}}",
 		"expectedResult": "http://user:info@/example.com"
 	}]
+}, {
+    "name": "resolveURI - non standard schema names",
+    "cases": [{
+        "input": "{{resolveURI('subpath', 'dummy://host/path/')}}",
+        "expectedResult": "dummy://host/path/subpath"
+    },{
+        "input": "{{resolveURI('subpath', 'http4://host/path/')}}",
+        "expectedResult": "http4://host/path/subpath"
+    }]
 }]
