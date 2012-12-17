@@ -38,6 +38,7 @@
 		"expectedResult": "a [1,2,3] b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: request method)",
 	"comment": "make sure that the request method is passed correctly",
 	"cases": [{
@@ -93,6 +94,7 @@
 		"expectedResult": "a true b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: handling urls)",
 	"comment": "make sure that request path and query string are correctly passed to the server",
 	"cases": [{
@@ -187,6 +189,7 @@
 		"expectedResult": "a foo=bar b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: handling urls + jsonp)",
 	"comment": "make sure that request path and query string is correctly passed to the server when sending JSONP request",
 	"cases": [{
@@ -305,6 +308,7 @@
 		"expectedResult": "a true b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: GET HEAD DELETE TRACE OPTIONS, shouldn't pass request body)",
 	"comment": "make sure that request data will only be passed to the server for PUT and POST request methods",
 	"cases": [{
@@ -453,6 +457,7 @@
 		"expectedResult": "a  b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: custom request headers)",
 	"comment": "make sure that request headers are passed correctly",
 	"cases": [{
@@ -517,6 +522,7 @@
 		"expectedResult": "a true b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: invalid request headers)",
 	"comment": "make sure that those request headers won't reach the server",
 	"cases": [{
@@ -596,6 +602,7 @@
 		"expectedResult": "a true b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: POST, PUT + plain request body & controlling response body)",
 	"comment": "make sure that the plain request data is correctly passed to the server",
 	"cases": [{
@@ -636,6 +643,7 @@
 		"expectedResult": "a string b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: POST, PUT + map request body & controlling response body)",
 	"comment": "make sure that the map request data is correctly passed to the server",
 	"cases": [{
@@ -658,6 +666,7 @@
 		"expectedResult": "a foo=bar&bar=x%20y%20z b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: POST, PUT + plain request body & controlling response content-type)",
 	"comment": "make sure that the plain request data is correctly passed to the server",
 	"cases": [{
@@ -698,6 +707,7 @@
 		"expectedResult": "a  b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: POST, PUT + plain request body & controlling response content-type)",
 	"comment": "make sure that sending plain request data doesn't change content-header value",
 	"cases": [{
@@ -738,6 +748,7 @@
 		"expectedResult": "a foo b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: POST, PUT + map request body & controlling response content-type)",
 	"comment": "make sure that sending map request body switches the content-type request header value to application/x-www-form-urlencoded",
 	"cases": [{
@@ -760,6 +771,7 @@
 		"expectedResult": "a application/x-www-form-urlencoded b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: POST, PUT + map request body & controlling response content-type)",
 	"comment": "make sure that sending map request body overwrited content-type header value to application/x-www-form-urlencoded",
 	"cases": [{
@@ -782,6 +794,7 @@
 		"expectedResult": "a application/x-www-form-urlencoded b"
 	}]
 }, {
+	"ignore": "javascript",
 	"name": "global.loadJSON (remote: follow redirects)",
 	"comment": "make sure that we follow redirects if the response code is > 300 and < 400",
 	"cases": [{
