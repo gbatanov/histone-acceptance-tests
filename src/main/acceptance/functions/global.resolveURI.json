@@ -1,4 +1,16 @@
 [{
+    "name": "resolveURI - test for wrong arguments",
+    "cases": [{
+        "input": "a {{resolveURI('','').isUndefined()}} b",
+        "expectedResult": "a true b"
+    }, {
+        "input": "a {{resolveURI(123,'http://test/')}} b",
+        "expectedResult": "a http://test/123 b"
+    }, {
+        "input": "a {{resolveURI('sub','http://test/',123123213)}} b",
+        "expectedResult": "a http://test/sub b"
+    }]
+}, {
     "name": "resolveURI - normal examples",
 	"cases": [{
 		"input": "{{resolveURI('g:h', 'http://a/b/c/d;p?q')}}",
