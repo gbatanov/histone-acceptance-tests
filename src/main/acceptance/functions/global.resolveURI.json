@@ -2,7 +2,10 @@
     "name": "resolveURI - test for wrong arguments",
     "cases": [{
         "input": "a {{resolveURI('','').isUndefined()}} b",
-        "expectedResult": "a true b"
+        "expectedResult": "a false b"
+    }, {
+        "input": "a {{resolveURI('','')}} b",
+        "expectedResult": "a  b"
     }, {
         "input": "a {{resolveURI(123,'http://test/')}} b",
         "expectedResult": "a http://test/123 b"
