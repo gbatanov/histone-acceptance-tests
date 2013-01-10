@@ -1,1 +1,1 @@
-inner_output{{var x = 10}}{{macro macro_name}}inner macro output{{/macro}}
+inner_output{{var x = 10}}{{macro macro_name}}inner macro output{{/macro}}{{var Z = ['a':111,'b':222]}}
