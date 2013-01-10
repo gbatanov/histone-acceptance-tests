@@ -1,0 +1,238 @@
+[{
+	"name": "data URI - wrong format",
+	"cases": [{
+		"input": "a {{loadText('data:').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:base64,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:,base64,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}]
+}, {
+	"name": "data URI - no encoding",
+	"cases": [{
+		"input": "a {{loadText('data:;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:;charset=UTF-8;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:;charset=BLA-BLA;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/plain;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/plain;charset=UTF-8;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;charset=UTF-8;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/plain;charset=BLA-BLA;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;charset=BLA-BLA;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:application/javascript;charset=UTF-8;x=y;foo=bar;,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}]
+}, {
+	"name": "data URI - unsupported encoding",
+	"cases": [{
+		"input": "a {{loadText('data:;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:;charset=UTF-8;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:;charset=BLA-BLA;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/plain;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/plain;charset=UTF-8;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;charset=UTF-8;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/plain;charset=BLA-BLA;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;charset=BLA-BLA;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:application/javascript;charset=UTF-8;x=y;foo=bar;base65,e3syICogMn19').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}]
+}, {
+	"name": "data URI - base64 encoding: loadText",
+	"cases": [{
+		"input": "a {{loadText('data:;base64,')}} b",
+		"expectedResult": "a  b"
+	}, {
+		"input": "a {{loadText('data:;base64,').isString()}} b",
+		"expectedResult": "a true b"
+	}, {
+		"input": "a {{loadText('data:;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:;charset=UTF-8;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:;charset=BLA-BLA;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:text/plain;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:text/plain;charset=UTF-8;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;charset=UTF-8;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:text/plain;charset=BLA-BLA;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:text/foobar;charset=BLA-BLA;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}, {
+		"input": "a {{loadText('data:application/javascript;charset=UTF-8;x=y;foo=bar;base64,e3syICogMn19')}} b",
+		"expectedResult": "a {{2 * 2}} b"
+	}]
+}, {
+	"name": "data URI - base64 encoding: loadJSON",
+	"cases": [{
+		"input": "a {{loadJSON('data:;base64,WzEsIDIsIDNd')}} b",
+		"expectedResult": "a 1 2 3 b"
+	}, {
+		"input": "a {{loadJSON('data:;base64,WzEsIDIsIDNd').toJSON()}} b",
+		"expectedResult": "a [1,2,3] b"
+	}, {
+		"input": "a {{loadJSON('data:;base64,eyJmb28iOiJiYXIifQ==').toJSON()}} b",
+		"expectedResult": "a {\"foo\":\"bar\"} b"
+	}, {
+		"input": "a {{loadJSON('data:;base64,eyJmb28iOiJiYXIi').isUndefined()}} b",
+		"expectedResult": "a true b"
+	}]
+}, {
+	"name": "data URI - base64 encoding: include plain",
+	"cases": [{
+		"input": "a {{include('data:;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:;charset=UTF-8;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:;charset=BLA-BLA;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/plain;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/foobar;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/plain;charset=UTF-8;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/foobar;charset=UTF-8;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/plain;charset=BLA-BLA;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/foobar;charset=BLA-BLA;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:application/javascript;charset=UTF-8;x=y;foo=bar;base64,e3syICogMn19')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:application/javascript;charset=UTF-8;x=y;foo=bar;base64,e3t0aGlzfX0=', 123)}} b",
+		"expectedResult": "a 123 b"
+	}]
+}, {
+	"name": "data URI - base64 encoding: include ast",
+	"cases": [{
+		"input": "a {{include('data:;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:;charset=UTF-8;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:;charset=BLA-BLA;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/plain;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/foobar;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/plain;charset=UTF-8;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/foobar;charset=UTF-8;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/plain;charset=BLA-BLA;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:text/foobar;charset=BLA-BLA;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:application/javascript;charset=UTF-8;x=y;foo=bar;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMSwgWzEwMSwgMl0sDQogICAgICAgICAgICBbMTAxLCAyXQ0KICAgICAgICBdDQogICAgXQ0KXQ==')}} b",
+		"expectedResult": "a 4 b"
+	}, {
+		"input": "a {{include('data:application/javascript;charset=UTF-8;x=y;foo=bar;base64,Ww0KICAgIFsiSElTVE9ORSIsDQogICAgew0KICAgICAgICAidmVyc2lvbiI6ICIxLjAuNiINCiAgICB9XSwNCiAgICBbDQogICAgICAgIFsxMDUsIFsidGhpcyJdXQ0KICAgIF0NCl0=', 123)}} b",
+		"expectedResult": "a 123 b"
+	}]
+}, {
+	"name": "data URI - base64 encoding: import plain",
+	"cases": [{
+		"input": "a {{import 'data:;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='}}{{hello('world')}} b",
+		"expectedResult": "a Hello world! b"
+	}, {
+		"input": "a {{import 'data:;charset=UTF-8;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='}}{{hello('world')}} b",
+		"expectedResult": "a Hello world! b"
+	}, {
+		"input": "a {{import 'data:;charset=BLA-BLA;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='}}{{hello('world')}} b",
+		"expectedResult": "a Hello world! b"
+	}, {
+		"input": "a {{import 'data:text/plain;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='}}{{hello('world')}} b",
+		"expectedResult": "a Hello world! b"
+	}]
+}, {
+	"name": "data URI - base64 encoding: import ast",
+	"cases": [{
+		"input": "a {{import 'data:;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='}}{{hello('world')}} b",
+		"expectedResult": "a Hello world! b"
+	}, {
+		"input": "a {{import 'data:;charset=UTF-8;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='}}{{hello('world')}} b",
+		"expectedResult": "a Hello world! b"
+	}, {
+		"input": "a {{import 'data:;charset=BLA-BLA;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='}}{{hello('world')}} b",
+		"expectedResult": "a Hello world! b"
+	}, {
+		"input": "a {{import 'data:text/plain;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='}}{{hello('world')}} b",
+		"expectedResult": "a Hello world! b"
+	}]
+}]
