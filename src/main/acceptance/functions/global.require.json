@@ -1,4 +1,5 @@
 [{
+    "ignore":["java"],
 	"name": "global.require - variables",
 	"cases": [{
 		"input": "a {{require('../testresources/tpl/DOESNT_EXIST.tpl').isUndefined()}} b",
