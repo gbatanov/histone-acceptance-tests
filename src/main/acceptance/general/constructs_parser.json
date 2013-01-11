@@ -28,7 +28,42 @@
 			"expected": "}}",
 			"found": "EOF"
 		}
-	}, {
+	},  {
+        "input": "{{var f = 'world'}}{{var numbers = [1,2,3,4,5]}}\n{{for i in numbers}}\n{{for x in numbers}}{{var a = 'Hello'}}{{a}},{{f}} [{{self.index}} : {{self.last}}] {{self.qwe}}{{/for}}\n{{for y in [numbers]}}{{var a = 'Hello'}}{{a}},{{f}} [{{i}} : {{self.last}}] {{self.index[0]}}{{/for}}\n{{/for}}",
+        "expectedAST": [
+                [1001, "f", [103, "world"]],
+                [1001, "numbers", [107, [
+                    [null, [101, 1]],
+                    [null, [101, 2]],
+                    [null, [101, 3]],
+                    [null, [101, 4]],
+                    [null, [101, 5]]
+                ]]], "\n", [1002, ["i"],
+                [105, ["numbers"]],
+                [
+                    ["\n", [1002, ["x"],
+                        [105, ["numbers"]],
+                        [
+                            [
+                                [1001, "a", [103, "Hello"]],
+                                [105, ["a"]], ",", [105, ["f"]], " [", [105, ["self", "index"]], " : ", [105, ["self", "last"]], "] ", [105, ["self", "qwe"]]
+                            ]
+                        ]
+                    ], "\n", [1002, ["y"],
+                        [107, [
+                            [null, [105, ["numbers"]]]
+                        ]],
+                        [
+                            [
+                                [1001, "a", [103, "Hello"]],
+                                [105, ["a"]], ",", [105, ["f"]], " [", [105, ["i"]], " : ", [105, ["self", "last"]], "] ", [105, ["self", "index", [101, 0]]]
+                            ]
+                        ]
+                    ], "\n"]
+                ]
+            ]
+        ]
+    },  {
 		"input": "a {{10 is 10 ? true is true ? '1' : '2' : '3'}} b",
 		"expectedAST": ["a ", [104, [3, [101, 10],
 			[101, 10]
