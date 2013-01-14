@@ -1,14 +1,13 @@
 [
     {
         "name": "global.require - variables",
-        "ignore": ["java"],
         "cases": [
             {
                 "input": "a {{require('../testresources/tpl/DOESNT_EXIST.tpl').isUndefined()}} b",
                 "expectedResult": "a true b"
             },
             {
-                "input": "a {{require('../testresources/tpl/test_for_import.tpl').isObject()}} b",
+                "input": "a {{require('../testresources/tpl/test_for_import.tpl').isMap()}} b",
                 "expectedResult": "a true b"
             },
             {
@@ -19,11 +18,18 @@
     },
     {
         "name": "global.require - macros",
-        "ignore": ["java"],
         "cases": [
             {
                 "input": "a {{var x = require('../testresources/tpl/test_for_import.tpl')}} b {{x.macro_name()}} c",
                 "expectedResult": "a  b inner macro output c"
+            },
+            {
+                "input": "a {{var x = require('../testresources/tpl/test_for_import.tpl')}} b {{x()}} c",
+                "expectedResult": "a  b anonymous c"
+            },
+            {
+                "input": "a {{var x = require('../testresources/tpl/test_for_import.tpl')}} b {{x.param('parameter')}} c",
+                "expectedResult": "a  b parameter c"
             }
         ]
     }
