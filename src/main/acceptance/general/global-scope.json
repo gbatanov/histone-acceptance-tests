@@ -82,5 +82,13 @@
 		 },
 		"input": "a {{macro myMacro}}{{global.baseURI}}{{/macro}} b {{myMacro()}} c",
 		"expectedResult": "a  b dummy://some/test/ c"
-	}]
+	}, {
+        "property": {
+            "name": "baseURI",
+            "node": "global",
+            "result": "dummy://some/test/"
+        },
+        "input": "a {{macro myMacro(baseURI)}}{{baseURI}} {{global.baseURI}}{{/macro}} b {{myMacro('test://path')}} c",
+        "expectedResult": "a  b 'test://path' dummy://some/test/ c"
+    }]
 }]
