@@ -209,30 +209,62 @@
 	"name": "data URI - base64 encoding: import plain",
 	"cases": [{
 		"input": "a {{import 'data:;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='}}{{hello('world')}} b",
-		"expectedResult": "a Hello world! b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'data:;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='"
+		}
 	}, {
 		"input": "a {{import 'data:;charset=UTF-8;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='}}{{hello('world')}} b",
-		"expectedResult": "a Hello world! b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'data:;charset=UTF-8;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='"
+		}
 	}, {
 		"input": "a {{import 'data:;charset=BLA-BLA;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='}}{{hello('world')}} b",
-		"expectedResult": "a Hello world! b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'data:;charset=BLA-BLA;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='"
+		}
 	}, {
 		"input": "a {{import 'data:text/plain;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='}}{{hello('world')}} b",
-		"expectedResult": "a Hello world! b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'data:text/plain;base64,e3ttYWNybyBoZWxsbyhuYW1lKX19SGVsbG8ge3tuYW1lfX0he3svbWFjcm99fQ=='"
+		}
 	}]
 }, {
 	"name": "data URI - base64 encoding: import ast",
 	"cases": [{
 		"input": "a {{import 'data:;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='}}{{hello('world')}} b",
-		"expectedResult": "a Hello world! b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'data:;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='"
+		}
 	}, {
 		"input": "a {{import 'data:;charset=UTF-8;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='}}{{hello('world')}} b",
-		"expectedResult": "a Hello world! b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'data:;charset=UTF-8;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='"
+		}
 	}, {
 		"input": "a {{import 'data:;charset=BLA-BLA;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='}}{{hello('world')}} b",
-		"expectedResult": "a Hello world! b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'data:;charset=BLA-BLA;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='"
+		}
 	}, {
 		"input": "a {{import 'data:text/plain;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='}}{{hello('world')}} b",
-		"expectedResult": "a Hello world! b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'data:text/plain;base64,W1siSElTVE9ORSIseyJ2ZXJzaW9uIjoiMS4wLjYifV0sW1sxMDAzLCJoZWxsbyIsWyJuYW1lIl0sWyJIZWxsbyAiLFsxMDUsWyJuYW1lIl1dLCIhIl1dXV0='"
+		}
 	}]
 }]
