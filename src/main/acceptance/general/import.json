@@ -4,41 +4,39 @@
 		"input": "{{import",
 		"expectedException": {
 			"line": "1",
-			"expected": "string",
+			"expected": "}}",
 			"found": "EOF"
 		}
 	}, {
 		"input": "{{import}}",
-		"expectedException": {
-			"line": "1",
-			"expected": "string",
-			"found": "}}"
-		}
+		"expectedResult": ""
 	}, {
 		"input": "{{import bla}}",
 		"expectedException": {
 			"line": "1",
-			"expected": "string",
+			"expected": "}}",
 			"found": "bla"
 		}
 	}, {
 		"input": "{{import 'template.tpl'}}",
-		"expectedAST": [
-			[110, "template.tpl"]
-		]
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'template.tpl'"
+		}
 	}, {
 		"input": "{{import 'template.tpl',}}",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
-			"found": ","
+			"found": "'template.tpl'"
 		}
 	}, {
 		"input": "{{import 't1.tpl', 't2.tpl'}}",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
-			"found": ","
+			"found": "'t1.tpl'"
 		}
 	}]
 }]
