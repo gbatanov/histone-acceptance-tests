@@ -33,7 +33,7 @@
         "input": "a {{macro",
         "expectedException": {
             "line": "1",
-            "expected": "}}",
+            "expected": "identifier",
             "found": "EOF"
         }
     }, {
