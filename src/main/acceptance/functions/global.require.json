@@ -1,6 +1,7 @@
 [
     {
         "name": "global.require - variables",
+        "ignore": "javascript",
         "cases": [
             {
                 "input": "a {{require('../testresources/tpl/DOESNT_EXIST.tpl').isUndefined()}} b",
@@ -18,6 +19,7 @@
     },
     {
         "name": "global.require - macros",
+        "ignore": "javascript",
         "cases": [
             {
                 "input": "a {{var x = require('../testresources/tpl/test_for_import.tpl')}} b {{x.macro_name()}} c",
