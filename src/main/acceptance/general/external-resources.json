@@ -38,37 +38,81 @@
 	"name": "import",
 	"cases": [{
 		"input": "a {{import '../testresources/tpl/test_for_import.tpl'}} b {{x}} c {{macro_name()}} d",
-		"expectedResult": "a  b 10 c inner macro output d"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import.tpl'"
+		}
 	}, {
         "input": "a {{import '../testresources/tpl/test_for_import_ast.tpl'}} b {{x}} c {{macro_name()}} d",
-		"expectedResult": "a  b 10 c inner macro output d"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import_ast.tpl'"
+		}
 	}, {
 		"input": "a {{import 'other://../testresources/tpl/test_for_import.tpl'}} b",
-		"expectedResult": "a  b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'other://../testresources/tpl/test_for_import.tpl'"
+		}
 	}, {
 		"input": "a {{import 'other://../testresources/tpl/unknown.tpl'}} b",
-		"expectedResult": "a  b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'other://../testresources/tpl/unknown.tpl'"
+		}
 	}, {
 		"input": "a {{var x = 30}} b {{x}} c {{import '../testresources/tpl/test_for_import.tpl'}} d {{x}} e {{macro_name()}} f",
-		"expectedResult": "a  b 30 c  d 10 e inner macro output f"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import.tpl'"
+		}
 	}, {
         "input": "a {{var x = 30}} b {{x}} c {{import '../testresources/tpl/test_for_import_ast.tpl'}} d {{x}} e {{macro_name()}} f",
-		"expectedResult": "a  b 30 c  d 10 e inner macro output f"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import_ast.tpl'"
+		}
 	}, {
 		"input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{import '../testresources/tpl/test_for_import.tpl'}} d {{macro_name()}} e",
-		"expectedResult": "a  b local macro c  d inner macro output e"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import.tpl'"
+		}
 	}, {
         "input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{import '../testresources/tpl/test_for_import_ast.tpl'}} d {{macro_name()}} e",
-		"expectedResult": "a  b local macro c  d inner macro output e"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import_ast.tpl'"
+		}
 	}, {
 		"input": "a {{import 'dummy:/file.tpl'}} b",
-		"expectedResult": "a  b"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'dummy:/file.tpl'"
+		}
 	}, {
 		"input": "a {{import '../testresources/tpl/test_for_import_recursive_1.tpl'}} b {{macro1()}} c {{macro2()}} d",
-		"expectedResult": "a  b macro1 output c macro2 output d"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import_recursive_1.tpl'"
+		}
 	}, {
         "input": "a {{import '../testresources/tpl/test_for_import_recursive_1_ast.tpl'}} b {{macro1()}} c {{macro2()}} d",
-		"expectedResult": "a  b macro1 output c macro2 output d"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import_recursive_1_ast.tpl'"
+		}
 	}]
 }, {
 	"name": "include",
@@ -120,6 +164,10 @@
 		"expectedResult": "a true b"
 	}, {
 		"input": "a {{import '../testresources/tpl/test_for_import.tpl'}} b {{x}} c {{macro_name()}} d",
-		"expectedResult": "a  b 10 c inner macro output d"
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'../testresources/tpl/test_for_import.tpl'"
+		}
 	}]
 }]
