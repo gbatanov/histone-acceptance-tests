@@ -120,6 +120,9 @@
 			"items": 10
 		},
 		"expectedResult": "a  b"
+    }, {
+        "input": "a {{for x in []}}1{{else}}2{{/for}} b",
+        "expectedResult": "a 2 b"
 	}, {
 		"input": "a {{for x in items}}{{x}}{{/for}} b",
 		"context": {
