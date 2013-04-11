@@ -14,7 +14,7 @@
 		"expectedResult": "a 1 2 3 b true c"
 	}, {
 		"input": "a {{loadJSON('../testresources/json/test_for_json_string.json')}} b {{loadJSON('../testresources/json/test_for_json_string.json').isString()}} c",
-		"expectedResult": "a test string b true c"
+		"expectedResult": "a test тест string b true c"
 	}, {
 		"input": "a {{loadJSON('../testresources/json/test_for_json_invalid.json').isUndefined()}} b",
 		"expectedResult": "a true b"
