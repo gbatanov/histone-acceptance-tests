@@ -23,7 +23,7 @@
 	"name": "loadText",
 	"cases": [{
 		"input": "a {{loadText('../testresources/txt/file.txt')}} b",
-		"expectedResult": "a text file content b"
+		"expectedResult": "a text тест file content b"
 	}, {
 		"input": "a {{loadText('dummy:/file.txt').isUndefined()}} b",
 		"expectedResult": "a true b"
@@ -98,7 +98,7 @@
 	"name": "relative URIs",
 	"cases": [{
 		"input": "a {{loadText('../testresources/txt/file.txt')}} b",
-		"expectedResult": "a text file content b"
+		"expectedResult": "a text тест file content b"
 	}, {
 		"property": {
 			"name": "baseURI",
