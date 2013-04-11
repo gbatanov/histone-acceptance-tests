@@ -8,6 +8,6 @@
 		"expectedResult": "a text file {{'test'}} content b"
 	}, {
 		"input": "a {{loadText('../testresources/txt/file.txt')}} b",
-		"expectedResult": "a text file content b"
+		"expectedResult": "a text тест file content b"
 	}]
 }]
