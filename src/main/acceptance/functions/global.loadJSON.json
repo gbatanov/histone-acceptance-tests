@@ -26,7 +26,7 @@
 		"expectedResult": "a null b"
 	}, {
 		"input": "a {{loadJSON('../testresources/json/test_for_json_string.json', true).toJSON()}} b",
-		"expectedResult": "a \"test string\" b"
+		"expectedResult": "a \"test тест string\" b"
 	}, {
 		"input": "a {{loadJSON('../testresources/json/test_for_json.json', true).toJSON()}} b",
 		"expectedResult": "a {\"key\":123} b"
