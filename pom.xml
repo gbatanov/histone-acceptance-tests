@@ -87,30 +87,39 @@
         <developerConnection>scm:git:ssh://git@github.com/MegafonWebLab/histone-acceptance-tests.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-    <distributionManagement>
-        <repository>
-            <id>weblab-release</id>
-            <url>http://weblab.megafon.ru/maven/release-weblab</url>
-        </repository>
-        <snapshotRepository>
-            <id>weblab-snapshot</id>
-            <url>http://weblab.megafon.ru/maven/snapshot-weblab</url>
-        </snapshotRepository>
-    </distributionManagement>
+
     <repositories>
         <repository>
+            <id>hq-weblab-release</id>
+            <url>https://hq-devlabs.megafon.ru/artifactory/weblab-release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-            <id>central</id>
-            <name>release</name>
-            <url>http://weblab.megafon.ru/maven/release</url>
         </repository>
         <repository>
-            <snapshots />
-            <id>snapshots</id>
-            <name>snapshot</name>
-            <url>http://weblab.megafon.ru/maven/snapshot</url>
+            <id>hq-weblab-snapshot</id>
+            <url>https://hq-devlabs.megafon.ru/artifactory/weblab-snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>hq-weblab-release</id>
+            <url>https://hq-devlabs.megafon.ru/artifactory/weblab-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>hq-weblab-snapshot</id>
+            <url>https://hq-devlabs.megafon.ru/artifactory/weblab-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
