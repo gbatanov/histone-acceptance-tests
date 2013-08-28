@@ -799,6 +799,7 @@
 			]
 		]
 	}, {
+        "ignore": "java",
         "input": "{{null ? 10 ? 3.14 : \"string\" : 1E5 ? '' : .1E-2}}",
 		"expectedAST": [
 			[104, [100],
