@@ -1,11 +1,51 @@
 [{
 	"name": "func import",
 	"cases": [{
-		"input": "{{import}}",
+		"input": "{{import",
 		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "EOF"
+		},
+        "ignore": "java"
+	}, {
+        "input": "{{import}}",
+        "expectedException": {
             "line": "1",
             "expected": "string",
             "found": "}}"
         }
+	}, {
+		"input": "{{import bla}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "bla"
+		},
+		"ignore": "java"
+	}, {
+		"input": "{{import 'template.tpl'}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'template.tpl'"
+		},
+        "ignore": "java"
+	}, {
+		"input": "{{import 'template.tpl',}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'template.tpl'"
+		},
+		"ignore": "java"
+	}, {
+		"input": "{{import 't1.tpl', 't2.tpl'}}",
+		"expectedException": {
+			"line": "1",
+			"expected": "}}",
+			"found": "'t1.tpl'"
+		},
+		"ignore": "java"
 	}]
 }]
