@@ -99,7 +99,7 @@
                                     <goal>execute</goal>
                                 </goals>
                                 <configuration>
-                                    <source>print "##teamcity[buildNumber "+project.version[0..-10]+"]\n"</source>
+                                    <source>println "##teamcity[buildNumber "+project.version[0..-10]+"]"</source>
                                 </configuration>
                             </execution>
                         </executions>
