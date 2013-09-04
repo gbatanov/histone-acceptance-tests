@@ -86,7 +86,7 @@
                 <version>1.7</version>
                 <configuration>
                     <tasks>
-                        <echo>##teamcity[buildNumber '${pom.version}}']</echo>
+                        <echo> ##teamcity[buildNumber '${pom.version}'] </echo>
                     </tasks>
                 </configuration>
             </plugin>
