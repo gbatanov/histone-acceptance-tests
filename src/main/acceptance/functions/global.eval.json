@@ -1,7 +1,7 @@
 [{
 	"name": "global.eval",
 	"cases": [{
-		"input": "a {{eval('{{'test'}}')}} b",
-		"expectedResult": "a test b"
+		"input": "a {{eval('{{123}}')}} b",
+		"expectedResult": "a 123 b"
 	}]
 }]
