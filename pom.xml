@@ -84,7 +84,8 @@
                 <artifactId>gmaven-plugin</artifactId>
                 <version>1.5</version>
                 <configuration>
-                    <source>println "##teamcity[buildNumber "+project.version.substring(0,project.version.indexOf('-SNAPSHOT'))+"]"</source>
+                    <source>println project.version
+                        println "##teamcity[buildNumber "+project.version.substring(0,project.version.indexOf('-SNAPSHOT'))+"]"</source>
                 </configuration>
             </plugin>
         </plugins>
