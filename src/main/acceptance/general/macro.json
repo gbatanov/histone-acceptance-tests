@@ -44,7 +44,8 @@
         "expectedResult": "a  b  10 "
     }, {
         "input": "a {{var myMacro = 10}}{{macro myMacro}}HELLO WORLD{{/macro}} - {{myMacro}} - {{myMacro()}} c",
-        "expectedResult": "a  -  - HELLO WORLD c"
+        "expectedResult": "a  -  - HELLO WORLD c",
+        "ignore": "java"
     }, {
         "input": "a {{var x = 10}}{{macro myMacro}}{{x}}{{/macro}} {{myMacro()}} {{x}}",
         "expectedResult": "a  10 10"

@@ -42,77 +42,88 @@
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import.tpl'"
-		}
+		},
+		"ignore": "java"
 	}, {
         "input": "a {{import '../testresources/tpl/test_for_import_ast.tpl'}} b {{x}} c {{macro_name()}} d",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import_ast.tpl'"
-		}
+		},
+		"ignore": "java"
 	}, {
 		"input": "a {{import 'other://../testresources/tpl/test_for_import.tpl'}} b",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'other://../testresources/tpl/test_for_import.tpl'"
-		}
+		},
+        "ignore": "java"
 	}, {
 		"input": "a {{import 'other://../testresources/tpl/unknown.tpl'}} b",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'other://../testresources/tpl/unknown.tpl'"
-		}
+		},
+		"ignore": "java"
 	}, {
 		"input": "a {{var x = 30}} b {{x}} c {{import '../testresources/tpl/test_for_import.tpl'}} d {{x}} e {{macro_name()}} f",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import.tpl'"
-		}
+		},
+		"ignore": "java"
 	}, {
         "input": "a {{var x = 30}} b {{x}} c {{import '../testresources/tpl/test_for_import_ast.tpl'}} d {{x}} e {{macro_name()}} f",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import_ast.tpl'"
-		}
+		},
+		"ignore": "java"
 	}, {
 		"input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{import '../testresources/tpl/test_for_import.tpl'}} d {{macro_name()}} e",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import.tpl'"
-		}
+		},
+		"ignore": "java"
 	}, {
         "input": "a {{macro macro_name}}local macro{{/macro}} b {{macro_name()}} c {{import '../testresources/tpl/test_for_import_ast.tpl'}} d {{macro_name()}} e",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import_ast.tpl'"
-		}
+		},
+		"ignore": "java"
 	}, {
 		"input": "a {{import 'dummy:/file.tpl'}} b",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'dummy:/file.tpl'"
-		}
+		},
+		"ignore": "java"
 	}, {
 		"input": "a {{import '../testresources/tpl/test_for_import_recursive_1.tpl'}} b {{macro1()}} c {{macro2()}} d",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import_recursive_1.tpl'"
-		}
+		},
+        "ignore": "java"
 	}, {
         "input": "a {{import '../testresources/tpl/test_for_import_recursive_1_ast.tpl'}} b {{macro1()}} c {{macro2()}} d",
 		"expectedException": {
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import_recursive_1_ast.tpl'"
-		}
+		},
+		"ignore": "java"
 	}]
 }, {
 	"name": "include",
@@ -168,6 +179,7 @@
 			"line": "1",
 			"expected": "}}",
 			"found": "'../testresources/tpl/test_for_import.tpl'"
-		}
+		},
+        "ignore": "java"
 	}]
 }]
